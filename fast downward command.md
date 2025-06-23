@@ -1,6 +1,7 @@
 # Cd into the computer file address that have domain.pddl and problem.pddl 
 
-** search using “astar(lmcut())” —  A with LM-Cut (Optimal but Slow)* algorithm — A* search
+
+search using “astar(lmcut())” —  A with LM-Cut (Optimal but Slow)* algorithm — A* search
 /Users/qinxinyue/Desktop/CP5106/downward/fast-downward.py domain.pddl problem.pddl --search "astar(lmcut())" 
 
 /Users/qinxinyue/Desktop/CP5106/downward/fast-downward.py domain.pddl problem.pddl --search "lazy_greedy([ff()])" 
