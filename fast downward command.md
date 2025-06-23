@@ -8,16 +8,18 @@ search using “astar(lmcut())” —  A with LM-Cut (Optimal but Slow)* algori
 
 
 # VAL tools
- validate domain.pddl problem.pddl sas_plan
-Command	Purpose
-validate domain.pddl problem.pddl	Check PDDL syntax
-validate -v domain.pddl problem.pddl plan.txt	Verbose debugging
-validate -t 0.1 domain.pddl problem.pddl plan.txt	Set time tolerance
+validate domain.pddl problem.pddl sas_plan
+
+| Command | Purpose |
+|-----|-----|
+| validate domain.pddl problem.pddl   | Check PDDL syntax   |
+| validate -v domain.pddl problem.pddl plan.txt   | Verbose debugging   |
+
 * Verify success: Command — echo $? 
     * Returns 0 → Validation passed
     * Returns 1 → Validation failed (but errors may be hidden)
-
-Enhanced Report (Human-Readable)
+      
+# Enhanced Report (Human-Readable)
 /Users/qinxinyue/Desktop/CP5106/downward/fast-downward.py \
     domain.pddl problem.pddl \
     --search "lazy_greedy([ff()])" \
