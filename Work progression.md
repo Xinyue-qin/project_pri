@@ -1,14 +1,15 @@
 ## Progression on project in last week:
 1. I have deployed the fast downwards on the computer, with its accompanying tools (VAL, report generating…);
 2. I worked to be more familiar with PDDL syntax;
-3. I have given the prompt (NL instruction, PDDL domain predicates) to Gemma3 and Devstral, and asked them to generate action;
+3. I have given the prompt (NL instruction, PDDL domain predicates) to Gemma3 and Devstral, and asked them to generate action:
+   
 **Prompt**:
 Given a description of an action in some domain, convert it to Planning Domain Definition Language (PDDL) action. You may only use the allowed predicates for each action. 
 Allowed Predicates: - (handempty) : the hand is empty. - (holding ?x - block): block x is held. - (clear ?x - block): block x is clear. - (on ?x - block ?y - block) : block x is on block y. - (ontable ?x - block): block x is on the table. 
 Input: The action, “put-down” will have the hand put down a block. 
 PDDL Action:
 
-**Result of devstral**: (ollama run devstral)
+**Result of devstral**:
 
 Sure! Here's how you can define the "put-down" action in PDDL using the 
 allowed predicates:
