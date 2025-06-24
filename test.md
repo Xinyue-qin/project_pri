@@ -8,6 +8,7 @@ Input: The action, “put-down” will have the hand put down a block.
 PDDL Action:
 
 Result of devstral: (ollama run devstral)
+
 Sure! Here's how you can define the "put-down" action in PDDL using the 
 allowed predicates:
 
