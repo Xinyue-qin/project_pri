@@ -27,5 +27,16 @@ block.
 - Effect: After performing the action, the block is no longer being held 
 by the hand (`(not (holding ?x))`), the hand becomes empty 
 (`(handempty)`), and the block is now on the table (`(ontable ?x)`).
-
 (ollama run devstral)
+
+
+... Sure! Here's how you can define the "put-down" action in PDDL using the allo
+... wed predicates:
+```pddl
+(action put-down)
+  :parameters (block ?x) //syntax problem?
+  :precondition (and (handempty) (holding ?x - block)) 
+  :effect (and (handempty) (not (holding ?x - block)) (ontable ?x - 
+block))
+```
+(gemma3)
