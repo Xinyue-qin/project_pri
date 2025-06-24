@@ -1,5 +1,5 @@
 # Prompt and result for the action generation (put-down) for the BLOCKS domain
-Task Signature = [input: NL instruction, PDDL domain predicates; output: PDDL action]
+*`Task Signature = [input: NL instruction, PDDL domain predicates; output: PDDL action]`*
 
 **Prompt**:
 Given a description of an action in some domain, convert it to Planning Domain Definition Language (PDDL) action. You may only use the allowed predicates for each action. 
