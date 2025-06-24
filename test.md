@@ -39,7 +39,7 @@ by the hand (`(not (holding ?x))`), the hand becomes empty
 ... wed predicates:
 ```pddl
 (action put-down)
-  :parameters (block ?x) <syntax problem>
+  :parameters (block ?x)   //syntax problem?
   :precondition (and (handempty) (holding ?x - block)) 
   :effect (and (handempty) (not (holding ?x - block)) (ontable ?x - 
 block))
