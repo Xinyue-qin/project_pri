@@ -1,4 +1,5 @@
 # Prompt and result for the action generation (put-down) for the BLOCKS domain
+Task Signature = [input: NL instruction, PDDL domain predicates; output: PDDL action]
 
 Given a description of an action in some domain, convert it to Planning Domain Definition Language (PDDL) action. You may only use the allowed predicates for each action. 
 Allowed Predicates: - (handempty) : the hand is empty. - (holding ?x - block): block x is held. - (clear ?x - block): block x is clear. - (on ?x - block ?y - block) : block x is on block y. - (ontable ?x - block): block x is on the table. 
