@@ -11,9 +11,6 @@ PDDL Action:
 
 **Result of devstral**:
 
-Sure! Here's how you can define the "put-down" action in PDDL using the 
-allowed predicates:
-
 ```pddl
 (:action put-down
     :parameters (?x - block)
@@ -37,7 +34,6 @@ by the hand (`(not (holding ?x))`), the hand becomes empty
 
 **Result of Gemma3**
 
-Sure! Here's how you can define the "put-down" action in PDDL using the allowed predicates:
 ```pddl
 (action put-down)
   :parameters (block ?x)   //syntax problem?
