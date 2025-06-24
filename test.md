@@ -33,7 +33,7 @@ by the hand (`(not (holding ?x))`), the hand becomes empty
 (`(handempty)`), and the block is now on the table (`(ontable ?x)`).
 
 
-**Result of Gemma3**
+**Result of Gemma3:**
 
 ... Sure! Here's how you can define the "put-down" action in PDDL using the allo
 ... wed predicates:
@@ -45,3 +45,12 @@ by the hand (`(not (holding ?x))`), the hand becomes empty
 block))
 ```
 (gemma3)
+
+**Result of Gemma3:27b-it-qat (27B parameter model):** (ollama run gemma3:27b-it-qat)
+```pddl
+(action put-down
+  :parameters (?x - block)
+  :precondition (holding ?x)
+  :effect (and (handempty) (ontable ?x) (not (holding ?x)))
+)
+```
