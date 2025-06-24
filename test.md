@@ -54,7 +54,6 @@ block))
   :effect (and (handempty) (ontable ?x) (not (holding ?x)))
 )
 ```
-
 **Result of gemma3:12b (12B parameter model): ollama run gemma3:12b-it-qat**
 ```pddl
 (:action put-down
@@ -62,25 +61,26 @@ block))
   :precondition (and (holding ?x))
   :effect (and (handempty) (clear ?x) (ontable ?x) (not (holding ?x))))
 ```
-
 **Result of gemma3:4b (4B parameter model): ollama run gemma3:4b-it-qat**
 ```pddl
 (action put-down
   :parameters (?x - block)
   :precondition (and (handempty) (holding ?x - block))
-  :effect (and (handempty) (not (holding ?x - block)) (ontable ?x - 
-block))
+  :effect (and (handempty) (not (holding ?x - block)) (ontable ?x - block))
 ```
 **Result of gemma3:1b (1B parameter model): ollama run gemma3:1b-it-qat**
 ```pddl
 put-down(hand, block)
 ```
 
+---
+
 # Problem generation in blocksworld domain (init=holding one)
 Task Signature = [input: NL instruction, PDDL domain; output: PDDL problem]
 
 **Prompt**
 
+---
 
 # Plan generation in blocksworld domain (init=on table, goal=tower)
 Task Signature = [input: PDDL domain, PDDL problem; output: Plan]
