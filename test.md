@@ -54,3 +54,10 @@ block))
   :effect (and (handempty) (ontable ?x) (not (holding ?x)))
 )
 ```
+
+**Result of gemma3:12b (12B parameter model): ollama run gemma3:12b-it-qat**
+
+**Result of gemma3:4b (4B parameter model): ollama run gemma3:4b-it-qat**
+
+**Result of gemma3:1b (1B parameter model): ollama run gemma3:1b-it-qat**
+
