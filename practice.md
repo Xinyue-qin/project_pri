@@ -1,4 +1,5 @@
-# Prompt and result for the action generation (put-down) for the BLOCKS domain
+
+## Prompt and result for the action generation (put-down) for the BLOCKS domain
 ```diff
 - Task Signature = [input: NL instruction, PDDL domain predicates; output: PDDL action]
 ```
@@ -82,7 +83,7 @@ put-down(hand, block)
 ```
 ---
 
-# Problem generation in blocksworld domain (init=holding one)
+## Problem generation in blocksworld domain (init=holding one)
 ```diff
 - Task Signature = [input: NL instruction, PDDL domain; output: PDDL problem]
 ```
@@ -155,7 +156,7 @@ height 3
 **Result of Gemma3:27b-it-qat (27B parameter model):** (ollama run gemma3:27b-it-qat)
 ---
 
-# Plan generation in blocksworld domain (init=on table, goal=tower)
+## Plan generation in blocksworld domain (init=on table, goal=tower)
 ```diff
 - Task Signature = [input: PDDL domain, PDDL problem; output: Plan]
 ```
