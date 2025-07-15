@@ -395,14 +395,17 @@ block)
     (on b17 b15)
   ))
 )
-```</end_of_turn>
-
+```
+</end_of_turn>
 ---
 
+
 ## Plan generation in blocksworld domain (init=on table, goal=tower)
+
 ```diff
 - Task Signature = [input: PDDL domain, PDDL problem; output: Plan]
 ```
+
 **Prompt**
 
 Given a PDDL domain and a PDDL problem file, come up with the plan associated with the problem. The domain describes the possible actions and their effects, while the problem file details the specific scenario to be solved. Do not generate anything but the correct plan.
