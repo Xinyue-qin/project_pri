@@ -3,7 +3,6 @@ marp: true
 size: 4:3
 ---
 
-
 <!-- ------------------------- -->
 ![bg fit](image-8.png)
 
@@ -78,7 +77,47 @@ section {
 
 4. (Heuristically) Equivalent Domain: The model <u>produced syntactically valid PDDL</u> that integrates with the desired domain under the domain equivalence heuristic, plans from the original domain can be applied in the new domain and vice versa.
 
+------
+
+<!-- -->
+![bg fit](image-8.png)
+<style scoped>
+section {
+  font-family: Calibri;
+  font-size: 15px
+}
+</style>
+<!-- -->
+
+## Gemma3:1b -- Action Generation Performance regarding Blocksworld Problem 1
+Output:
+```pddl
+activate(robot_arm)
+    where:
+        robot_arm = {
+            “arm-empty” = true
+            “holding ?x - block” = true
+            “clear ?x - block” = true
+            “on ?x - block ?y - block” = true
+            “on-table ?x - block” = true
+        }
+```
+**Explanation:**
+*   `activate(robot_arm)`:  This indicates that the action is being performed by a robot arm.
+*   `where:`:  This section defines the specific robot arm.
+*   `robot_arm = { ... }`:  This defines the state of the robot arm, specifying the attributes:
+    *   `“arm-empty” = true`: The robot arm is empty.
+    *   `“holding ?x - block” = true`: The robot arm is holding block `?x`.
+    *   `“clear ?x - block” = true`: The robot arm is clear block `?x`.
+    *   `“on ?x - block ?y - block” = true`: The robot arm is on block `?x` at block `?y`.
+    *   `“on-table ?x - block” = true`: The robot arm is on the table at block `?x`.
+This PDDL representation accurately captures the actions and their preconditions based on the provided descriptions.
+
+Result Classes: Syntax Error -- No PDDL (NoPDDL): Gemma3: 1b model did not output any PDDL.
+
+
 ---
+
 <!-- ------------------------- -->
 ![bg fit](image-8.png)
 
@@ -102,4 +141,7 @@ This metric is useful for understanding the distribution of how close is the out
 
 ---
 
-
+name | 111 | 222 | 333 | 444
+:-: | :-: | :-: | :-: | :-:
+aaa | bbb | ccc | ddd | eee| 
+fff | ggg| hhh | iii | 000|

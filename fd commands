@@ -1,0 +1,23 @@
+1. 使用fastdownwards运行规划
+1.1 首先下载fastdownwards，再将fast-downwards路径保存入系统路径（方便后期简单运用 -- 不用繁冗索引地址）
+1.2 运行规划命令：
+fast-downward.py D_gemma_1b_blocks.pddl P_1_blocks.pddl --search "astar(lmcut())"
+
+//将 fast-downward.py 的运行输出自动保存到文件：
+> 保存标准输出到文件
+2>&1 将错误输出也重定向到同一文件
+生成的文件 output.log 将包含所有输出信息
+
+fast-downward.py D_gemma_1b_blocks.pddl P_1_blocks.pddl --search "astar(lmcut())"> output.log 2>&1
+
+
+
+
+
+2. 验证
+
+validate -v D_gemma_1b_blocks.pddl
+
+//把validate 生成的的验证结果保存到文件中
+validate -v D_gemma_1b_blocks.pddl > val_debug.txt 2>&1
+

@@ -1,7 +1,0 @@
-(define (problem simple-stack)
-  (:domain blocksworld-4ops)
-  (:objects A B C - block)
-  (:init (arm-empty)
-         (on-table A) (on-table B) (on-table C)
-         (clear A) (clear B) (clear C))
-  (:goal (and (on A B) (on B C) (on-table C))))

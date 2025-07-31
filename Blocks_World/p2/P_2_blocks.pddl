@@ -1,7 +1,0 @@
-(define (problem tower-reversal)
-  (:domain blocksworld-4ops)
-  (:objects A B C - block)
-  (:init (arm-empty)
-         (on-table A) (on B A) (on C B)
-         (clear C))
-  (:goal (and (on-table C) (on B C) (on A B))))
