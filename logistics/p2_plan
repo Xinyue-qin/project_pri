@@ -1,0 +1,6 @@
+(load pkg2 plane1 airport1)
+(load pkg1 plane1 airport1)
+(fly plane1 airport1 airport2)
+(unload pkg2 plane1 airport2)
+(unload pkg1 plane1 airport2)
+; cost = 5 (unit cost)

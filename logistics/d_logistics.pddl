@@ -1,0 +1,40 @@
+(define (domain logistics)
+  (:requirements :strips :typing)
+  (:types
+    physobj
+    object vehicle - physobj
+    truck airplane - vehicle
+    location - physobj
+    airport - location
+    city
+  )
+  (:predicates
+    (loc ?l - location ?c - city)
+    (at ?x - physobj ?l - location)
+    (in ?p - object ?v - vehicle)
+  )
+
+  (:action load
+    :parameters (?o - object ?v - vehicle ?l - location)
+    :precondition (and (at ?v ?l) (at ?o ?l))
+    :effect (and (in ?o ?v) (not (at ?o ?l)))
+  )
+
+  (:action unload
+    :parameters (?o - object ?v - vehicle ?l - location)
+    :precondition (and (in ?o ?v) (at ?v ?l))
+    :effect (and (at ?o ?l) (not (in ?o ?v)))
+  )
+
+  (:action drive
+    :parameters (?t - truck ?from - location ?to - location ?c - city)
+    :precondition (and (at ?t ?from) (loc ?from ?c) (loc ?to ?c))
+    :effect (and (at ?t ?to) (not (at ?t ?from)))
+  )
+
+  (:action fly
+    :parameters (?p - airplane ?from - airport ?to - airport)
+    :precondition (at ?p ?from)
+    :effect (and (at ?p ?to) (not (at ?p ?from)))
+  )
+)
