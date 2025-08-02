@@ -8,9 +8,12 @@ fast-downward.py D_gemma_1b_blocks.pddl P_1_blocks.pddl --search "astar(lmcut())
 2>&1 将错误输出也重定向到同一文件
 生成的文件 output.log 将包含所有输出信息
 
+E.g., Series Fd commands of Blocksworld Problem 1:
+fast-downward.py D_Devstral_blocks.pddl P_1_blocks.pddl --search "astar(lmcut())"> output.log 2>&1
 fast-downward.py D_gemma_1b_blocks.pddl P_1_blocks.pddl --search "astar(lmcut())"> output.log 2>&1
-
-
+fast-downward.py D_gemma_4b_blocks.pddl P_1_blocks.pddl --search "astar(lmcut())"> output.log 2>&1
+fast-downward.py D_gemma_12b_blocks.pddl P_1_blocks.pddl --search "astar(lmcut())"> output.log 2>&1
+fast-downward.py D_gemma_27b_blocks.pddl P_1_blocks.pddl --search "astar(lmcut())"> output.log 2>&1
 
 
 
@@ -19,5 +22,8 @@ fast-downward.py D_gemma_1b_blocks.pddl P_1_blocks.pddl --search "astar(lmcut())
 validate -v D_gemma_1b_blocks.pddl
 
 //把validate 生成的的验证结果保存到文件中
+validate -v D_Devstral_blocks.pddl > val_debug.txt 2>&1
 validate -v D_gemma_1b_blocks.pddl > val_debug.txt 2>&1
-
+validate -v D_gemma_4b_blocks.pddl > val_debug.txt 2>&1
+validate -v D_gemma_12b_blocks.pddl > val_debug.txt 2>&1
+validate -v D_gemma_27b_blocks.pddl > val_debug.txt 2>&1
