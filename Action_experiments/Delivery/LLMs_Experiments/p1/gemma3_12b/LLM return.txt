@@ -1,0 +1,121 @@
+Okay, here's the complete 'delivery' domain in PDDL, incorporating the 
+requested actions (pick-up, move, drop-off) and using only the provided 
+predicates. I've included a domain header and some initial actions.  I've 
+also added preconditions and effects to each action as described in your 
+prompt.
+
+```pddl
+(define (domain delivery)
+  (:requirements :strips :typing)
+  (:types
+    agent package location
+  )
+
+  (:predicates
+    (at ?a - agent ?l - location)
+    (has ?a - agent ?p - package)
+    (in ?p - package ?l - location)
+    (connected ?from ?to - location)
+    (requested ?p - package ?dest - location)
+    (delivered ?p - package)
+    (available ?a - agent)
+  )
+
+  (:action pick-up
+    :parameters (?a - agent ?p - package ?l - location)
+    :precondition (and
+      (at ?a ?l)
+      (in ?p ?l)
+      (available ?a)
+    )
+    :effect (and
+      (not (in ?p ?l))
+      (has ?a ?p)
+      (not (available ?a))
+    )
+  )
+
+  (:action move
+    :parameters (?a - agent ?from ?to - location)
+    :precondition (and
+      (at ?a ?from)
+      (connected ?from ?to)
+      (available ?a)
+    )
+    :effect (and
+      (at ?a ?to)
+      (not (at ?a ?from))
+      (not (available ?a))
+    )
+  )
+
+  (:action drop-off
+    :parameters (?a - agent ?p - package ?l - location)
+    :precondition (and
+      (at ?a ?l)
+      (has ?a ?p)
+      (requested ?p ?l)
+      (available ?a)
+    )
+    :effect (and
+      (delivered ?p)
+      (not (has ?a ?p))
+      (not (available ?a))
+    )
+  )
+)
+```
+
+**Explanation and Key Points:**
+
+*   **Domain Header:** The `(define (domain delivery))` line starts the 
+domain definition. The `(:requirements)` line specifies the PDDL features 
+used. `:strips` indicates that we're using a basic STRIPS-like 
+representation. `:typing` enables the use of types (agent, package, 
+location).
+*   **Types:** The `(:types)` section defines the types of objects used in 
+the domain.
+*   **Predicates:** The `(:predicates)` section lists the predicates that 
+can be used in preconditions and effects.
+*   **Actions:**
+    *   **`pick-up`:**  An agent picks up a package from a location.
+        *   **Preconditions:** The agent must be at the location, the 
+package must be at the location, and the agent must be available.
+        *   **Effects:** The package is no longer at the location, the 
+agent is carrying the package, and agent is no longer available.
+    *   **`move`:** An agent moves from one location to another.
+        *   **Preconditions:**  The agent must be at the starting 
+location, the two locations must be connected, and the agent must be 
+available.
+        *   **Effects:** The agent is now at the destination location, the 
+agent is no longer at the starting location, and agent is no longer 
+available.
+    *   **`drop-off`:** An agent delivers a package to a location.
+        *   **Preconditions:** The agent must be at the delivery location, 
+the agent must be carrying the package, the package must be requested for 
+that destination, and the agent must be available.
+        *   **Effects:** The package is marked as delivered, the agent is 
+no longer carrying the package, and agent is no longer available.
+
+**How to use it:**
+
+This PDDL domain definition can be used with a PDDL planner to generate 
+plans for delivering packages.  You'll need a problem definition file that 
+specifies the initial state and the goal state.  The planner will then use 
+the domain and problem definitions to find a sequence of actions that 
+achieves the goal.
+
+**Important Considerations:**
+
+*   **Problem Definition:** This domain definition *must* be paired with a 
+problem definition file that specifies the initial state (where the agent 
+is, where the packages are, destinations, agent availability) and the goal 
+state (which packages are delivered).
+*   **More Complex Scenarios:**  This is a very basic model.  Real-world 
+delivery scenarios are much more complex (e.g., multiple agents, traffic, 
+obstacles, loading/unloading, package dependencies).
+*   **`available` predicate:** The `available` predicate is a simple way 
+to model that an agent can only perform one action at a time.  You might 
+need a more sophisticated model of agent availability in a more complex 
+domain.
+

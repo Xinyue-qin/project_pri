@@ -2,14 +2,29 @@
 marp: true
 size: 4:3
 ---
+<!-- -->
+![bg fit](image-8.png)
+<style scoped>
+section {
+  font-family: Calibri;
+  font-size: 15px
+}
+</style>
+<!-- -->
 
+# NL Description Class
+1. Base $N_b(A)$: Base NL descriptions include only information including the action name, parameters, and parameter types of the action, as well as a one-line description of what the action does without explicitly mentioning any predicates. For example: The action "unstack" will have a hand unstack a block x from a block y.
+
+
+2. Flipped $N_f(A)$: Flipped descriptions include the base descriptions with an additional description of all predicates that are deleted preconditions in that action schema, that is, for an action schema $a \in A$, $N_f(a)$ is $N_b(a)$ extended with a description of predicates in $pre(a)\cap del(a)$ as preconditions. The motivation behind this class is to evaluate if predicates that are explicitly changed are the most important things to include in a natural language description for the LLM, as they might be for a person when describing a domain. For example: 'The action ’unstack’ will have a hand unstack a block $x$ from a block $y$, if the block $x$ is clear, on top of $y$, and the hand is empty.'
+---
 <!-- ------------------------- -->
 ![bg fit](image-8.png)
 
 <style scoped>
 section {
   font-family: Calibri;
-  font-size: 25px
+  font-size: 20px
 }
 </style>
 <!-- ------------------------- -->
@@ -145,3 +160,33 @@ name | 111 | 222 | 333 | 444
 :-: | :-: | :-: | :-: | :-:
 aaa | bbb | ccc | ddd | eee| 
 fff | ggg| hhh | iii | 000|
+
+
+--- 
+<!-- -->
+![bg fit](image-8.png)
+<style scoped>
+section {
+  font-family: Calibri;
+  font-size: 23px
+}
+</style>
+<!-- -->
+# Weekly Working Progress 
+1. Reading references to seek and build the NL Description Classes and Result Error Classes, which would be used for further exploration variations and evaluation of LLMs' results;
+2. Exploring the Devstral and Gemma3 capabilities in generating actions in blocksworld by giving the 'base' NL description and using the one-shot prompting method;
+3. Methods: compile new domain file (consists of the predicates given and generated actions) and problems file using Fast Downward, and figure out the error class based on the VAL log file;
+4. Make statistical evaluations based on the error information.
+
+5. using university template to complete project essay, mainly working on the ‘method” and “result” part
+
+---
+
+Questions:
+Should I put these code in the paper?
+
+---
+
+Future work:
+would test more domains;
+would explore 

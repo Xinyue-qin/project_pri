@@ -1,0 +1,6 @@
+Type-checking pick-up
+...action passes type checking.
+Type-checking move
+...action passes type checking.
+Type-checking drop-off
+...action passes type checking.

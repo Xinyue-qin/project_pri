@@ -1,0 +1,3 @@
+(walk h1 base camp)
+(walk h1 camp summit)
+; cost = 2 (unit cost)

@@ -1,0 +1,21 @@
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /opt/anaconda3/bin/python3 /Users/qinxinyue/Desktop/5106/downward/builds/release/bin/translate/translate.py d_hiking.pddl p4.pddl --sas-file output.sas
+Parsing...
+Parsing domain
+	->Parsing axiom/action entry #3
+	->Parsing action #3
+	->Parsing action 'check-weather'
+	->Parsing precondition
+	->Parsing condition
+Expected logical operator or predicate name
+Got: true
+translate exit code: 31
+
+Driver aborting after translate
+INFO     Planner time: 0.05s

@@ -1,0 +1,5 @@
+(pick-up drone medicalpkg depot)
+(move drone depot hospital)
+(move drone hospital disasterarea)
+(drop-off drone medicalpkg disasterarea)
+; cost = 4 (unit cost)

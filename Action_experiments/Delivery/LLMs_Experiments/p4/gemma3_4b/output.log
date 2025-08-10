@@ -1,0 +1,15 @@
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /opt/anaconda3/bin/python3 /Users/qinxinyue/Desktop/5106/downward/builds/release/bin/translate/translate.py d_delivery.pddl p4.pddl --sas-file output.sas
+Parsing...
+Error: Could not parse domain file: d_delivery.pddl
+Reason: Tokens remaining after parsing: ( define ( move ?agent - agent ?from - location ?to - location ) ) ( connected ?from - location ?to - location ) ( at ?agent - agent ?from - location ) ( available ?agent - agent ) ( define ( drop-off ?p - package ?l - location ) ( at ?agent - agent ) ( has ?agent - agent ?p - package ) ( in ?p - package ?l - location ) ( available ?agent - agent ) ) ( define ( deliver ?p - package ) ( in ?p - package ?l - location ) ( delivered ?p - package ) ( available ?agent - agent ) )
+translate exit code: 31
+
+Driver aborting after translate
+INFO     Planner time: 0.05s

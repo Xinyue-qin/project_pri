@@ -1,0 +1,3 @@
+(walk h1 a b)
+(walk h1 b d)
+; cost = 2 (unit cost)

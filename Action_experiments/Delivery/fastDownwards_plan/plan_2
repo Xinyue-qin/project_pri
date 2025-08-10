@@ -1,0 +1,7 @@
+(pick-up robot2 pkgb loc1)
+(drop-off robot2 pkgb loc1)
+(pick-up robot2 pkga loc1)
+(move robot2 loc1 loc2)
+(move robot2 loc2 loc3)
+(drop-off robot2 pkga loc3)
+; cost = 6 (unit cost)

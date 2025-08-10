@@ -1,0 +1,15 @@
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /opt/anaconda3/bin/python3 /Users/qinxinyue/Desktop/5106/downward/builds/release/bin/translate/translate.py d_gemma3_4b_logistics.pddl p3.pddl --sas-file output.sas
+Parsing...
+Error: Could not parse domain file: d_gemma3_4b_logistics.pddl
+Reason: Tokens remaining after parsing: ( define ( unload ?p ?v ?l ) ( at ?p ?l ) ( in ?p ?v ) ( loc ?l ?c ) ) ( define ( drive ?v ?l1 ?l2 ) ( loc ?l1 ?c ) ( loc ?l2 ?c ) ( at ?v ?l1 ) ( at ?v ?l2 ) ) ( define ( fly ?p ?v ?l1 ?l2 ) ( loc ?l1 ?c ) ( loc ?l2 ?c ) ( at ?v ?l1 ) ( at ?v ?l2 ) ( in ?p ?v ) )
+translate exit code: 31
+
+Driver aborting after translate
+INFO     Planner time: 0.05s

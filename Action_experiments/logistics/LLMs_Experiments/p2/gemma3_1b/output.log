@@ -1,0 +1,15 @@
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /opt/anaconda3/bin/python3 /Users/qinxinyue/Desktop/5106/downward/builds/release/bin/translate/translate.py d_gemma3_1b_logistics.pddl p2.pddl --sas-file output.sas
+Parsing...
+Error: Could not parse domain file: d_gemma3_1b_logistics.pddl
+Reason: Tokens remaining after parsing: ( define action load ( :intent 'move ) ( :specifies 'location 'newyork ) ( :precondition 'object 'package ) ( :effect 'vehicle 'truck ) ( :extend 'vehicle 'truck 'newyork' ) ) ( define action unload ( :intent 'remove ) ( :specifies 'location 'newyork ) ( :precondition 'object 'vehicle ) ( :effect 'vehicle 'truck ) ( :extend 'vehicle 'truck 'newyork' ) ) ( define action drive ( :intent 'move ) ( :specifies 'location 'unknown ) ( :precondition 'vehicle 'truck ) ( :effect 'truck 'location 'newyork' ) ) ( define action fly ( :intent 'move ) ( :specifies 'location 'unknown ) ( :precondition 'airplane 'truck ) ( :effect 'airplane 'location 'newyork' ) ) ( define action locate ( :intent 'find ) ( :specifies 'location 'newyork ) ( :precondition 'object 'truck ) ( :effect 'truck 'location 'newyork' ) )
+translate exit code: 31
+
+Driver aborting after translate
+INFO     Planner time: 0.05s

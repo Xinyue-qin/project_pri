@@ -1,0 +1,75 @@
+... 
+Sure, I can help with that. Let's start by defining the PDDL domain for hiking 
+using the allowed predicates you've provided. Here are the actions as specified:
+
+1. **walk**: A hiker moves from one location to another.
+2. **rest**: A hiker recovers energy at a location.
+3. **check-weather**: Updates the weather status of a location.
+
+Let's write these actions in PDDL format and combine them into a complete domain 
+definition:
+
+```pddl
+(define (domain hiking)
+  (:requirements :strips :typing)
+
+  ;; Define types for hiker and location
+  (:types hiker location)
+
+  ;; Define predicates
+  (:predicates
+    (at ?h - hiker ?l - location)
+    (rained ?l - location)
+    (has-energy ?h - hiker)
+    (path-clear ?from - location ?to - location)
+  )
+
+  ;; Action: walk
+  (:action walk
+    :parameters (?h - hiker ?from - location ?to - location)
+    :precondition (and (at ?h ?from) (has-energy ?h) (path-clear ?from ?to))
+    :effect (and (not (at ?h ?from)) (at ?h ?to))
+  )
+
+  ;; Action: rest
+  (:action rest
+    :parameters (?h - hiker ?l - location)
+    :precondition (and (at ?h ?l) (has-energy ?h))
+    :effect (and (not (has-energy ?h)))
+  )
+
+  ;; Action: check-weather
+  (:action check-weather
+    :parameters (?l - location)
+    :precondition (true)
+    :effect (rained ?l)
+  )
+)
+
+;; Notes:
+;;
+;; The `walk` action allows a hiker to move from one location to another if the 
+path is clear and the hiker has energy.
+;; The `rest` action allows a hiker to rest at a location, which would likely need 
+more specifics about how energy is regained.
+;; The `check-weather` action updates whether it's raining at a specific location.
+
+```
+
+This PDDL domain definition includes:
+
+1. **Types**: Defined types for `hiker` and `location`.
+2. **Predicates**:
+   - `(at ?h ?l)`: A hiker is currently at a specific location.
+   - `(rained ?l)`: Indicates whether it is raining at a given location.
+   - `(has-energy ?h)`: A hiker has sufficient energy to perform actions.
+   - `(path-clear ?from ?to)`: A traversable path exists between two locations.
+
+3. **Actions**:
+   - `walk`: Moves the hiker from one location to another if there is a clear path 
+and the hiker has energy.
+   - `rest`: Allows the hiker to rest at a location (though this action would need 
+more details on how energy is regained).
+   - `check-weather`: Updates the weather status of a location.
+
+You can use this domain definition as part of your planning problem.

@@ -1,0 +1,8 @@
+Type-checking walk
+...action passes type checking.
+Type-checking rest
+...action passes type checking.
+Type-checking check-weather
+Predicate true not found
+Conditions fail type-checking.
+Type problem in domain description!

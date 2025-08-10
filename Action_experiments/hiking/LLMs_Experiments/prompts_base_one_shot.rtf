@@ -1,0 +1,30 @@
+{\rtf1\ansi\ansicpg936\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red24\green26\blue30;\red255\green255\blue255;\red0\green0\blue0;
+\red231\green231\blue231;}
+{\*\expandedcolortbl;;\cssrgb\c12157\c13725\c15686;\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c0\c0;
+\cssrgb\c92549\c92549\c92549;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa320\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 Given descriptions of each action in some domain, convert it to Planning Domain Definition Language (PDDL) action. You need to return me the complete \'91hiking\'92 domain with the predicates I give you and new actions you generated. You may only use the allowed predicates for each action.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab20\partightenfactor0
+\cf4 Allowed Predicates:\
+
+\f1 \cb5 (at ?h - hiker ?l - location)
+\f0 \cb3 : A hiker is currently at a specific location.\
+
+\f1 \cb5 (rained ?l - location)
+\f0 \cb3 : Indicates whether it is raining at a given location.\
+
+\f1 \cb5 (has-energy ?h - hiker)
+\f0 \cb3 : A hiker has sufficient energy to perform actions.\
+
+\f1 \cb5 (path-clear ?from ?to - location)
+\f0 \cb3 : A traversable path exists between two locations.\
+\
+Output: The action "walk" will have a hiker go from one location to another;  the action "rest" will have a hiker recover at a location; the action "check-weather" will have a location's weather status updated.\
+\
+PPDL Action:\
+}
