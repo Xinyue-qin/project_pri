@@ -1,1 +1,8 @@
-Problem in domain definition!
+Type-checking putdown
+...action passes type checking.
+Type-checking pickup
+...action passes type checking.
+Type-checking stack
+...action passes type checking.
+Type-checking unstack
+...action passes type checking.

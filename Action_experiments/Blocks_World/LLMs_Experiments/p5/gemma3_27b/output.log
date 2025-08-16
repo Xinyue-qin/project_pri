@@ -5,12 +5,13 @@ INFO     Running translator.
 INFO     translator stdin: None
 INFO     translator time limit: None
 INFO     translator memory limit: None
-INFO     translator command line string: /opt/anaconda3/bin/python3 /Users/qinxinyue/Desktop/5106/downward/builds/release/bin/translate/translate.py D_gemma_27b_blocks.pddl P_5_blocks.pddl --sas-file output.sas
+INFO     translator command line string: /opt/anaconda3/bin/python3 /Users/qinxinyue/Desktop/5106/downward/builds/release/bin/translate/translate.py d_blocksworld.pddl P_5_blocks.pddl --sas-file output.sas
 Parsing...
-Parsing domain
-Expected a non-empty block starting with any of the following words: :requirements, :types, :constants, :predicates, :functions, :derived, :action
-Got: (define (action putdown :parameters (?x - block) :precondition (holding ?x) :effect (and (arm-empty) (on-table ?x))) (define (action pickup :parameters (?x - block) :precondition (and (arm-empty) (on-table ?x) (clear ?x)) :effect (and (holding ?x) (not (on-table ?x)) (not (clear ?x)))) (define (action stack :parameters (?x - block ?y - block) :precondition (and (holding ?x) (clear ?y)) :effect (and (on ?x ?y) (arm-empty) (not (holding ?x)) (not (clear ?y)))) (define (action unstack :parameters (?x - block ?y - block) :precondition (and (on ?x ?y) (clear ?x) (arm-empty)) :effect (and (holding ?x) (clear ?y) (not (on ?x ?y)) (not (arm-empty))))))))
-translate exit code: 31
+Parsing: [0.000s CPU, 0.001s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... b'Traceback (most recent call last):\n  File "/Users/qinxinyue/Desktop/5106/downward/builds/release/bin/translate/translate.py", line 747, in <module>\n    main()\n  File "/Users/qinxinyue/Desktop/5106/downward/builds/release/bin/translate/translate.py", line 718, in main\n    sas_task = pddl_to_sas(task)\n               ^^^^^^^^^^^^^^^^^\n  File "/Users/qinxinyue/Desktop/5106/downward/builds/release/bin/translate/translate.py", line 547, in pddl_to_sas\n    reachable_action_params) = instantiate.explore(task)\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/qinxinyue/Desktop/5106/downward/builds/release/bin/translate/instantiate.py", line 116, in explore\n    prog = pddl_to_prolog.translate(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/qinxinyue/Desktop/5106/downward/builds/release/bin/translate/pddl_to_prolog.py", line 167, in translate\n    translate_facts(prog, task)\n  File "/Users/qinxinyue/Desktop/5106/downward/builds/release/bin/translate/pddl_to_prolog.py", line 153, in translate_facts\n    translate_typed_object(prog, obj, type_dict)\n  File "/Users/qinxinyue/Desktop/5106/downward/builds/release/bin/translate/pddl_to_prolog.py", line 146, in translate_typed_object\n    supertypes = type_dict[obj.type_name].supertype_names\n                 ~~~~~~~~~^^^^^^^^^^^^^^^\nKeyError: \'block\'\n'
+translate exit code: 30
 
 Driver aborting after translate
 INFO     Planner time: 0.05s

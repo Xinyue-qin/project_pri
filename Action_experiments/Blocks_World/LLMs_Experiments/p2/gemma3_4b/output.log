@@ -5,11 +5,17 @@ INFO     Running translator.
 INFO     translator stdin: None
 INFO     translator time limit: None
 INFO     translator memory limit: None
-INFO     translator command line string: /opt/anaconda3/bin/python3 /Users/qinxinyue/Desktop/5106/downward/builds/release/bin/translate/translate.py D_gemma_4b_blocks.pddl P_2_blocks.pddl --sas-file output.sas
+INFO     translator command line string: /opt/anaconda3/bin/python3 /Users/qinxinyue/Desktop/5106/downward/builds/release/bin/translate/translate.py d_blocksworld.pddl P_2_blocks.pddl --sas-file output.sas
 Parsing...
 Parsing domain
-Expected a non-empty block starting with any of the following words: :requirements, :types, :constants, :predicates, :functions, :derived, :action
-Got: action
+	->Parsing axiom/action entry #1
+	->Parsing action #1
+	->Parsing action 'pickup'
+	->Parsing precondition
+	->Parsing condition
+	->Parsing literal
+Undefined object
+Got: -
 translate exit code: 31
 
 Driver aborting after translate
