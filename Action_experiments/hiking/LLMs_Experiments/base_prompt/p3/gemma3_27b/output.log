@@ -1,0 +1,15 @@
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /opt/anaconda3/bin/python3 /Users/qinxinyue/Desktop/5106/downward/builds/release/bin/translate/translate.py d_hiking.pddl p3.pddl --sas-file output.sas
+Parsing...
+Error: Could not parse task file: p3.pddl
+Reason: Tokens remaining after parsing: ( :domain hiking ) ( :objects h1 - hiker start mid end - location ) ( :init ( at h1 start ) ( path-clear start mid ) ( path-clear mid end ) ( not ( has-energy h1 ) ) ) ( :goal ( at h1 end ) )
+translate exit code: 31
+
+Driver aborting after translate
+INFO     Planner time: 0.05s

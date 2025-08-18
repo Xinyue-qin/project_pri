@@ -1,0 +1,5 @@
+(check-weather trail)
+(walk h1 lodge trail)
+(rest h1 trail)
+(walk h1 trail peak)
+; cost = 4 (unit cost)

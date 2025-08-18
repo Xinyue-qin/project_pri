@@ -1,0 +1,41 @@
+```pddl
+(define (domain logistics)
+  (:requirements :strips)
+
+  (:types physobj vehicle package location city airport truck)
+
+  (:predicates
+    (loc ?l - location ?c - city)
+    (at ?x - physobj ?l - location)
+    (in ?p - package ?v - vehicle)
+  )
+
+  ;; Action: load
+  (:action load
+    :parameters (?x - physobj ?v - vehicle ?l - location)
+    :precondition (and (at ?x ?l) (at ?v ?l))
+    :effect (and (in ?x ?v) (not (at ?x ?l)))
+  )
+
+  ;; Action: unload
+  (:action unload
+    :parameters (?x - physobj ?v - vehicle ?l - location)
+    :precondition (and (in ?x ?v) (at ?v ?l))
+    :effect (and (at ?x ?l) (not (in ?x ?v)))
+  )
+
+  ;; Action: drive
+  (:action drive
+    :parameters (?t - truck ?from - location ?to - location)
+    :precondition (and (loc ?from ?c) (loc ?to ?c) (at ?t ?from))
+    :effect (and (at ?t ?to) (not (at ?t ?from)))
+  )
+
+  ;; Action: fly
+  (:action fly
+    :parameters (?a - airplane ?from - airport ?to - airport)
+    :precondition (at ?a ?from)
+    :effect (and (at ?a ?to) (not (at ?a ?from)))
+  )
+)
+```

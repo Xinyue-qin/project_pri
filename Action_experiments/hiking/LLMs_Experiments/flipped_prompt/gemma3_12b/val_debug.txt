@@ -1,0 +1,6 @@
+Type-checking walk
+...action passes type checking.
+Type-checking rest
+...action passes type checking.
+Type-checking check-weather
+...action passes type checking.

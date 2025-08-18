@@ -1,0 +1,39 @@
+```pddl
+% blocksworld-4ops
+% This domain defines actions for manipulating blocks on a table.
+
+% Predicates
+(arm-empty)
+(holding ?x - block)
+(clear ?x - block)
+(on ?x - block ?y - block)
+(on-table ?x - block)
+
+% Actions
+
+(define-action pickup-block
+  :parameters (?x - block)
+  :precondition (and (clear ?x - block) (arm-empty))
+  :effect (and (holding ?x - block) (not (arm-empty)))
+)
+
+(define-action putdown-block
+  :parameters (?x - block)
+  :precondition (and (holding ?x - block) (arm-empty))
+  :effect (and (not (holding ?x - block)) (not (arm-empty)))
+)
+
+(define-action stack-block
+  :parameters (?x - block ?y - block)
+  :precondition (and (holding ?x - block) (clear ?y - block))
+  :effect (and (not (holding ?x - block)) (on ?x - block ?y - block) (not 
+(arm-empty)))
+)
+
+(define-action unstack-block
+  :parameters (?x - block ?y - block)
+  :precondition (and (on ?x - block ?y - block) (clear ?x - block) 
+(arm-empty))
+  :effect (and (not (on ?x - block ?y - block)) (not (arm-empty)))
+)
+```

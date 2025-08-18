@@ -1,0 +1,17 @@
+Given descriptions of each action in some domain, convert it to Planning Domain Definition Language (PDDL) action. You need to return me the complete ‘delivery’ domain with the predicates I give you and new actions you generated. You may only use the allowed predicates for each action.
+
+Allowed Predicates:
+(at ?a - agent ?l - location): an agent a is at location l.
+(has ?a - agent ?p - package): agent a is carrying package p.
+(in ?p - package ?l - location): package p is at location l.
+(connected ?from ?to - location): locations are directly connected.
+(requested ?p - package ?dest - location): package p needs to be delivered to dest.
+(delivered ?p - package): package p has been delivered.
+(available ?a - agent): agent a is free to perform tasks.
+
+Output:
+The action "pick-up" will have an agent take a package from a location, if the agent is at the location, the package is at the location, and the agent is available (and the package will no longer be at the location after pickup).
+The action "move" will transport an agent between two locations, if the agent is at the source location, the locations are connected, and the agent is available (and the agent will no longer be at the source location after moving).
+The action "drop-off" will have an agent deliver a package to a location, if the agent is carrying the package, the agent is at the destination location, and the package is requested to be delivered there (and the agent will no longer be carrying the package after drop-off).
+
+PDDL domain code with generated action:

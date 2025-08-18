@@ -1,0 +1,63 @@
+Okay, here’s the complete PDDL domain code with generated actions, 
+incorporating the provided predicates:
+
+```pddl
+(define domain delivery
+  (:type domain)
+  (:extend domain existing-domain)
+
+  (:capability existing-domain)
+  (:capability delivery)
+
+  (:predicate pick-up
+    :agent ?a
+      :location ?l
+      :package ?p
+      :available ?a
+    :and
+    :package in ?l)
+
+  (:predicate move
+    :agent ?a
+      :source-location ?l
+      :locations connected ?from ?to
+      :available ?a
+      :and
+      :package requested-to ?dest)
+
+  (:predicate drop-off
+    :agent ?a
+      :package ?p
+      :destination ?dest
+      :available ?a
+      :and
+      :package delivered-from ?l)
+)
+```
+
+**Explanation:**
+
+*   **`(:extend domain delivery ...)`**: This extends the existing domain.
+*   **`(:type domain ...)`**: Specifies the domain type, which is a domain 
+definition.
+*   **`(:capability existing-domain)`**:  This allows the domain to 
+perform the tasks defined.
+*   **`(:capability delivery)`**: Allows the domain to perform the tasks 
+defined.
+*   **`(:predicate ...)`**: Defines the predicates for each action.
+*   **`pick-up`**: Agent takes a package from a location, if the agent is 
+at the location, the package is at the location, and the agent is 
+available (and the package will no longer be at the location after 
+pickup).
+*   **`move`**: Agent moves between two locations, if the agent is 
+at the source location, the locations are connected, and the agent is 
+available (and the agent will no longer be at the source location after 
+moving).
+*   **`drop-off`**: Agent delivers a package to a location, if the agent 
+is carrying the package, the agent is at the destination location, and the 
+package is requested to be delivered there (and the agent will no longer 
+be carrying the package after drop-off).
+
+This code represents the domain and the actions we've defined.  Let me 
+know if you’d like me to elaborate on any part of this or add any new 
+predicates!

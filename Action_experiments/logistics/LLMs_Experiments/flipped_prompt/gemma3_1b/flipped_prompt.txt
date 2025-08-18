@@ -1,0 +1,8 @@
+Given descriptions of each action in some domain, convert it to Planning Domain Definition Language (PDDL) action. You need to return me the complete 'logistics' domain with the predicates I give you and new actions you generated. You may only use the allowed predicates for each action. Allowed Predicates: (loc ?l - location ?c - city): a location l is in a city c. (at ?x - physobj ?l - location): a physical object x is at a location l. (in ?p - package ?v - vehicle): a package p is in a vehicle v.
+Output:  
+The action "load" will place an object into a vehicle at a location, if the vehicle is at the location and the object is at the location;
+The action "unload" will remove an object from a vehicle at a location, if the object is in the vehicle and the vehicle is at the location;
+The action "drive" will move a truck between locations within a city, if the truck is at the starting location and both locations are in the same city;
+The action "fly" will transport an airplane between airports, if the airplane is at the starting airport;
+PDDL domain code with generated action:
+

@@ -1,0 +1,42 @@
+```pddl
+MODULE main
+-- Define the domain
+(define domain logistics
+  [(loc city)
+   (at physobj city)
+   (in physobj city)
+   (in physobj)]
+
+-- Define predicates
+(define action load
+  (:domain logistics)
+  (:extend origin .?l)
+  (:operation load
+    :predicates (and (loc ?l) (at ?x) )
+    :parameters (none)
+  ))
+
+(define action unload
+  (:domain logistics)
+  (:extend origin .?p)
+  (:operation unload
+    :predicates (and (at ?p) (in ?v) )
+    :parameters (none)
+  ))
+
+(define action drive
+  (:domain logistics)
+  (:extend origin .?v)
+  (:operation drive
+    :predicates (and (at ?v) (loc ?l) )
+    :parameters (none)
+  ))
+
+(define action fly
+  (:domain logistics)
+  (:extend origin .?a)
+  (:operation fly
+    :predicates (and (at ?a) (loc ?l))
+    :parameters (none)
+  ))
+```

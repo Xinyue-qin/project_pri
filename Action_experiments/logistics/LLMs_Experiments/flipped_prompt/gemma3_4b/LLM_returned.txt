@@ -1,0 +1,38 @@
+```pddl
+% Logistics Domain
+
+% Predicates
+(loc ?l - location ?c - city)
+(at ?x - physobj ?l - location)
+(in ?p - package ?v - vehicle)
+
+% Actions
+
+% Load
+(load ?p - package ?v - vehicle ?l - location) =>
+  (at ?p - package ?l - location)
+  (in ?p - package ?v - vehicle)
+  (at ?v - vehicle ?l - location)
+
+% Unload
+(unload ?p - package ?v - vehicle ?l - location) =>
+  (at ?p - package ?l - location)
+  (in ?p - package ?v - vehicle)
+  (at ?v - vehicle ?l - location)
+
+% Drive
+(drive ?t - truck ?s ?d) =>
+  (loc ?s - city)
+  (loc ?d - city)
+  (at ?t - truck ?s - city)
+  (sameCity ?s ?d)
+
+% Fly
+(fly ?a - airplane ?s) =>
+  (at ?a - airplane ?s)
+  (at ?a - airplane ?s)
+
+% sameCity
+(sameCity ?c1 - city ?c2 - city) =>
+  true
+```

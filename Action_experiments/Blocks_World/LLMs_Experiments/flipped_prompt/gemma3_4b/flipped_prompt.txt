@@ -1,0 +1,21 @@
+Given descriptions of each action in some domain, convert it to Planning Domain Definition Language (PDDL) action. You need to return me the complete new 'blocksworld-4ops' domain with the predicates I have given you and the new actions you generate. You may only use the allowed predicates for each action.
+Allowed Predicates:
+
+(arm-empty) : the robot arm is empty.
+
+(holding ?x - block): block x is held.
+
+(clear ?x - block): block x is clear.
+
+(on ?x - block ?y - block) : block x is on block y.
+
+(on-table ?x - block): block x is on the table.
+
+Output:
+The action "putdown" will have the robot arm put down a block, if the robot arm is holding that block.
+The action "pickup" will have the robot arm pick up a block, if the block is clear, on the table, and the robot arm is empty.
+The action "stack" will have the robot arm stack one block on another block, if the robot arm is holding the first block and the second block is clear.
+The action "unstack" will have the robot arm pick up a block that was stacked on another block, if the top block is clear, on top of the bottom block, and the robot arm is empty.
+
+PDDL domain code with generated action:
+

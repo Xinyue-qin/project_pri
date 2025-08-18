@@ -1,0 +1,39 @@
+```pddl
+(define (domain blocksworld-4ops)
+  (:requirements :strips)
+  (:predicates
+    (arm-empty)
+    (holding ?x - block)
+    (clear ?x - block)
+    (on ?x - block ?y - block)
+    (on-table ?x - block)
+  )
+
+  (:action pickup
+    :parameters (?x - block)
+    :precondition (and (arm-empty) (clear ?x) (on-table ?x))
+    :effect (and (not (arm-empty)) (holding ?x) (not (clear ?x)) (not 
+(on-table ?x)))
+  )
+
+  (:action putdown
+    :parameters (?x - block)
+    :precondition (holding ?x)
+    :effect (and (arm-empty) (not (holding ?x)) (clear ?x) (on-table ?x))
+  )
+
+  (:action stack
+    :parameters (?x - block ?y - block)
+    :precondition (and (holding ?x) (clear ?y))
+    :effect (and (arm-empty) (not (holding ?x)) (on ?x ?y) (clear ?x) (not 
+(clear ?y)))
+  )
+
+  (:action unstack
+    :parameters (?x - block ?y - block)
+    :precondition (and (arm-empty) (on ?x ?y) (clear ?x))
+    :effect (and (not (arm-empty)) (holding ?x) (clear ?y) (not (clear 
+?x)) (not (on ?x ?y)))
+  )
+)
+```

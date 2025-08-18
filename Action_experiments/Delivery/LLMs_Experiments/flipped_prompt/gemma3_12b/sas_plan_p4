@@ -1,0 +1,7 @@
+(pick-up courier2 normalpkg station)
+(move courier2 station client)
+(drop-off courier2 normalpkg client)
+(pick-up courier1 urgentpkg warehouse)
+(move courier1 warehouse client)
+(drop-off courier1 urgentpkg client)
+; cost = 6 (unit cost)

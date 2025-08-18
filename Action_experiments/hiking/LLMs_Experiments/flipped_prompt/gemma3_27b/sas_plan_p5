@@ -1,0 +1,8 @@
+(check-weather danger-zone)
+(rest h1 base)
+(walk h1 base rest-area)
+(rest h1 rest-area)
+(walk h1 rest-area danger-zone)
+(rest h1 danger-zone)
+(walk h1 danger-zone summit)
+; cost = 7 (unit cost)

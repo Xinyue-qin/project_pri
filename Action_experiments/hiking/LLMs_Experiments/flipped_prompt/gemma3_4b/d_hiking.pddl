@@ -1,0 +1,34 @@
+% Hiking Domain
+
+% Predicates
+(at ?h ?l)
+(rained ?l)
+(has-energy ?h)
+(path-clear ?from ?to)
+
+% Actions
+
+% Walk
+(define action walk)
+(parameters ?h ?from ?to)
+(body
+  (at ?h ?from)
+  (path-clear ?from ?to)
+  (not (rained ?to))
+  (not (at ?h ?to))
+)
+
+% Rest
+(define action rest)
+(parameters ?h)
+(body
+  (not (has-energy ?h))
+  (has-energy ?h)
+)
+
+% Check Weather
+(define action check-weather)
+(parameters ?l)
+(body
+  (not (rained ?l))
+)

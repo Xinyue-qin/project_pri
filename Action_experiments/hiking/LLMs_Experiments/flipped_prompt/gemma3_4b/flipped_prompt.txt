@@ -1,0 +1,6 @@
+Given descriptions of each action in some domain, convert it to Planning Domain Definition Language (PDDL) action. You need to return me the complete 'hiking' domain with the predicates I give you and new actions you generated. You may only use the allowed predicates for each action. Allowed Predicates: (at ?h - hiker ?l - location): A hiker is currently at a specific location. (rained ?l - location): Indicates whether it is raining at a given location. (has-energy ?h - hiker): A hiker has sufficient energy to perform actions. (path-clear ?from ?to - location): A traversable path exists between two locations.
+Output:
+The action "walk" will have a hiker go from one location to another, if the hiker is at the starting location, there's a clear path to the destination, and it's not raining at the destination location. This action will make the hiker no longer be at the starting location;
+The action "rest" will have a hiker recover at a location. This action will give the hiker energy;
+The action "check-weather" will have a location's weather status updated. This action will make it stop raining at that location.
+PDDL domain code with generated action:

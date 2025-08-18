@@ -1,0 +1,18 @@
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /opt/anaconda3/bin/python3 /Users/qinxinyue/Desktop/5106/downward/builds/release/bin/translate/translate.py d_hiking.pddl p2.pddl --sas-file output.sas
+Parsing...
+Parsing domain
+	->Parsing domain name
+Expected a non-empty block starting with any of the following words: domain
+Syntax: (domain NAME)
+Got: domain
+translate exit code: 31
+
+Driver aborting after translate
+INFO     Planner time: 0.05s
