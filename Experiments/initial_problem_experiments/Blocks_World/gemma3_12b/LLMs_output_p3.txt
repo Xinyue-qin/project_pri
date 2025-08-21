@@ -1,0 +1,53 @@
+Okay, you've identified the core issue: the initial state prevents the 
+goals from being reached due to the existing block placements.  The 
+current initial state makes it impossible to achieve the goal because A is 
+already under B, and moving A freely is blocked.
+
+Here's an achievable initial state in PDDL, designed to allow the goals to 
+be reached without directly stating the goals themselves.  This 
+alternative focuses on a minimal, stable starting arrangement from which 
+the desired block configuration can be built.
+
+```pddl
+(define (problem complex-rearrange)
+  (:domain blocksworld-4ops)
+  (:objects A B C D - block)
+  (:init
+    (arm-empty)
+    (clear A)
+    (on-table A)
+    (clear B)
+    (on-table B)
+    (clear C)
+    (on-table C)
+    (clear D)
+    (on-table D)
+  )
+  (:goal (and
+    (on A B)
+    (on B C)
+    (on C D)
+    (on-table D)
+  ))
+```
+
+**Explanation of the Change:**
+
+*   **Blocks on Table:** The key is that all blocks start on the table. 
+This allows the `pickup` action to be used to move them into the desired 
+configuration.  The original state `(on B A)` and `(on D C)` effectively 
+"glued" the blocks together making them impossible to move.
+*   **Arm Empty:** The arm starts empty which is standard.
+*   **Clear:**  All blocks are clear (nothing is on top of them) in the 
+initial state.
+
+**Why this works:**
+
+This initial state provides a clean slate. The robot can pick up each 
+block individually and stack them in the desired order (A -> B -> C -> D), 
+ending with D on the table.  This avoids the constraints imposed by the 
+original state.
+
+This solution addresses your concern about incompleteness while providing 
+a solvable initial state and maintains the original problem goals.
+

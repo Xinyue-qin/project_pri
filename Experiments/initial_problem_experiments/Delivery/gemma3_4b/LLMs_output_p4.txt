@@ -1,0 +1,38 @@
+```pddl
+(define (problem delivery-competition-alternative)
+  (:domain delivery)
+  (:objects
+    courier1 courier2 - agent
+    urgentPkg normalPkg - package
+    warehouse station client - location
+  )
+  (:init
+    (at courier1 warehouse)
+    (at courier2 station)
+    (connected station client)
+    (requested urgentPkg client)
+    (requested normalPkg client)
+    (available courier1)(available courier2)
+    (in urgentPkg warehouse)
+    (in normalPkg warehouse)
+  )
+  (:goal (and (delivered urgentPkg)(delivered normalPkg))))
+```
+
+**Explanation of Changes:**
+
+The original problem was unsolvable because the `urgentPkg` and 
+`normalPkg` were initially just declared as `requested` but not actually 
+*at* the `warehouse`.  This meant neither courier could immediately pick 
+them up.
+
+The solution adds these lines to the `:init` section:
+
+*   `(in urgentPkg warehouse)`
+*   `(in normalPkg warehouse)`
+
+This places both packages at the `warehouse`, which is the initial 
+location for the couriers.  Now, the `pick-up` action can be executed by 
+either courier, and the planning algorithm can proceed towards achieving 
+the goal of delivering both packages.  This simple change transforms the 
+unsolvable problem into one that the planning system can handle.

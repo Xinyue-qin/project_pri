@@ -1,0 +1,44 @@
+To make this problem solvable, we need to complete the initial state with 
+all necessary information that allows for a valid plan to be generated. In 
+this case, the robot needs to start at a location where it can pick up the 
+package, and the package needs to be at a specific location.
+
+Here's an alternative initial state in PDDL:
+
+```pddl
+(:init
+  (connected locA locB)
+  (requested pkg1 locB)
+  (available robot1)
+  (at robot1 locA)          ; Robot starts at location A
+  (in pkg1 locA)            ; Package is at location A
+)
+```
+
+With this initial state, the robot can pick up the package at `locA`, move 
+to `locB`, and drop off the package there. This should make the planning 
+task solvable.
+
+Here's the full problem description with the updated initial state:
+
+```pddl
+(define (problem delivery-basic)
+  (:domain delivery)
+  (:objects
+    robot1 - agent
+    pkg1 - package
+    locA locB - location
+  )
+  (:init
+    (connected locA locB)
+    (requested pkg1 locB)
+    (available robot1)
+    (at robot1 locA)          ; Robot starts at location A
+    (in pkg1 locA)            ; Package is at location A
+  )
+  (:goal (delivered pkg1))
+)
+```
+
+This should provide a complete initial state that allows for achieving the 
+goal of delivering `pkg1`.

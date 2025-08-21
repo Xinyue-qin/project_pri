@@ -1,0 +1,17 @@
+```pddl
+(define (problem tower-reversal-alt)
+  (:domain blocksworld-4ops)
+  (:objects A B C - block)
+  (:init (on B A) (on C B)
+         (clear C) (arm-empty))
+  (:goal (and (on-table C) (on B C) (on A B))))
+```
+
+**Explanation of the changes and why it works:**
+
+The original problem was unsolvable because the initial state lacked the 
+`arm-empty` predicate. The `pickup` action requires an empty arm.  We've 
+added `(arm-empty)` to the initial state.  This ensures the agent begins 
+with an empty arm, and the `pickup` action can proceed to lift block `A` 
+and place it on block `B`.  The goal remains the same: to reverse the 
+tower by placing `C` on the table and `B` on `C`.

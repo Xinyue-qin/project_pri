@@ -1,0 +1,51 @@
+To make this problem solvable, we need to specify where each package is 
+located initially and also ensure that all locations are properly 
+connected so that couriers can reach both packages.
+
+Here's an alternative initial state in PDDL with this information:
+
+```pddl
+(:init
+  (at courier1 warehouse)
+  (at courier2 station)
+  (in urgentPkg warehouse) ; Urgent package is at the warehouse
+  (in normalPkg station)   ; Normal package is at the station
+  (connected warehouse station) ; Connect warehouse to station
+  (connected station client)    ; Connect station to client location
+  (requested urgentPkg client)
+  (requested normalPkg client)
+  (available courier1)
+  (available courier2)
+)
+```
+
+With this initial state, both couriers can pick up their respective 
+packages and deliver them to the client. Here's the full problem 
+description with the updated initial state:
+
+```pddl
+(define (problem delivery-competition)
+  (:domain delivery)
+  (:objects
+    courier1 courier2 - agent
+    urgentPkg normalPkg - package
+    warehouse station client - location
+  )
+  (:init
+    (at courier1 warehouse)
+    (at courier2 station)
+    (in urgentPkg warehouse) ; Urgent package is at the warehouse
+    (in normalPkg station)   ; Normal package is at the station
+    (connected warehouse station) ; Connect warehouse to station
+    (connected station client)    ; Connect station to client location
+    (requested urgentPkg client)
+    (requested normalPkg client)
+    (available courier1)
+    (available courier2)
+  )
+  (:goal (and (delivered urgentPkg)(delivered normalPkg)))
+)
+```
+
+This should provide a complete initial state that allows for achieving the 
+goal of delivering both `urgentPkg` and `normalPkg`.

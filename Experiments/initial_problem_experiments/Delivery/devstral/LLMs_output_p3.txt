@@ -1,0 +1,47 @@
+To make this problem solvable, we need to specify that both robots are 
+available for actions. The current initial state doesn't mention whether 
+`robotA` or `robotB` is available.
+
+Here's an alternative initial state in PDDL with this information:
+
+```pddl
+(:init
+  (at robotA locX)
+  (at robotB locZ)
+  (in pkgX locX)
+  (connected locX locY)
+  (connected locY locZ)
+  (requested pkgX locZ)
+  (available robotA) ; Robot A is available for actions
+  (available robotB) ; Robot B is available for actions
+)
+```
+
+With this initial state, the robots can collaborate to deliver `pkgX` from 
+`locX` to `locZ`. Here's the full problem description with the updated 
+initial state:
+
+```pddl
+(define (problem delivery-relay)
+  (:domain delivery)
+  (:objects
+    robotA robotB - agent
+    pkgX - package
+    locX locY locZ - location
+  )
+  (:init
+    (at robotA locX)
+    (at robotB locZ)
+    (in pkgX locX)
+    (connected locX locY)
+    (connected locY locZ)
+    (requested pkgX locZ)
+    (available robotA) ; Robot A is available for actions
+    (available robotB) ; Robot B is available for actions
+  )
+  (:goal (delivered pkgX))
+)
+```
+
+This should provide a complete initial state that allows for achieving the 
+goal of delivering `pkgX` using both robots.

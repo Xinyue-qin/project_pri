@@ -1,0 +1,25 @@
+Certainly! The problem statement mentions that the goal is to achieve a specific 
+configuration of blocks (A on B, B on C, and C remaining on-table). However, the 
+current initial state might be incomplete or incorrect.
+
+To make this planning task solvable, we need to provide an alternative initial state 
+where the goals can be achieved. Since the problem description already specifies that 
+all three blocks are clear and on-table in the initial state, we'll need to consider a 
+different configuration of these blocks that still allows us to reach the goal without 
+directly including the goal conditions.
+
+One possible alternative initial state could be:
+
+```pddl
+(:init (on A B) (clear A) (on B C) (clear B))
+```
+
+This would mean initially block A is on block B, and block B is on block C. In this 
+configuration:
+- Block A is clear (no other block is stacked on top of it).
+- Block B is not clear since block A is on top of it.
+- Block C is on-table.
+
+With this initial state, the planner can manipulate the blocks to achieve the goal 
+state `(on A B) (on B C) (on-table C)` without including the goals directly in the 
+initial description.

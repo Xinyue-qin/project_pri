@@ -1,0 +1,30 @@
+```pddl
+(:init
+  (connected depot hospital)
+  (connected hospital disasterArea)
+  (requested medicalPkg disasterArea)
+  (not (connected depot disasterArea))
+  (available drone)
+  (at drone depot)
+  (in medicalPkg depot)
+)
+```
+
+**Explanation of Changes:**
+
+The original problem was unsolvable because the initial state didn't specify 
+*where* the drone and the package were located.  While connections and the 
+request are defined, the planner cannot start the delivery process without 
+knowing the initial positions. I added `(at drone depot)` and `(in medicalPkg 
+depot)` to the initial state.
+
+Now, the planner can formulate a plan:
+
+1.  The drone picks up the package at the depot.
+2.  The drone moves from the depot to the hospital.
+3.  The drone moves from the hospital to the disaster area.
+4.  The drone drops off the package at the disaster area.
+
+These additions are the minimal changes needed to make the problem solvable 
+without including the goal state directly. Without them, the planner has no 
+starting point for the delivery process.

@@ -1,0 +1,48 @@
+Okay, you're right, the original problem is indeed unsolvable because the 
+initial state doesn't provide enough information to achieve the desired 
+goal. Specifically, there's no knowledge about the position of blocks C 
+and D, which are crucial for the goal `(on C D)`.
+
+Here's an alternative initial state that allows for a plan to be generated 
+to achieve the goal:
+
+```pddl
+(define (problem partial-goal)
+  (:domain blocksworld-4ops)
+  (:objects A B C D - block)
+  (:init
+    (arm-empty)
+    (on-table A)
+    (on-table B)
+    (on-table C)
+    (on-table D)
+    (clear A)
+    (clear B)
+    (on C A)
+    (clear D)
+  )
+  (:goal (and (on A B) (on C D)))
+```
+
+**Explanation of Changes:**
+
+*   **Added `(on C A)`:** This predicate establishes a starting position 
+for block C, placing it on top of block A. This is a minimal change needed 
+to give the planner a starting point for arranging the blocks.
+*   **Maintained existing predicates:** The `(arm-empty)`, `(on-table A)`, 
+`(on-table B)`, `(clear A)`, and `(clear B)` predicates remain as they 
+were.
+*   **Added `(clear D)`:** This is needed because `(on C D)` means D must 
+start clear.
+
+**Why this works:**
+
+By placing C on top of A, the planner now has a configuration to work 
+with. The `pickup` action can then move C, and the `stack` action can be 
+used to place C on D to satisfy the goal. Adding the clear condition for D 
+ensures D is free to receive block C.  The crucial point is that this 
+alternative state *gives* the planner some starting constraints without 
+explicitly stating how the blocks *should* be arranged (i.e., the goal).
+
+This revised initial state provides enough information to allow a plan to 
+be generated to achieve the specified goal.

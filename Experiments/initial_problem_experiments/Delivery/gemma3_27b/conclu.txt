@@ -1,0 +1,133 @@
+Based on the provided log files and plan outputs from Fast Downward (FD) runs, we can analyze the performance of the Gemma3:27B model in completing PDDL problem files with missing initial states for the delivery domain. The analysis covers five problem instances (p1 to p5).
+
+Overall Summary
+Success Rate: 3/5 (60%) – p1, p3, and p5 were successfully solved, while p2 and p4 failed.
+
+Successful Plans:
+
+p1: Cost 3 – Simple delivery from loca to locb
+
+p3: Cost 4 – Delivery through multiple locations (locx, locy, locz)
+
+p5: Cost 4 – Delivery with a drone through multiple locations (depot, hospital, disasterarea)
+
+Failed Cases: p2 and p4 resulted in unsolvable tasks due to incomplete initial states.
+
+No Syntax Errors: All generated PDDL files were syntactically correct.
+
+Detailed Problem Analysis
+1. p1_by_LLMs.pddl ✅ SUCCESS
+Translation: Successful. The translator instantiated 3 variables, 7 facts, and 4 operators.
+
+Search: Solution found with cost 3.
+
+Plan:
+(pick-up robot1 pkg1 loca)
+(move robot1 loca locb)
+(drop-off robot1 pkg1 locb)
+
+Analysis: The model provided a complete and correct initial state. The planner generated a valid plan to move the robot from loca to locb and deliver the package.
+
+2. p2_by_LLMs.pddl ❌ FAILURE
+Translation: The translator output only 1 variable, 2 facts, and 0 operators. It reported: "No relaxed solution! Generating unsolvable task..."
+
+Search: Initial state is a dead end. No solution.
+
+Analysis: The model failed to provide any meaningful initial state. Only 2 facts were present (likely just the goal and one unrelated fact), which is insufficient.
+
+3. p3_by_LLMs.pddl ✅ SUCCESS
+Translation: Successful. The translator instantiated 3 variables, 9 facts, and 7 operators.
+
+Search: Solution found with cost 4.
+
+Plan:
+(pick-up robota pkgx locx)
+(move robota locx locy)
+(move robota locy locz)
+(drop-off robota pkgx locz)
+
+Analysis: The model correctly initialized the problem with multiple locations. The plan involves two moves and a drop-off, which is valid.
+
+4. p4_by_LLMs.pddl ❌ FAILURE
+Translation: The translator output only 1 variable, 2 facts, and 0 operators. It reported: "No relaxed solution! Generating unsolvable task..."
+
+Search: Initial state is a dead end. No solution.
+
+Analysis: Similar to p2, the initial state was severely incomplete (only 2 facts), making the problem trivially unsolvable.
+
+5. p5_by_LLMs.pddl ✅ SUCCESS
+Translation: Successful. The translator instantiated 3 variables, 8 facts, and 5 operators.
+
+Search: Solution found with cost 4.
+
+Plan:
+(pick-up drone medicalpkg depot)
+(move drone depot hospital)
+(move drone hospital disasterarea)
+(drop-off drone medicalpkg disasterarea)
+
+Analysis: The model correctly initialized a more complex scenario involving a drone and multiple locations. The plan is valid and efficient.
+
+Root Causes of Failure for p2 and p4
+Incomplete Initial States: The model provided only 2 facts (e.g., the goal and one unrelated fact), which is insufficient for any operator to be applicable.
+
+Missing Critical Predicates: The initial state likely lacked:
+
+(at <robot> <location>)
+
+(at <package> <location>)
+
+Or other domain-specific prerequisites.
+
+No Operators Instantiated: The translator could not instantiate any operators because the initial state lacked the necessary preconditions.
+
+Strengths and Weaknesses of Gemma3:27B
+Strengths
+Syntax Correctness: All generated PDDL files were syntactically correct (no parsing errors).
+
+Ability to Generate Valid States: In p1, p3, and p5, the model produced initial states that were sufficient for the planner to find correct plans.
+
+Handling Complexity: The model successfully handled problems with multiple locations (p3 and p5) and different agents (e.g., drone in p5).
+
+Consistency: The model succeeded in 3 out of 5 cases, showing better reliability than smaller Gemma variants.
+
+Weaknesses
+Incomplete Initial States: For p2 and p4, the model failed to provide critical predicates, leading to unsolvable tasks.
+
+Inconsistency: The model works well for some problems but fails for others, indicating that it does not always grasp the domain requirements fully.
+
+Comparison with Expected Behavior
+A correctly completed problem file should include:
+
+All required objects (robots, packages, locations).
+
+Initial predicates: (at <robot> <location>), (at <package> <location>), etc.
+
+Enough information to allow operator instantiation.
+
+The Gemma3:27B model met these requirements in 3 out of 5 cases.
+
+Recommendations for Improvement
+Domain-Specific Prompting: Provide the model with examples of minimal initial states for the delivery domain to avoid incomplete states.
+
+Predicate Checklist: Ensure the initial state includes:
+
+(at <robot> <loc>)
+
+(at <package> <loc>)
+
+And other required predicates.
+
+Error Feedback Loop: Use the translator’s output (e.g., "No relaxed solution") to refine the initial state.
+
+Fine-Tuning: Fine-tune the model on PDDL data to improve its understanding of domain requirements.
+
+Conclusion
+The Gemma3:27B model demonstrates a significant improvement over smaller variants (e.g., 1B, 4B, and 12B) in completing missing initial states for PDDL problems in the delivery domain. It successfully generated solvable problems for 3 out of 5 cases, with valid plans for scenarios involving multiple locations and different agents. However, it still suffers from inconsistencies, as seen in p2 and p4, where it produced incomplete initial states. This suggests that while the model has a better grasp of PDDL syntax and domain requirements, it still requires further improvements to achieve full reliability.
+
+Success Rate: 3/5 (60%)
+Key Issues: Incomplete initial states for some problems.
+Recommendation: Use domain-specific prompting or fine-tuning to enhance consistency.
+
+Note: The model's performance is promising and indicates that larger models have better capabilities in understanding and generating PDDL content. However, for critical applications, additional validation mechanisms should be in place.
+

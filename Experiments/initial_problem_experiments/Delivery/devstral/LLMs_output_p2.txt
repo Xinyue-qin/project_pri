@@ -1,0 +1,55 @@
+To make this problem solvable, we need to specify where the robot starts 
+in the initial state. Currently, there's no information about the robot's 
+starting location. Let's assume that the robot starts at `loc2`, which is 
+a central location and will allow it to reach both packages.
+
+Here's an alternative initial state in PDDL:
+
+```pddl
+(:init
+  (in pkgA loc1)
+  (in pkgB loc2)
+  (connected loc1 loc2)
+  (connected loc2 loc3)
+  (requested pkgA loc3)
+  (requested pkgB loc1)
+  (available robot2)
+  (at robot2 loc2) ; Robot starts at location 2
+)
+```
+
+With this initial state, the robot can:
+
+1. Pick up `pkgB` from `loc2`
+2. Move to `loc1` and drop off `pkgB`
+3. Move back to `loc2`
+4. Move to `loc1`
+5. Pick up `pkgA`
+6. Move to `loc3` and drop off `pkgA`
+
+Here's the full problem description with the updated initial state:
+
+```pddl
+(define (problem delivery-multi-priority)
+  (:domain delivery)
+  (:objects
+    robot2 - agent
+    pkgA pkgB - package
+    loc1 loc2 loc3 - location
+  )
+  (:init
+    (in pkgA loc1)
+    (in pkgB loc2)
+    (connected loc1 loc2)
+    (connected loc2 loc3)
+    (requested pkgA loc3)
+    (requested pkgB loc1)
+    (available robot2)
+    (at robot2 loc2) ; Robot starts at location 2
+  )
+  (:goal (and (delivered pkgA)(delivered pkgB)))
+)
+```
+
+This should provide a complete initial state that allows for achieving the 
+goal of delivering both `pkgA` and `pkgB`.

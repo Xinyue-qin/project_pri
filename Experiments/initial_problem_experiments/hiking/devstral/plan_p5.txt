@@ -1,0 +1,4 @@
+(walk h1 base rest-area)
+(walk h1 rest-area danger-zone)
+(walk h1 danger-zone summit)
+; cost = 3 (unit cost)

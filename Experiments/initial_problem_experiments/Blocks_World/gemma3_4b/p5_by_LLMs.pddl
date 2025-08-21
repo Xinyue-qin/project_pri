@@ -1,0 +1,8 @@
+(define (problem multi-tower-alt)
+  (:domain blocksworld-4ops)
+  (:objects A B C D E - block)
+  (:init (on-table A) (on B A) (on C B) (clear C)
+         (on-table D) (clear E))
+  (:goal (and (on A C) (on-table C)
+              (on B E) (on-table E)
+              (on A B))))

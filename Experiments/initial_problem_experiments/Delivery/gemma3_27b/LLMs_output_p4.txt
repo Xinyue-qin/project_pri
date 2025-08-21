@@ -1,0 +1,35 @@
+```pddl
+(:init
+  (at courier1 warehouse)
+  (at courier2 station)
+  (connected station client)
+  (requested urgentPkg client)
+  (requested normalPkg client)
+  (available courier1)
+  (available courier2)
+  (in urgentPkg warehouse)
+  (in normalPkg warehouse)
+)
+```
+
+**Explanation of Changes:**
+
+The original problem was unsolvable because the initial state didn't 
+specify *where* the packages were located.  The robots can be at their 
+starting locations and the connections are established, but without 
+knowing the initial location of `urgentPkg` and `normalPkg`, the planner 
+cannot begin a valid sequence of actions. I added `(in urgentPkg 
+warehouse)` and `(in normalPkg warehouse)` to the initial state.
+
+Now a possible plan could involve:
+
+1.  `courier1` picks up `urgentPkg` at `warehouse`.
+2.  `courier1` moves from `warehouse` to `client`.
+3.  `courier1` drops off `urgentPkg` at `client`.
+4.  `courier2` picks up `normalPkg` at `warehouse`.
+5.  `courier2` moves from `warehouse` to `client`.
+6.  `courier2` drops off `normalPkg` at `client`.
+
+These added predicates are the minimal changes necessary to make the 
+problem solvable. Without them, the planner has no basis for initiating 
+the delivery process.

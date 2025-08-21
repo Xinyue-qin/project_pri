@@ -1,0 +1,29 @@
+You're right, the initial state is incomplete. The robot's arm needs an 
+initial condition to begin planning. Here's an alternative initial state 
+in PDDL that allows the goal to be achieved, without directly stating the 
+goal in the initial state:
+
+```pddl
+(define (problem tower-reversal-solvable)
+  (:domain blocksworld-4ops)
+  (:objects A B C - block)
+  (:init (on B A) (on C B)
+         (clear C)
+         (arm-empty)
+         (clear A))
+  (:goal (and (on-table C) (on B C) (on A B))))
+```
+
+**Explanation of Changes:**
+
+*   **`(arm-empty)`:** This initializes the robot's arm to be empty, which 
+is crucial for the `pickup` action.
+*   **`(clear A)`:**  The initial state only states that C is clear, but A 
+is also a block that could be moved. Adding `(clear A)` to the initial 
+state is needed because otherwise A will always be blocked by B and the 
+robot won't be able to start the process.
+
+With these additions, the planner can now begin by unstacking blocks, 
+moving them around, and ultimately achieving the goal configuration. The 
+initial state provides the necessary conditions for planning without 
+pre-stating the desired goal configuration.

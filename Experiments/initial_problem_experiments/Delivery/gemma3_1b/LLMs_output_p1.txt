@@ -1,0 +1,36 @@
+Here’s an alternative initial state designed to achieve the goal of the 
+problem, incorporating a more comprehensive initial state and removing the 
+explicit goal:
+
+```pddl
+(define (problem delivery-basic)
+  (:domain delivery)
+  (:objects
+    robot1 - agent
+    pkg1 - package
+    locA locB - location
+  )
+  (:init
+    (connected locA locB)
+    (requested pkg1 locB)
+    (available robot1)
+  )
+  (:goal (delivered pkg1))
+```
+
+**Reasoning for this alternative:**
+
+* **`connected locA locB`**: This establishes the initial location of the 
+robot. It's a fundamental starting point.
+* **`requested pkg1 locB`**: This adds a request for the package to be 
+located in the specified location. This sets up a scenario where the robot 
+has a task to perform.
+* **`available robot1`**: This clarifies that the robot is in a suitable 
+state to start moving.
+
+This state is more robust and provides a clearer context for the planning 
+task.  It doesn’t explicitly state a goal but gives the robot a 
+sufficient starting point to *begin* the process of delivering the 
+package.  The entire focus shifts to the robot's movement and the 
+package's location as the driving force.  It avoids the immediate 
+"delivered" goal and guides the planning toward a successful outcome.

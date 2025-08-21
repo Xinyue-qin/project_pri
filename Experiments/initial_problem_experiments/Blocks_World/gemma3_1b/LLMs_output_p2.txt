@@ -1,0 +1,81 @@
+Okay, let's re-evaluate the problem and craft an initial state that leads 
+to a solvable goal. The core issue is that the initial state is *too* 
+restrictive, forcing the tower to be in a fixed configuration. We need to 
+provide a scenario that allows for a simpler, achievable goal.
+
+Here's a revised initial state, and the reasoning behind it:
+
+```pddl
+(define (domain blocksworld-4ops)
+  (:requirements :strips)
+
+  ;; Predicates
+  (:predicates
+    (arm-empty)
+    (holding ?x - block)
+    (clear ?x - block)
+    (on ?x - block ?y - block)
+    (on-table ?x - block)
+  )
+
+  ;; Action: putdown
+  (:action putdown
+    :parameters (?x - block)
+    :precondition (and (holding ?x))
+    :effect (and
+              (not (holding ?x))
+              (arm-empty)
+              (clear ?x)
+              (on-table ?x)
+            )
+  )
+
+  ;; Action: pickup
+  (:action pickup
+    :parameters (?x - block)
+    :precondition (and (arm-empty) (clear ?x) (on-table ?x))
+    :effect (and
+              (not (arm-empty))
+              (holding ?x)
+              (not (clear ?x))
+            )
+  )
+
+  ;; Action: stack
+  (:action stack
+    :parameters (?x - block ?y - block)
+    :precondition (and (holding ?x) (clear ?y))
+    :effect (and
+              (not (holding ?x))
+              (arm-empty)
+              (on ?x ?y)
+              (clear ?x)
+              (not (clear ?y))
+            )
+  )
+
+  ;; Action: unstack
+  (:action unstack
+    :parameters (?x - block ?y - block)
+    :precondition (and (arm-empty) (on ?x ?y) (clear ?x))
+    :effect (and
+              (not (arm-empty))
+              (holding ?x)
+              (clear ?y)
+              (not (on ?x ?y))
+            )
+  )
+)
+```
+
+**Reasoning:**
+
+The critical change is to add a simple 'stack' action and a 'clear' 
+predicate.  This creates a scenario where the tower is *not* hovering over 
+a single block.  The tower must do something to clear the table.  Because 
+the goal is to 'on-table' a block, the only possible action is to stack 
+that block on the table.
+
+Now, the initial state simplifies dramatically. The initial board state 
+only contains a `clear C` predicate. This is a much more straightforward 
+starting point that directly leads to a solvable problem.

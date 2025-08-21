@@ -1,0 +1,27 @@
+Okay, you're right. The original problem is unsolvable because the initial 
+state doesn't give the robot's arm any initial condition. It's neither 
+empty nor holding anything. Here's an alternative initial state in PDDL 
+that makes the problem solvable, while adhering to the constraint of not 
+directly including the goals:
+
+```pddl
+(define (problem simple-stack-solvable)
+  (:domain blocksworld-4ops)
+  (:objects A B C - block)
+  (:init (on-table A) (on-table B) (on-table C)
+         (clear A) (clear B) (clear C)
+         (arm-empty)
+         )
+  (:goal (and (on A B) (on B C) (on-table C))))
+```
+
+**Explanation of Changes:**
+
+I've added `(arm-empty)` to the `:init` section.  This initializes the 
+robot's arm to be empty, which is a necessary condition for the `pickup` 
+action.  Without this, the planner can't begin to manipulate the blocks.
+
+This modified initial state allows a planner to start by picking up a 
+block, stacking it on another, and so on, ultimately achieving the goal 
+state. It avoids directly including the goal state in the initial state, 
+satisfying the prompt's requirement.

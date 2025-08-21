@@ -1,0 +1,48 @@
+You're absolutely right, the original initial state is impossible to 
+achieve the goal. The given initial state has C on B, which is on A, which 
+is on the table.  To achieve the goal of reversing the order (A on B, B on 
+C, C on table), we need to initially have the blocks stacked in the 
+*reverse* order of the desired final state.
+
+Here's an alternative initial state that is solvable, avoiding the 
+directly stating the desired goal:
+
+```pddl
+(define (problem tower-reversal)
+  (:domain blocksworld-4ops)
+  (:objects A B C - block)
+  (:init (on A B) (on B C)
+         (clear A)
+         (arm-empty)
+         (holding None)  ; important: Start with the arm empty
+         )
+  (:goal (and (on-table C) (on B C) (on A B)))
+)
+```
+
+**Explanation of Changes and Why it Works:**
+
+*   **Initial Stack Order:** `(on A B) (on B C)` - This establishes the 
+initial stack as A on B, and B on C, *opposite* of the target order.  This 
+is crucial.
+*   **`arm-empty`:** Crucial for solving the domain.  Starting with the 
+arm empty simplifies the initial steps.
+*   **`holding None`:** Clarifies that no blocks are initially held.  This 
+can be omitted as it's implied by the `arm-empty`, but is good practice 
+for clarity.
+*   **`clear A`:**  A is on the table, so it is clear.
+
+With this initial state, a planner can now execute the following sequence:
+
+1.  `unstack C B`
+2.  `putdown C`
+3.  `pickup B`
+4.  `unstack B A`
+5.  `putdown B`
+6.  `pickup A`
+7.  `stack A B`
+
+This will achieve the goal state. The key is to make the initial state 
+allow for the necessary actions to reverse the tower without being blocked 
+by contradictory initial conditions.
+

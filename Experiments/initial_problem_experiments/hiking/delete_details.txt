@@ -1,0 +1,7 @@
+P1: delete (at h1 base) (path-clear base camp);
+P2: delete (rained trail) ;
+P3: delete (path-clear mid end) (not (has-energy h1));
+P4: delete (path-clear B D) (path-clear A C) (path-clear C D);
+P5: delete (path-clear danger-zone summit)
+
+

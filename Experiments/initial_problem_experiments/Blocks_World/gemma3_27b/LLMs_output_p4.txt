@@ -1,0 +1,27 @@
+You are correct; the problem is unsolvable with the initial state. The 
+issue is that we haven't defined the "clear" status of blocks C and D, and 
+they're initially on the table.  To allow the planner to achieve the goal 
+of stacking C and D, we need to make sure they are clear. Here's a revised 
+initial state:
+
+```pddl
+(define (problem partial-goal-solvable)
+  (:domain blocksworld-4ops)
+  (:objects A B C D - block)
+  (:init (arm-empty)
+         (on-table A) (on-table B) (on-table C) (on-table D)
+         (clear A) (clear B)
+         (clear C) (clear D))
+  (:goal (and (on A B) (on C D))))
+```
+
+**Explanation of Changes:**
+
+*   **(clear C)** and **(clear D)**:  These predicates state that blocks C 
+and D are initially clear, allowing the planner to pick them up and stack 
+them, fulfilling the goal.
+
+With these additions, the planner has the necessary information to achieve 
+the goal. We haven't included the goal directly in the initial state; 
+instead, we've made the initial state complete enough for a planner to 
+find a sequence of actions to reach the goal.

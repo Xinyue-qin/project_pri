@@ -1,0 +1,56 @@
+Consider this domain description:
+
+(define (domain hiking)
+  (:requirements :strips :typing)  ; 
+  (:types 
+    hiker 
+    location
+  )
+  
+  (:predicates 
+    (at ?h - hiker ?l - location)
+    (rained ?l - location)
+    (has-energy ?h - hiker)
+    (path-clear ?from ?to - location)
+  )
+
+  (:action walk
+    :parameters (?h - hiker ?from ?to - location)
+    :precondition (and 
+      (at ?h ?from)
+      (path-clear ?from ?to)
+      (not (rained ?to)))
+    :effect (and 
+      (not (at ?h ?from))
+      (at ?h ?to))
+  )
+
+  (:action rest
+    :parameters (?h - hiker ?l - location)
+    :effect (has-energy ?h)
+  )
+
+  (:action check-weather
+    :parameters (?l - location)
+    :effect (not (rained ?l))  ; 
+  )
+)
+
+And this problem associated to it:
+
+(define (problem hike-hard)
+  (:domain hiking)
+  (:objects
+    h1 - hiker
+    base rest-area danger-zone summit - location)
+  (:init
+    (at h1 base)
+    (path-clear base rest-area)
+    (path-clear rest-area danger-zone)
+    (rained danger-zone)
+    (not (has-energy h1)))
+  (:goal (at h1 summit)))
+
+
+
+The planning task is unsolvable due to an incomplete initial state description. Can you provide an alternative initial state in PDDL from which the goals are achievable? This state must not include the goals directly.

@@ -1,0 +1,32 @@
+You're right, the problem is unsolvable with the given initial state. The 
+main issue is that block E isn't "on the table" or supported, and we also 
+don't know if it's clear. Without that information, the planner cannot 
+start working towards the goal of having B on E. Here's a revised initial 
+state:
+
+```pddl
+(define (problem multi-tower-solvable)
+  (:domain blocksworld-4ops)
+  (:objects A B C D E - block)
+  (:init (on-table A) (on B A) (on C B) (clear C)
+         (on-table D) (on-table E) (clear E)
+         (arm-empty))
+  (:goal (and (on A C) (on-table C)
+              (on B E) (on-table E)
+              (on D B))))
+```
+
+**Explanation of Changes:**
+
+*   **(on-table E)**: This indicates that block E is initially on the 
+table.
+*   **(clear E)**: This indicates that block E is initially clear, 
+allowing the planner to pick it up.
+*   **(arm-empty)**: This adds the arm-empty predicate to ensure the 
+initial state is complete and the planner knows the robot is not holding 
+anything initially.
+
+These additions provide the necessary information for the planner to 
+achieve the goal. The planner can now pick up blocks E and D and move them 
+as needed to fulfill the goal conditions.  The goal conditions themselves 
+are not present in the initial state.

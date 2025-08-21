@@ -1,0 +1,35 @@
+Okay, let’s craft a plausible initial state that allows us to achieve the 
+goal of `(delivered pkgX)` while remaining consistent with the provided 
+domain and predicates.
+
+```pddl
+(define (problem delivery-relay)
+  (:domain delivery)
+  (:objects
+    robotA robotB - agent
+    pkgX - package
+    locX locY locZ - location
+  )
+  (:init
+    (at robotA locX)(at robotB locZ)
+    (in pkgX locX)
+    (connected locX locY)(connected locY locZ)
+    (requested pkgX locZ)
+  )
+  (:goal (delivered pkgX))
+)
+```
+
+**Reasoning for this alternative:**
+
+* **Focus on Initial State:** This initial state focuses on the robot's 
+location and connection to another robot, directly establishing the 
+prerequisites for the goal.
+* **Connectedness:** The `connected` predicates ensure the locations are 
+accessible.
+* **Request:** The `requested` predicates now clearly state the desired 
+action – to deliver the package (`pkgX`).
+
+This initial state is a logical step:  The robot *must* be at the location 
+of the package to perform the action of delivery.  It's a good starting 
+point for a planning task where the goal is simply to deliver a package.

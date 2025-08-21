@@ -1,0 +1,17 @@
+(define (problem logistics-2)
+  (:domain logistics)
+  (:objects
+    pkg1 pkg2 - object
+    truck1 - truck
+    plane1 - airplane
+    loc1 - location
+    airport1 airport2 - airport
+    city1 city2 - city
+  )
+  (:init
+    (at truck1 airport1)
+    (at plane1 airport1)
+    (at pkg1 airport1)
+    (at pkg2 airport1)
+  )
+  (:goal (and (at pkg1 airport2) (at pkg2 airport2))))

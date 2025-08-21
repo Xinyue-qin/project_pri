@@ -1,0 +1,17 @@
+```pddl
+(define (problem complex-rearrange-alt)
+  (:domain blocksworld-4ops)
+  (:objects A B C D
+ - block)
+  (:init (arm-empty) (on B A) (clear B) (on D C) (clear D) (on-table A))
+  (:goal (and (on A B) (on B C) (on C D) (on-table D))))
+```
+
+**Explanation of the changes and why it works:**
+
+The original problem was unsolvable because the initial state lacked a 
+block on the table. The `pickup` action requires a block to be on the 
+table. We've added `(on-table A)` to the initial state.  This ensures that 
+block `A` is on the table, enabling the agent to perform the `pickup` 
+action and start the rearrangement process. The goal remains the same: to 
+achieve the specified block arrangement.

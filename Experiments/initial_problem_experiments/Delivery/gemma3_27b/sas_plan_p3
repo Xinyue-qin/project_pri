@@ -1,0 +1,5 @@
+(pick-up robota pkgx locx)
+(move robota locx locy)
+(move robota locy locz)
+(drop-off robota pkgx locz)
+; cost = 4 (unit cost)

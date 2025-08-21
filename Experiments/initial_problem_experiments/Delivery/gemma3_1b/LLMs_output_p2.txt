@@ -1,0 +1,42 @@
+Okay, let's craft a plausible initial state that allows us to achieve the 
+goal of `(delivered pkgA)(delivered pkgB)` while remaining consistent with 
+the provided domain and predicates.  Here's an alternative initial state:
+
+```pddl
+(define (problem delivery-multi-priority)
+  (:domain delivery)
+  (:objects
+    robot2 - agent
+    pkgA pkgB - package
+    loc1 loc2 loc3 - location
+  )
+  (:init
+    (in pkgA loc1)(in pkgB loc2)
+    (connected loc1 loc2)(connected loc2 loc3)
+    (requested pkgA loc3)(requested pkgB loc1)
+    (available robot2)
+  )
+  (:goal (and (delivered pkgA)(delivered pkgB)))
+)
+```
+
+**Reasoning for this alternative:**
+
+* **Focus on Initial State Setup:** This initial state directly 
+establishes the necessary preconditions for the goal. It sets up the 
+context where the robot needs to `pick up` the `pkgA` and `pkgB`.
+* **Connectivity:** The `connected` predicates ensure that the location is 
+accessible.
+* **Request:** The `requested` predicates show the desired actions, which 
+are directly relevant to achieving the goal.
+* **Availability:** The `available` predicate ensures the robot is ready 
+to perform the actions.
+
+**Why this works:**  This initial state tells the planner to begin the 
+task of getting the packages, and the goal is achieved with the packages 
+delivered.  It’s a simple, logical starting point.
+
+**Important Note:**  DPDL planners often have "heuristics" or "reasoning" 
+mechanisms that can allow them to generate more complex initial states. 
+However, for a basic, straightforward initial setup, this is a very solid 
+starting point.

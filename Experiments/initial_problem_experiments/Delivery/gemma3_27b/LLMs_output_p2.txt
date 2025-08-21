@@ -1,0 +1,34 @@
+```pddl
+(:init
+  (in pkgA loc1)
+  (in pkgB loc2)
+  (connected loc1 loc2)
+  (connected loc2 loc3)
+  (requested pkgA loc3)
+  (requested pkgB loc1)
+  (available robot2)
+  (at robot2 loc2)
+)
+```
+
+**Explanation of Changes:**
+
+The original problem was unsolvable because the robot didn't have a 
+starting location.  Without knowing where the robot *is*, a planner can't 
+begin a sequence of actions. I've added `(at robot2 loc2)` to the initial 
+state.
+
+Now, the robot starts at `loc2`. This allows the following plan:
+
+1.  **Pick up pkgB:** The robot is at `loc2` and `pkgB` is at `loc2`.
+2.  **Move to loc1:** The robot moves from `loc1` to `loc2`.
+3.  **Drop off pkgB:** The robot drops off `pkgB` at `loc1`.
+4.  **Move to loc1:** The robot moves from `loc1` to `loc2`.
+5.  **Pick up pkgA:** The robot picks up `pkgA` at `loc1`.
+6.  **Move to loc3:** The robot moves from `loc2` to `loc3`.
+7.  **Drop off pkgA:** The robot drops off `pkgA` at `loc3`.
+
+This plan achieves the goal of delivering both packages.  The added `(at 
+robot2 loc2)` is the minimal change necessary to make the problem solvable 
+without directly stating the goal in the initial state.
+

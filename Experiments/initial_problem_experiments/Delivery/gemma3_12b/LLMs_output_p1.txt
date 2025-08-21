@@ -1,0 +1,43 @@
+Okay, you're right. The initial state is missing crucial information.  The 
+robot needs to be at a location and the package needs to be somewhere. 
+Let's construct a solvable initial state. Here's an alternative PDDL 
+initial state that allows for a solution:
+
+```pddl
+(:init
+  (connected locA locB)
+  (available robot1)
+  (at robot1 locA)
+  (in pkg1 locA)
+  (requested pkg1 locB)
+)
+```
+
+**Explanation of Changes & Reasoning:**
+
+*   **`(at robot1 locA)`**: This places the robot `robot1` at location 
+`locA`.  The `move` action requires the agent to be at a starting 
+location.
+*   **`(in pkg1 locA)`**: This puts the package `pkg1` at 
+location `locA`. The `pick-up` action requires the package to be at a 
+location.
+
+**Why this is solvable:**
+
+With this initial state:
+
+1.  The robot is at `locA`.
+2.  The package is at `locA`.
+3.  The destination of the package is `locB`.
+4.  The robot is available.
+
+A possible plan would be:
+
+1.  `pick-up(robot1 pkg1 locA)`
+2.  `move(robot1 locA locB)`
+3.  `drop-off(robot1 pkg1 locB)`
+
+This sequence achieves the goal `(delivered pkg1)`.
+
+**Important Note:** There could be other valid initial states that would 
+allow a solution. This is just one example.

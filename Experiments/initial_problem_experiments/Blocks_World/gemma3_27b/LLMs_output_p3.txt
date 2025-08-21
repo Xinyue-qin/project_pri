@@ -1,0 +1,28 @@
+You're right, the initial state is missing crucial information to allow a 
+planner to achieve the goal. Specifically, we need to know which blocks 
+are clear and/or on the table to allow for initial pick-ups. Here's a 
+revised initial state that should make the problem solvable, without 
+including the goal state:
+
+```pddl
+(define (problem complex-rearrange-solvable)
+  (:domain blocksworld-4ops)
+  (:objects A B C D - block)
+  (:init (arm-empty)
+         (on B A) (clear B)
+         (on D C) (clear D)
+         (on C A)
+         (clear A))
+  (:goal (and (on A B) (on B C) (on C D) (on-table D))))
+```
+
+**Explanation of Changes:**
+
+*   **(on C A)**: This states that block C is on block A.
+*   **(clear A)**: This states that block A is clear.
+
+These additions are vital because they provide the necessary information 
+for the planner to start manipulating the blocks. With these additions, 
+the planner can pick up the blocks, rearrange them, and achieve the 
+specified goal configuration.  The goal configuration is not directly 
+stated in the initial state.

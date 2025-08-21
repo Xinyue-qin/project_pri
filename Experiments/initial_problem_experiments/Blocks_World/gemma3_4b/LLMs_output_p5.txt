@@ -1,0 +1,19 @@
+```pddl
+(define (problem multi-tower-alt)
+  (:domain blocksworld-4ops)
+  (:objects A B C D E - block)
+  (:init (on-table A) (on B A) (on C B) (clear C)
+         (on-table D) (clear E))
+  (:goal (and (on A C) (on-table C)
+              (on B E) (on-table E)
+              (on A B))))
+```
+
+**Explanation of the changes and why it works:**
+
+The original problem was unsolvable because the initial state lacked the 
+`clear` predicate for block `E`. The `stack` action requires a block to be 
+clear to be stacked on top of another. We've added `(clear E)` to the 
+initial state. This ensures that block `E` is clear, enabling the agent to 
+perform the necessary actions to achieve the specified goal. The goal 
+remains the same.

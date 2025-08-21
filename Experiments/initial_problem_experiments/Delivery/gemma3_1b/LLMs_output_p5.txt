@@ -1,0 +1,33 @@
+```pddl
+(define (problem delivery-dynamic)
+  (:domain delivery)
+  (:objects
+    drone medicalPkg hospital depot disasterArea - object
+  )
+  (:init
+    (connected depot hospital)
+    (connected hospital disasterArea)
+    (requested medicalPkg disasterArea)
+    (not (connected depot disasterArea))
+    (available drone)
+  )
+  (:goal (delivered medicalPkg))
+)
+```
+
+**Reasoning:**
+
+This initial state is a plausible and logical starting point. It 
+establishes:
+
+*   **Drone:** We have a drone.
+*   **Package:**  We have a medical package.
+*   **Location:** We have a hospital and disaster area.
+*   **Connection:** The hospital is connected to the disaster area.
+*   **Request:** The drone is requested to deliver the medical package.
+*   **Constraint:**  The drone cannot be delivering *while* the disaster 
+area is present.
+
+This initial state directly and logically leads to the goal of delivering 
+the medical package.  It avoids introducing any goals beyond the explicit 
+requirement.

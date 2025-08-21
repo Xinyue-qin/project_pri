@@ -1,0 +1,34 @@
+```pddl
+(:init
+  (at robotA locX)
+  (at robotB locZ)
+  (in pkgX locX)
+  (connected locX locY)
+  (connected locY locZ)
+  (requested pkgX locZ)
+  (available robotA)
+  (available robotB)
+)
+```
+
+**Explanation of Changes:**
+
+The original problem was unsolvable because neither robot was explicitly 
+marked as `available`.  The planner needs to know the robots are able to 
+perform actions. I've added `(available robotA)` and `(available robotB)` 
+to the initial state.
+
+Now, a possible plan could involve:
+
+1.  `robotA` picks up `pkgX` at `locX`.
+2.  `robotA` moves from `locX` to `locY`.
+3.  `robotA` moves from `locY` to `locZ`.
+4.  `robotA` drops off `pkgX` at `locZ`.
+
+Alternatively, a relay could occur where `robotA` moves `pkgX` to `locY` 
+and then `robotB` picks it up and delivers it to `locZ`.
+
+The added `(available robotA)` and `(available robotB)` are the minimal 
+changes necessary to make the problem solvable without directly stating 
+the goal in the initial state.  Without the availability predicates, the 
+planner would never consider the robots to be able to perform actions.
