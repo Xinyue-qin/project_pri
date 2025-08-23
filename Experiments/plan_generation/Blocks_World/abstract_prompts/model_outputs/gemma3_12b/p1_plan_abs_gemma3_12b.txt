@@ -1,0 +1,6 @@
+ ⠙ ⠹ ⠸ ⠼ ⠴ ⠧ ⠧ ⠇ ⠏ ⠋ ⠙ ⠸ ⠸ ⠼ ⠦ ⠦ ⠧ ⠇ ⠋ ⠋ ⠙ ⠹ ⠸ ⠼ (pickup A)
+(stack A B)
+(pickup B)
+(stack B C)
+(pickup C)
+(putdown C)

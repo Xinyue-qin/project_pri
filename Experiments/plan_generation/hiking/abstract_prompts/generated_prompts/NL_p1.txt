@@ -1,0 +1,5 @@
+Initial State:
+A hiker starts at the base with energy, and there is a clear path through a camp to the summit.
+
+Goal State:
+The hiker reaches the summit.

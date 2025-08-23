@@ -1,0 +1,5 @@
+ ⠹ ⠹ ⠼ ⠼ ⠦ ⠦ ⠧ 1. drive truck1 to loc3
+2. fly plane1 to loc3
+3. unload truck2
+4. unload truck1
+5. unload package pkg1

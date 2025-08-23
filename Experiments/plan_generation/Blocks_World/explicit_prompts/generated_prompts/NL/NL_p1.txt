@@ -1,0 +1,8 @@
+Problem 1: 
+Explicit Description：
+Initial State:
+The arm is empty. Blocks A, B, and C are on the table and clear.
+
+Goal State:
+Block A is on block B, block B is on block C, and block C is on the table.
+

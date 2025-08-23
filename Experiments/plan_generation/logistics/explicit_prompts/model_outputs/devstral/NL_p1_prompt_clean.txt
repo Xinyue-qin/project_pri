@@ -1,0 +1,10 @@
+ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠋ ⠹ ⠸ ⠸ ⠴ ⠦ ⠦ ⠇ ⠏ ⠏ ⠙ ⠙ ⠸ ⠸ ⠴ ⠴ ⠦ ⠇ ⠏ ⠋ ⠙ ⠙ ⠸ ⠼ ⠴ ⠴ ⠦ ⠧ ⠇ ⠋ ⠙ ⠙ ⠹ ⠼ ⠴ ⠦ ⠦ ⠧ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠹ ⠸ ⠴ ⠴ ⠦ ⠇ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠦ ⠧ ⠇ ⠇ ⠏ ⠋ ⠙ ⠸ ⠼ ⠴ ⠦ ⠦ ⠧ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠦ ⠧ ⠇ ⠋ ⠋ ⠹ ⠹ ⠸ ⠴ ⠴ ⠦ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠼ ⠴ To solve this problem, we need to get `pkg1` from `loc1` to `loc2`. Since both locations are in the same city (`city1`), we can use a truck for transportation. Here's the plan:
+1. Load `pkg1` onto `truck1` at `loc1`.
+2. Drive `truck1` (with `pkg1`) from `loc1` to `loc2`.
+3. Unload `pkg1` from `truck1` at `loc2`.
+So, the plan is:
+```
+(LOAD pkg1 truck1 loc1)
+(DRIVE truck1 loc1 loc2 city1)
+(UNLOAD pkg1 truck1 loc2)
+```

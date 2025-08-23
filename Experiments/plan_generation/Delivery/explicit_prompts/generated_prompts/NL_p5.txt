@@ -1,0 +1,5 @@
+Initial State:
+Drone is at depot. MedicalPkg is in depot. Locations are connected: depot to hospital, hospital to disasterArea. MedicalPkg is requested at disasterArea. Depot is not directly connected to disasterArea. Drone is available.
+
+Goal State:
+MedicalPkg is delivered.

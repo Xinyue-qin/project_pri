@@ -1,0 +1,16 @@
+ ⠹ ⠹ ⠼ ⠴ ⠴ ⠧ ⠇ ⠇ ⠋ ⠙ ⠹ ⠹ ⠸ ⠴ ⠴ ⠧ ⠇ 1. stack B A
+2. stack E D
+3. unstack A C
+4. putdown C
+5. stack E D
+6. unstack B C
+7. putdown C
+8. stack E D
+9. unstack B C
+10. putdown C
+11. stack E D
+12. unstack B C
+13. putdown C
+14. stack E D
+15. unstack B C
+16. putdown C

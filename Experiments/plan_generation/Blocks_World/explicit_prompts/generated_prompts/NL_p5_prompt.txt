@@ -1,0 +1,52 @@
+Given a PDDL domain and a PDDL problem natural language description, come up with the plan associated with the problem. The domain describes the possible actions and their effects, while the problem description details the specific scenario to be solved. Do not generate anything but the correct plan.
+
+Domain PDDL:
+(define (domain blocksworld-4ops)
+
+(:requirements :typing)
+(:types block) 
+
+(:predicates (clear ?x - block)
+             (on-table ?x - block)
+             (arm-empty)
+             (holding ?x - block)
+             (on ?x ?y - block))
+
+(:action pickup
+  :parameters (?ob - block)
+  :precondition (and (clear ?ob) (on-table ?ob) (arm-empty))
+  :effect (and (holding ?ob) (not (clear ?ob)) (not (on-table ?ob)) 
+               (not (arm-empty))))
+
+(:action putdown
+  :parameters  (?ob - block)
+  :precondition (holding ?ob)
+  :effect (and (clear ?ob) (arm-empty) (on-table ?ob) 
+               (not (holding ?ob))))
+
+(:action stack
+  :parameters  (?ob ?underob - block)
+  :precondition (and (clear ?underob) (holding ?ob))
+  :effect (and (arm-empty) (clear ?ob) (on ?ob ?underob)
+               (not (clear ?underob)) (not (holding ?ob))))
+
+(:action unstack
+  :parameters  (?ob ?underob - block)
+  :precondition (and (on ?ob ?underob) (clear ?ob) (arm-empty))
+  :effect (and (holding ?ob) (clear ?underob)
+               (not (on ?ob ?underob)) (not (clear ?ob)) (not (arm-empty))))) 
+
+Problem description:
+Explicit Description：
+Initial State:
+The arm is empty.
+Block A is on the table, block B is on A, block C is on B, and block C is clear.
+Block D is on the table, block E is on D, and block E is clear.
+
+Goal State:
+Block A is on block C and block C is on the table;
+Block B is on block E and block E is on the table;
+Block D is on block B.
+
+Plan:
+

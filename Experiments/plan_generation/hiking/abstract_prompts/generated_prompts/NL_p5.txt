@@ -1,0 +1,5 @@
+Initial State:
+A tired hiker faces a challenging route with a dangerous section that is currently rainy.
+
+Goal State:
+The hiker successfully reaches the summit despite fatigue and adverse weather conditions.

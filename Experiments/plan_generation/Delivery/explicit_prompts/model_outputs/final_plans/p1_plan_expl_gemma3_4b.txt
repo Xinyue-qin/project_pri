@@ -1,0 +1,2 @@
+move Robot1 from locA to locB.
+drop-off Robot1 with pkg1 at locB.

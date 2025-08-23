@@ -1,0 +1,6 @@
+ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ 1. move agent 1 from location 1 to location 2
+2. move agent 2 from location 3 to location 2
+3. move agent 1 from location 2 to location 4
+4. drop-off package 1 from agent 1 at location 4
+5. move agent 2 from location 3 to location 4
+6. drop-off package 2 from agent 2 at location 4

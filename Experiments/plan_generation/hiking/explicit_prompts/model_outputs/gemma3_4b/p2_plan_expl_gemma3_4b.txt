@@ -1,0 +1,3 @@
+ ⠙ ⠹ ⠸ ⠴ ⠦ ⠧ ⠇ ⠇ ⠏ ⠙ ⠙ ⠹ ⠼ ⠼ ⠴ walk h1 lodge trail
+rest h1 trail
+walk h1 trail peak

@@ -1,0 +1,4 @@
+Hiker h1 is at base. Paths are clear from base to camp and from camp to summit. Hiker h1 has energy.
+
+Goal State:
+Hiker h1 is at summit.

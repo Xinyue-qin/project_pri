@@ -1,0 +1,20 @@
+Drive truck 1 from airport to city 1
+Load package 1 onto truck 1
+Drive truck 1 from city 1 to airport
+Fly airplane 1 from airport to city 2
+Load package 2 onto airplane 1
+Drive truck 2 from airport to city 1
+Load package 3 onto truck 2
+Drive truck 2 from city 1 to airport
+Load package 1 onto airplane 1
+Fly airplane 1 from airport to city 2
+Load package 2 onto airplane 1
+Load package 3 onto airplane 1
+Fly airplane 1 from airport to city 2
+Load package 3 onto airplane 1
+Load package 2 onto airplane 1
+Load package 1 onto airplane 1
+Load package 3 onto airplane 1
+Load package 2 onto airplane 1
+Load package 1 onto airplane 1
+Load package 3 onto airplane 1

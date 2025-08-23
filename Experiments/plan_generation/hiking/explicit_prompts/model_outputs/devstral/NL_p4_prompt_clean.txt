@@ -1,0 +1,20 @@
+ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ To determine the plan for getting Hiker h1 from Location A to Location D, let's break down the problem using the provided domain:
+### Initial State
+- (at h1 A)
+- Paths: A→B→D and A→C→D
+### Goal State
+- (at h1 D)
+We need a plan that gets Hiker h1 from location A to location D.
+Given that there is a preference that Location C has not rained, we'll plan the path through B instead of C. Here's the step-by-step plan:
+1. **Check Weather at B** - If it rains at B, then clear the rain before walking.
+2. **Walk from A to B**
+3. **Check Weather at D** - If it rains at D, then clear the rain before reaching D.
+4. **Walk from B to D**
+The plan would be:
+```
+(check-weather B)
+(walk h1 A B)
+(check-weather D)
+(walk h1 B D)
+```
+This plan ensures that Hiker h1 reaches location D by avoiding potential rain at locations B and D.

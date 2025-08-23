@@ -1,0 +1,5 @@
+ ⠙ ⠹ ⠼ ⠼ ⠴ ⠦ ⠇ ⠏ ⠋ ⠙ ⠙ ⠹ ⠸ ⠴ ⠦ ⠦ stack A B
+unstack A B
+stack B C
+unstack B C
+stack C A

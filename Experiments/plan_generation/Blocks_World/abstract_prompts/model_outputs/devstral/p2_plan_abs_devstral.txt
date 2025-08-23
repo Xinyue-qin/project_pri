@@ -1,0 +1,11 @@
+ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠋ ⠙ ⠹ ⠼ ⠼ ⠦ ⠦ ⠇ ⠏ ⠋ ⠙ ⠙ ⠹ ⠸ ⠼ ⠴ ⠧ ⠇ ⠇ ⠏ ⠋ ⠙ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠼ ⠦ ⠦ ⠧ ⠏ ⠋ ⠙ ⠹ ⠹ ⠼ ⠴ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠸ ⠼ ⠼ ⠦ ⠧ ⠧ ⠏ ⠏ ⠋ ⠹ ⠹ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠸ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠼ ⠴ ⠦ ⠇ ⠇ Based on the given domain and problem description, here's the plan to achieve the goal state from the initial state:
+```
+(unstack C B)
+(putdown C)
+(unstack B A)
+(stack B C)
+(unstack A B)
+(stack A B)
+(putdown A)
+```
+This sequence of actions will result in the tower being reversed as specified in the goal state.

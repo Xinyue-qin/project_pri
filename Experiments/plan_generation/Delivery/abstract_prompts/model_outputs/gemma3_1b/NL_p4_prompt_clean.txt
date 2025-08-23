@@ -1,0 +1,5 @@
+ ⠙ ⠹ ⠸ ⠴ ⠴ ⠦ ⠧ ```tool_code
+pick-up(agent 1, package 1, location 1)
+move(agent 1, location 1, location 2)
+drop-off(agent 2, package 2, location 2)
+```

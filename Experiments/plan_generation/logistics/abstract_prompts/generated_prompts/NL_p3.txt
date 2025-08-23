@@ -1,0 +1,5 @@
+Initial State:
+Three packages are distributed across different locations in two cities, with trucks and planes available at various positions.
+
+Goal State:
+Packages need to be exchanged between cities, with each package reaching a specific destination location

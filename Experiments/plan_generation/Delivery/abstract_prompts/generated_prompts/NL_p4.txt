@@ -1,0 +1,5 @@
+Initial State:
+Two delivery agents start at different locations, each with a package that needs to be delivered to the same destination via different routes.
+
+Goal State:
+Both packages are successfully delivered to the client location.

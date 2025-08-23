@@ -1,0 +1,14 @@
+ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ```PDDL
+(define (plan deliver-urgent-pkg-normalpkg)
+[(pick-up courier1 warehouse normalPkg client)
+[(move courier1 warehouse client)
+[(pick-up courier2 warehouse normalPkg client)
+[(drop-off courier1 client client)
+[(pick-up courier2 warehouse normalPkg client)
+[(drop-off courier2 client client)
+[(deliver urgentPkg client)
+[(deliver normalPkg client)
+[(delivered urgentPkg)
+[(delivered normalPkg)])])
+)
+```

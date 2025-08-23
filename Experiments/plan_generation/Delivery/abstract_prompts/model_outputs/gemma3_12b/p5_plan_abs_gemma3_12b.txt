@@ -1,0 +1,4 @@
+ ⠙ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠙ (pick-up drone package depot)
+(move drone depot hospital)
+(move drone hospital disaster-area)
+(drop-off drone package disaster-area)

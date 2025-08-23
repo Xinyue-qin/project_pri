@@ -1,0 +1,10 @@
+ ⠙ ⠸ ⠼ ⠴ ⠴ ⠧ ⠧ ```tool_code
+(define (plan hiker_to_summit)
+(walk (start hiker_at base)
+(rest-area)
+(danger-zone)
+(summit)
+(check-weather)
+)
+)
+```

@@ -1,0 +1,5 @@
+Initial State:
+Robot2 is at loc1. Package pkgA is in loc1, package pkgB is in loc2. Locations are connected: loc1 to loc2, loc2 to loc3. Package pkgA is requested at loc3, package pkgB is requested at loc1. Robot2 is available.
+
+Goal State:
+Both package pkgA and package pkgB are delivered.

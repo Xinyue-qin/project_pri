@@ -1,0 +1,48 @@
+Given a PDDL domain and a PDDL problem natural language description, come up with the plan associated with the problem. The domain describes the possible actions and their effects, while the problem description details the specific scenario to be solved. Do not generate anything but the correct plan.
+
+Domain PDDL:
+(define (domain hiking)
+  (:requirements :strips :typing)  ; 
+  (:types 
+    hiker 
+    location
+  )
+  
+  (:predicates 
+    (at ?h - hiker ?l - location)
+    (rained ?l - location)
+    (has-energy ?h - hiker)
+    (path-clear ?from ?to - location)
+  )
+
+  (:action walk
+    :parameters (?h - hiker ?from ?to - location)
+    :precondition (and 
+      (at ?h ?from)
+      (path-clear ?from ?to)
+      (not (rained ?to)))
+    :effect (and 
+      (not (at ?h ?from))
+      (at ?h ?to))
+  )
+
+  (:action rest
+    :parameters (?h - hiker ?l - location)
+    :effect (has-energy ?h)
+  )
+
+  (:action check-weather
+    :parameters (?l - location)
+    :effect (not (rained ?l))  ; 
+  )
+)
+
+Problem description:
+Initial State:
+Hiker h1 is at location A. Two paths exist: A→B→D and A→C→D. There is a preference that location C has not rained.
+
+Goal State:
+Hiker h1 is at location D.
+
+Plan:
+

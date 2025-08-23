@@ -1,0 +1,8 @@
+ ⠹ ⠸ ⠸ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ (pick-up ?agent1 ?package1 ?location1)
+(move ?agent1 ?location1 ?intermediate1)
+(move ?agent1 ?intermediate1 ?destination)
+(drop-off ?agent1 ?package1 ?destination)
+(pick-up ?agent2 ?package2 ?location2)
+(move ?agent2 ?location2 ?intermediate2)
+(move ?agent2 ?intermediate2 ?destination)
+(drop-off ?agent2 ?package2 ?destination)

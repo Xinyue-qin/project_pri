@@ -1,0 +1,5 @@
+Initial State:
+A robot is at the starting location with a package that needs to be delivered to another connected location.
+
+Goal State:
+The package is successfully delivered to its destination.

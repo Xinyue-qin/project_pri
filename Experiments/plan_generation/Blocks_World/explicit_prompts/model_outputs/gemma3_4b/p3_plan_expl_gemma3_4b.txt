@@ -1,0 +1,7 @@
+ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ 1. stack B A
+2. unstack A B
+3. stack B C
+4. unstack C B
+5. stack B D
+6. unstack D B
+7. stack B A

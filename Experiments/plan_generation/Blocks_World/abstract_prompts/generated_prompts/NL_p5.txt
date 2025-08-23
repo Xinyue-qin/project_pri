@@ -1,0 +1,9 @@
+Abstract Description：
+Initial State:
+There are two towers: one with C on B on A, and another with E on D.
+
+Goal State:
+The blocks are rearranged into a new configuration:
+A is on C (which is on the table),
+B is on E (which is on the table),
+and D is on B.

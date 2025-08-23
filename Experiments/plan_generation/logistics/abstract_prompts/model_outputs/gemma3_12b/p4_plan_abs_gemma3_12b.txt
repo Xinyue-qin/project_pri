@@ -1,0 +1,7 @@
+ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ (load package1 truck1 city1)
+(drive truck1 city1 city2)
+(drive truck1 city2 city3)
+(unload package1 truck1 city3)
+(load package2 truck1 city2)
+(drive truck1 city2 city1)
+(unload package2 truck1 city1)

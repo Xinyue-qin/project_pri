@@ -1,0 +1,4 @@
+tool_code
+pick-up pkgX locZ
+move locX to locZ
+drop-off pkgX locX

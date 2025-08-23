@@ -1,0 +1,5 @@
+ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ```pddl
+(define (plan deliver_pkg1)
+[[pick-up drop-off deliver-pkg1]]
+]])
+```

@@ -1,0 +1,4 @@
+ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ (move RobotA locX locY)
+(move RobotA locY locZ)
+(pick-up RobotA pkgX locX)
+(drop-off RobotA pkgX locZ)

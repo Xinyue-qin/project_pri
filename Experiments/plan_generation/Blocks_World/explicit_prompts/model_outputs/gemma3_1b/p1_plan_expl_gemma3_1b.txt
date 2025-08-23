@@ -1,0 +1,3 @@
+ ⠙ ⠸ ⠸ ⠴ ⠴ ⠦ ⠧ ```
+pickup (ob = block A)
+```

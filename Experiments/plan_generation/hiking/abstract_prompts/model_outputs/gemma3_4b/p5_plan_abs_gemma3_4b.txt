@@ -1,0 +1,7 @@
+ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠇ ⠏ ⠋ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ```
+check-weather
+rest
+walk
+walk
+walk
+```

@@ -1,0 +1,4 @@
+Hiker h1 is at lodge. Paths are clear from lodge to trail and from trail to peak. Trail location has rained. Hiker h1 has energy.
+
+Goal State:
+Hiker h1 is at peak.

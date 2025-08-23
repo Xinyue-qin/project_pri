@@ -1,0 +1,6 @@
+ ⠙ ⠹ ⠸ ⠴ ⠴ ⠦ ⠧ ```tool_code
+(define (plan)
+(walk (list (start A) (end D))
+(rest))
+)
+```

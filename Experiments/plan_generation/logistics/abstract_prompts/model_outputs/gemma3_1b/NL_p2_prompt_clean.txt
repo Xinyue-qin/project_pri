@@ -1,0 +1,9 @@
+ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ```pddl
+(define (plan deliver_packages)
+[(load truck truck_city destination_city)
+(drive truck_city destination_city)
+(fly airplane destination_city)
+(unload truck truck_city destination_city)
+(unload truck truck_city destination_city)
+(unload truck truck_city destination_city)]
+```

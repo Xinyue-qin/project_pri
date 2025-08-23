@@ -1,0 +1,4 @@
+ ⠙ ⠸ ⠸ ⠼ ⠴ ⠧ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ (unstack C B)
+(putdown C)
+(stack B C)
+(stack A B)

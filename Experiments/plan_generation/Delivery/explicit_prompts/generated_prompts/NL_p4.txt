@@ -1,0 +1,5 @@
+Initial State:
+Courier1 is at warehouse, courier2 is at station. UrgentPkg is in warehouse, normalPkg is in station. Warehouse is connected to client, station is connected to client. Both packages are requested at client. Both couriers are available.
+
+Goal State:
+Both urgentPkg and normalPkg are delivered.

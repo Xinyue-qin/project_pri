@@ -1,0 +1,12 @@
+ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ```pddl
+(define (plan deliver)
+<start>
+(pick-up
+?a (agent "Delivery Drone")
+?p (package "Medical Package")
+?l (location "Depot")
+?from (location "Depot")
+?to (location "Disaster Area")
+)?dest (location "Hospital")
+)
+```

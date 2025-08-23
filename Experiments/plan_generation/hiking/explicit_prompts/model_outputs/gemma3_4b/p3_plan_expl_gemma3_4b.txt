@@ -1,0 +1,3 @@
+ ⠙ ⠸ ⠼ ⠼ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ walk h1 start mid
+rest h1 mid
+walk h1 mid end

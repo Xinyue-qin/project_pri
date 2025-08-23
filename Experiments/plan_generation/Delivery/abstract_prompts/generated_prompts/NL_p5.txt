@@ -1,0 +1,5 @@
+Initial State:
+A delivery drone starts at a depot with a medical package that needs to be delivered to a disaster area through an intermediate hospital location, as there is no direct connection.
+
+Goal State:
+The medical package is successfully delivered to the disaster area, requiring transit through the hospital.

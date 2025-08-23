@@ -1,0 +1,2 @@
+tool_code
+(pick-up (agent depot) (package MedicalPkg) (hospital disasterArea))

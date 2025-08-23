@@ -1,0 +1,6 @@
+ ⠙ ⠹ ⠼ ⠴ ⠦ ⠧ ⠧ ⠏ ⠋ ⠙ ⠙ ⠹ ⠸ ⠴ ⠴ ⠦ ⠧ ⠏ ⠋ ⠋ ⠹ ⠹ ⠸ ⠼ ⠦ ⠦ ⠧ ⠏ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠧ ⠧ ⠇ ⠋ ⠋ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠹ ⠸ ⠼ ⠦ ⠧ ⠇ ⠇ ⠏ ⠙ ⠹ ⠸ ⠼ ⠴ ⠴ ⠧ ⠇ ⠇ ⠋ ⠋ ⠙ ⠹ ⠸ ⠼ ⠦ ⠧ Based on the provided domain and problem description, here's the plan:
+1. (rest ?h - hiker ?lodge - location)  ; Recharge energy at lodge
+2. (check-weather ?trail - location)    ; Check if trail is clear from rain
+3. (walk ?h - hiker ?lodge - location ?trail - location)
+4. (walk ?h - hiker ?trail - location ?peak - location)
+This plan ensures the hiker has energy, checks for and clears any weather issues on the trail, then walks from the lodge to the peak via the trail.

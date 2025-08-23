@@ -1,0 +1,8 @@
+tool_code
+(def plan (and
+(walk hiker ?from ?to)
+(rest)
+(check-weather ?from ?to)
+)
+)
+

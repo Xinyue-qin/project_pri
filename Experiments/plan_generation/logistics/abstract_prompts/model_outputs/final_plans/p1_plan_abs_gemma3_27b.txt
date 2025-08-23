@@ -1,0 +1,3 @@
+(load package truck initial_location)
+(drive truck initial_location destination_location city)
+(unload package truck destination_location)

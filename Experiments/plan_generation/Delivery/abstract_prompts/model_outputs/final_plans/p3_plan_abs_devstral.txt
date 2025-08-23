@@ -1,0 +1,6 @@
+(pick-up r1 package1 L1)
+(move r1 L1 L2)
+(drop-off r1 package1 L2)
+(pick-up r2 package1 L2)
+(move r2 L2 L3)
+(drop-off r2 package1 L3)

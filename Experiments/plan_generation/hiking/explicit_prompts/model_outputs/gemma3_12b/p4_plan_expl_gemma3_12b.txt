@@ -1,0 +1,3 @@
+ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ (walk h1 A C)
+(check-weather C)
+(walk h1 C D)

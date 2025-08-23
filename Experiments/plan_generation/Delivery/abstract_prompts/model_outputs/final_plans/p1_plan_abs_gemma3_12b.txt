@@ -1,0 +1,4 @@
+(move ?robot ?start ?connected1)
+(pick-up ?robot ?package ?start)
+(move ?robot ?connected1 ?destination)
+(drop-off ?robot ?package ?destination)

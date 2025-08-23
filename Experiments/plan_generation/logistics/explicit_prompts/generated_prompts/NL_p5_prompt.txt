@@ -1,0 +1,56 @@
+Given a PDDL domain and a PDDL problem natural language description, come up with the plan associated with the problem. The domain describes the possible actions and their effects, while the problem description details the specific scenario to be solved. Do not generate anything but the correct plan.
+
+Domain PDDL:
+(define (domain logistics)
+  (:requirements :strips :typing)
+  (:types
+    physobj
+    object vehicle - physobj
+    truck airplane - vehicle
+    location - physobj
+    airport - location
+    city
+  )
+  (:predicates
+    (loc ?l - location ?c - city)
+    (at ?x - physobj ?l - location)
+    (in ?p - object ?v - vehicle)
+  )
+
+  (:action load
+    :parameters (?o - object ?v - vehicle ?l - location)
+    :precondition (and (at ?v ?l) (at ?o ?l))
+    :effect (and (in ?o ?v) (not (at ?o ?l)))
+  )
+
+  (:action unload
+    :parameters (?o - object ?v - vehicle ?l - location)
+    :precondition (and (in ?o ?v) (at ?v ?l))
+    :effect (and (at ?o ?l) (not (in ?o ?v)))
+  )
+
+  (:action drive
+    :parameters (?t - truck ?from - location ?to - location ?c - city)
+    :precondition (and (at ?t ?from) (loc ?from ?c) (loc ?to ?c))
+    :effect (and (at ?t ?to) (not (at ?t ?from)))
+  )
+
+  (:action fly
+    :parameters (?p - airplane ?from - airport ?to - airport)
+    :precondition (at ?p ?from)
+    :effect (and (at ?p ?to) (not (at ?p ?from)))
+  )
+)
+
+Problem description:
+Initial State:
+Three cities each have a location and an airport.
+Trucks are at each location: truck1 at loc1, truck2 at loc2, truck3 at loc3.
+Planes are at airports: plane1 at airport1, plane2 at airport2.
+Packages are distributed: pkg1 at loc1, pkg2 at airport1, pkg3 at loc2, pkg4 at airport3.
+
+Goal State:
+Package pkg1 is at loc3, pkg2 is at airport3, pkg3 is at loc1, pkg4 is at airport2.
+
+Plan:
+

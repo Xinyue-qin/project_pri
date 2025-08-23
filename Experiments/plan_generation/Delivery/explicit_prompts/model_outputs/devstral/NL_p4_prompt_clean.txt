@@ -1,0 +1,14 @@
+ ⠙ ⠹ ⠼ ⠴ ⠴ ⠦ ⠇ ⠇ ⠋ ⠋ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠙ ⠸ ⠸ ⠴ ⠦ ⠧ ⠧ ⠇ ⠏ ⠙ ⠙ ⠹ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ To determine the plan for delivering both UrgentPkg and NormalPkg to Client using Courier1 and Courier2 based on the given PDDL domain, we need to follow these steps:
+1. Courier1 picks up UrgentPkg from warehouse.
+2. Courier1 moves to client.
+3. Courier1 drops off UrgentPkg at client.
+4. Courier2 picks up normalPkg from station.
+5. Courier2 moves to client.
+6. Courier2 drops off NormalPkg at client.
+Plan:
+(pick-up courier1 urgentPkg warehouse)
+(move courier1 warehouse client)
+(drop-off courier1 urgentPkg client)
+(pick-up courier2 normalPkg station)
+(move courier2 station client)
+(drop-off courier2 normalPkg client)

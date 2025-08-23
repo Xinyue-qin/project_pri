@@ -1,0 +1,5 @@
+ ⠙ ⠸ ⠸ ⠴ ⠦ ⠧ ⠧ ```pddl
+(define (plan stack-tower)
+([] stack-tower)
+(buffer prove-problem)))
+```

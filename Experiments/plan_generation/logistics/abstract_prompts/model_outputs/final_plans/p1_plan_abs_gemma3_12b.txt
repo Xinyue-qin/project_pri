@@ -1,0 +1,2 @@
+(load ?package ?truck ?location)
+(drive ?truck ?location ?destination)

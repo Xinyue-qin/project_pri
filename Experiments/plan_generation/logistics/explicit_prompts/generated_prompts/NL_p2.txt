@@ -1,0 +1,5 @@
+Initial State:
+Airport1 is in city1, airport2 is in city2. Truck1 and plane1 are at airport1. Packages pkg1 and pkg2 are at airport1.
+
+Goal State:
+Both packages pkg1 and pkg2 are at airport2.

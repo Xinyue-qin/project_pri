@@ -1,0 +1,8 @@
+ ⠹ ⠸ ⠼ ⠴ ⠦ ⠦ ⠧ ```pddl
+(define (plan deliver_package)
+"Deliver the package to the destination location."
+(action pick-up
+:parameters (?a - agent ?p - package ?l - location)
+:precondition (and (at ?a ?l) (in ?p ?l) (available ?a))
+:effect (and (has ?a ?p) (not (in ?p ?l)))))
+```

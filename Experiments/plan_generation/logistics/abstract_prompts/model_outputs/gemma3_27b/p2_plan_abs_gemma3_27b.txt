@@ -1,0 +1,5 @@
+ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠏ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠹ ⠼ ⠴ ⠦ ⠦ ⠇ ⠇ ⠋ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠧ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠧ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠙ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠏ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠙ ⠙ ⠹ ⠸ ⠼ ⠴ ⠧ ⠧ ⠇ ⠏ ⠙ ⠙ ⠹ ⠼ ⠼ ⠦ ⠦ ⠧ ⠇ ⠋ ⠙ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠏ ⠋ ⠙ ⠙ (load package1 truck airport1)
+(load package2 truck airport1)
+(drive truck airport1 airport2 city1)
+(unload package1 truck airport2)
+(unload package2 truck airport2)

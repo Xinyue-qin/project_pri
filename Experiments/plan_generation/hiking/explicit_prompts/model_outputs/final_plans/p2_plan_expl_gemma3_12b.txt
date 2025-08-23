@@ -1,0 +1,4 @@
+(rest h1 lodge)
+(walk h1 lodge trail)
+(check-weather trail)
+(walk h1 trail peak)

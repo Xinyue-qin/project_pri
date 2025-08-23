@@ -1,0 +1,4 @@
+(move drone depot hospital)
+(move drone hospital disasterArea)
+(pick-up drone MedicalPkg disasterArea)
+(drop-off drone MedicalPkg disasterArea)

@@ -1,0 +1,40 @@
+COMPLETE PROCESSING SUMMARY
+===========================
+Date: 2025年 8月22日 星期五 23时33分45秒 CST
+Prompt directory: ./generated_prompts
+Output directory: ./model_outputs
+Final plans directory: ./final_plans
+Models processed: devstral gemma3:1b gemma3:4b gemma3:12b gemma3:27b
+
+FILES GENERATED:
+---------------
+  devstral:        5 plan files
+  gemma3_1b:        5 plan files
+  gemma3_4b:        5 plan files
+  gemma3_12b:        5 plan files
+  gemma3_27b:        5 plan files
+
+TOTAL PLAN FILES:       25
+COPIED TO FINAL DIR:       25
+
+DIRECTORY STRUCTURE:
+-------------------
+  ./model_outputs
+  ./model_outputs/devstral
+  ./model_outputs/gemma3_12b
+  ./model_outputs/gemma3_1b
+  ./model_outputs/gemma3_27b
+  ./model_outputs/gemma3_4b
+
+FINAL PLAN FILES:
+----------------
+  ./final_plans/p1_plan_abs_devstral.txt
+  ./final_plans/p1_plan_abs_gemma3_12b.txt
+  ./final_plans/p1_plan_abs_gemma3_1b.txt
+  ./final_plans/p1_plan_abs_gemma3_27b.txt
+  ./final_plans/p1_plan_abs_gemma3_4b.txt
+  ./final_plans/p2_plan_abs_devstral.txt
+  ./final_plans/p2_plan_abs_gemma3_12b.txt
+  ./final_plans/p2_plan_abs_gemma3_1b.txt
+  ./final_plans/p2_plan_abs_gemma3_27b.txt
+  ./final_plans/p2_plan_abs_gemma3_4b.txt

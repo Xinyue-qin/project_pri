@@ -1,0 +1,6 @@
+(move A1 L1 L4)
+(move A1 L4 L3)
+(drop-off A1 P1 L3)
+(move A2 L2 L5)
+(move A2 L5 L3)
+(drop-off A2 P2 L3)

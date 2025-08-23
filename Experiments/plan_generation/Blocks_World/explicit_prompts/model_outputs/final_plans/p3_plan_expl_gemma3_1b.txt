@@ -1,0 +1,8 @@
+pickup A
+putdown A
+stack B
+unstack B
+stack C
+unstack C
+stack D
+unstack D

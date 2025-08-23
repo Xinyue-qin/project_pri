@@ -1,0 +1,5 @@
+Initial State:
+Hiker h1 is at base. Paths are clear: base→rest-area→danger-zone→summit. Danger-zone has rained. Hiker h1 does not have energy.
+
+Goal State:
+Hiker h1 is at summit.

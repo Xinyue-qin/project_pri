@@ -1,0 +1,5 @@
+ ⠙ ⠸ ⠼ ⠼ ⠴ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ 1. fly airplane from airport to city
+2. drive truck from city to city
+3. unload package from truck to city
+4. drive truck from city to city
+5. unload package from truck to city

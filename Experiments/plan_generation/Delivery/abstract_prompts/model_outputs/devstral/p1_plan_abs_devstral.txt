@@ -1,0 +1,4 @@
+ ⠙ ⠹ ⠼ ⠼ ⠴ ⠦ ⠇ ⠏ ⠋ ⠙ ⠹ ⠹ ⠸ ⠼ ⠦ ⠦ ⠧ ⠏ ⠋ ⠙ ⠹ ⠸ ⠸ ⠴ ⠦ ⠦ ⠧ ⠏ ⠋ ⠙ ⠹ ⠸ ⠸ ⠴ ⠦ ⠧ ⠇ ⠏ ⠏ ⠋ ⠹ ⠹ ⠸ ⠼ ⠦ ⠦ ⠧ ⠇ ⠋ ⠙ ⠙ ⠸ ⠼ ⠴ ⠦ ⠦ ⠇ ⠏ ⠏ ⠙ ⠙ ⠸ ⠼ ⠴ ⠴ ⠦ ⠇ ⠇ ⠏ ⠋ ⠙ ⠹ ⠼ ⠼ ⠦ ⠦ ⠧ ⠏ ⠏ ⠋ ⠹ ⠸ ⠼ ⠼ ⠦ ⠧ ⠇ ⠇ ⠋ ⠙ ⠙ ⠹ ⠼ ⠼ ⠦ ⠧ ⠧ ⠇ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠦ ⠧ ⠇ ⠏ ⠙ ⠹ ⠸ ⠸ ⠴ ⠴ ⠧ ⠇ ⠇ ⠏ ⠋ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠧ ⠏ ⠋ ⠋ ⠹ ⠹ ⠼ ⠼ ⠦ ⠦ ⠇ ⠇ ⠋ ⠙ ⠹ ⠸ ⠸ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠙ ⠸ ⠼ ⠼ ⠴ ⠦ ⠇ ⠏ Based on the provided domain and problem description, here's the plan for delivering the package:
+1. `(pick-up robot package starting-location)`
+2. `(move robot starting-location destination-location)`
+3. `(drop-off robot package destination-location)`

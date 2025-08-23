@@ -1,0 +1,8 @@
+pickup D
+stack D E
+pickup C
+stack C E
+pickup B
+stack B E
+pickup A
+stack A C

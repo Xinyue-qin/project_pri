@@ -1,0 +1,8 @@
+ ⠙ ⠸ ⠼ ⠴ ⠦ ⠦ ⠧ ⠇ ⠋ ⠙ ⠙ ⠸ ⠼ ⠼ ⠦ ⠧ ⠇ ⠇ ⠏ ⠙ ⠙ ⠸ ⠼ ⠼ ⠦ ⠧ ⠧ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠹ ⠸ ⠼ ⠴ ⠧ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠼ ⠼ ⠴ ⠧ ⠇ ⠏ ⠏ ⠙ ⠹ ⠹ ⠼ ⠼ ⠴ ⠧ ⠇ ⠇ ⠋ ⠙ ⠙ ⠹ ⠸ ⠴ ⠴ ⠦ ⠧ ⠇ ⠋ ⠋ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ (move robot2 loc1 loc2)
+(pick-up robot2 pkgB loc2)
+(move robot2 loc2 loc1)
+(drop-off robot2 pkgB loc1)
+(move robot2 loc1 loc2)
+(pick-up robot2 pkgA loc2)
+(move robot2 loc2 loc3)
+(drop-off robot2 pkgA loc3)

@@ -1,0 +1,3 @@
+ ⠹ ⠹ ⠼ ⠴ ⠦ ⠦ ⠇ ⠏ ⠏ ⠋ ⠙ (rest lodge)
+(check-weather peak)
+(walk hiker peak)

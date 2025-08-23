@@ -1,0 +1,6 @@
+tool_code
+(define (plan hiker-at-peak)
+(walk (current-location) (start-location) (check-weather))
+(rest)
+)
+

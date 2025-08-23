@@ -1,0 +1,6 @@
+(unstack C B) -> (putdown C) ->
+(unstack A B) -> (stack A C) ->
+(unstack B A) -> (putdown B) ->
+(unstack E D) -> (putdown E) ->
+(stack B E) ->
+(unstack D TABLE) -> (stack D B)

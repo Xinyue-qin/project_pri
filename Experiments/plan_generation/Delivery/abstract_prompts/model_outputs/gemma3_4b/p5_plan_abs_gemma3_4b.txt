@@ -1,0 +1,4 @@
+ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ 1. Move drone to hospital.
+2. Pick up medical package at hospital.
+3. Move drone to disaster area.
+4. Drop off medical package at disaster area.

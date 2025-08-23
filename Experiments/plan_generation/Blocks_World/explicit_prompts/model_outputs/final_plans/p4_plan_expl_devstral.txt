@@ -1,0 +1,5 @@
+(pickup A)
+(stack A B)
+(pickup C)
+(stack C D)
+

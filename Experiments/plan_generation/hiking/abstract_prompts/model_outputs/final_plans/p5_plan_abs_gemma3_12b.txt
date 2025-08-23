@@ -1,0 +1,3 @@
+(rest hiker1 basecamp)
+(check-weather summit)
+(walk hiker1 basecamp summit)

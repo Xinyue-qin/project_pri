@@ -1,0 +1,2 @@
+(walk ?h ?from base camp)
+(walk ?h camp summit)

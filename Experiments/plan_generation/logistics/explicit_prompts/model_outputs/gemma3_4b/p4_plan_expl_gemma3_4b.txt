@@ -1,0 +1,3 @@
+ ⠙ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠇ ⠋ ⠙ ⠹ ⠸ ⠸ ⠴ ⠦ ⠧ ⠧ drive truck2 airport1 loc3 city1
+fly plane1 airport1 airport2
+drive truck1 airport2 loc3 city2

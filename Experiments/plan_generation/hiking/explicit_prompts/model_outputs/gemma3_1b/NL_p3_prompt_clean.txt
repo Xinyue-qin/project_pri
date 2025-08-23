@@ -1,0 +1,7 @@
+ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ```tool_code
+(define (plan walk-to-end)
+(if (not (check-weather))
+(walk (rest (at h1 start))))
+(walk (rest (at h1 end)))
+)
+```

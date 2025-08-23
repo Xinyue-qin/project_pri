@@ -1,0 +1,20 @@
+ ⠙ ⠹ ⠼ ⠴ ⠴ ⠧ ⠧ ⠏ ⠋ ⠋ ⠹ ⠸ ⠼ ⠼ ⠦ ⠦ ⠧ 1. Drive truck 1 from airport to city 1
+2. Load package 1 onto truck 1
+3. Drive truck 1 from city 1 to airport
+4. Fly airplane 1 from airport to city 2
+5. Load package 2 onto airplane 1
+6. Drive truck 2 from airport to city 1
+7. Load package 3 onto truck 2
+8. Drive truck 2 from city 1 to airport
+9. Load package 1 onto airplane 1
+10. Fly airplane 1 from airport to city 2
+11. Load package 2 onto airplane 1
+12. Load package 3 onto airplane 1
+13. Fly airplane 1 from airport to city 2
+14. Load package 3 onto airplane 1
+15. Load package 2 onto airplane 1
+16. Load package 1 onto airplane 1
+17. Load package 3 onto airplane 1
+18. Load package 2 onto airplane 1
+19. Load package 1 onto airplane 1
+20. Load package 3 onto airplane 1

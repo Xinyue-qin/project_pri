@@ -1,0 +1,2 @@
+ ⠹ ⠹ ⠸ ⠼ ⠦ ⠦ ⠧ ⠇ ⠋ ⠋ ⠙ ⠸ ⠼ ⠼ ⠦ ⠧ ⠧ 1. move Robot1 from locA to locB.
+2. drop-off Robot1 with pkg1 at locB.

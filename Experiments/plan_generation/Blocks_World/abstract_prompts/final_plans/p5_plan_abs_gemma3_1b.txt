@@ -1,0 +1,10 @@
+tool_code
+(define (plan pick_and_stack)
+(if (and (clear A) (clear B) (clear C) (clear E))
+(let ((underob = B) (ob = A))
+(pickup ob underob)
+(putdown ob underob)
+false)
+)
+)
+

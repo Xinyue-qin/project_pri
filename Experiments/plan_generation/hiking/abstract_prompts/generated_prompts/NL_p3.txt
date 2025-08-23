@@ -1,0 +1,5 @@
+Initial State:
+A hiker starts at the beginning of a trail but is tired and lacks energy for the hike.
+
+Goal State:
+The hiker completes the journey to the end destination.

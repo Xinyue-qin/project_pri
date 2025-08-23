@@ -1,0 +1,7 @@
+stack B A
+unstack A B
+stack B C
+unstack C B
+stack B D
+unstack D B
+stack B A

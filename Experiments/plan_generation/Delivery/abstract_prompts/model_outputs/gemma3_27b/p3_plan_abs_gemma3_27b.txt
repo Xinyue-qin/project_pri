@@ -1,0 +1,4 @@
+ ⠙ ⠹ ⠼ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠙ ⠙ ⠹ ⠸ ⠴ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠹ ⠹ ⠼ ⠼ ⠴ ⠧ ⠧ ⠏ ⠏ ⠋ ⠹ ⠹ ⠼ ⠼ ⠦ ⠧ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠧ ⠧ ⠇ ⠋ ⠙ ⠹ ⠸ ⠸ ⠼ ⠴ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠴ ⠦ ⠇ ⠇ ⠋ ⠙ ⠹ ⠹ ⠸ ⠼ ⠦ ⠦ ⠇ ⠏ ⠋ ⠙ ⠙ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ (pick-up robot1 package1 location1)
+(move robot1 location1 location2)
+(move robot1 location2 location3)
+(drop-off robot1 package1 location3)

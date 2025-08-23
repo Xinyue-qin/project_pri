@@ -1,0 +1,5 @@
+ ⠹ ⠹ ⠸ ⠼ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠸ ⠼ ⠴ ⠧ ⠧ ⠏ ⠏ ⠋ ⠙ ⠸ ⠼ ⠼ ⠦ ⠦ ⠧ ⠏ ⠏ ⠋ ⠙ ⠹ ⠼ ⠴ ⠴ ⠦ ⠇ ⠇ ⠏ ⠋ ⠙ ⠸ ⠼ ⠴ ⠦ ⠦ ⠇ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠹ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠸ ⠴ ⠦ ⠦ ⠧ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ Based on the given domain and problem description, here's the plan:
+1. (pick-up drone medicalpkg depot)
+2. (move drone depot hospital)
+3. (move drone hospital disasterArea)
+4. (drop-off drone medicalpkg disasterArea)

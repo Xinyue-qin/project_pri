@@ -1,0 +1,7 @@
+Abstract Description：
+Initial State:
+All blocks are scattered on the table.
+
+Goal State:
+Two pairs of blocks are stacked: A on B and C on D. The other blocks remain unchanged.
+

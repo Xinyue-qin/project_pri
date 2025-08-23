@@ -1,0 +1,7 @@
+(load pkg1 truck1 loc1)
+(drive truck1 loc1 loc3 city3)
+(unload pkg1 truck1 loc3)
+(fly plane1 airport1 airport2)
+(load pkg2 plane1 airport1)
+(unload pkg2 truck2 airport2)
+(drive truck2 airport2 loc2 city2)

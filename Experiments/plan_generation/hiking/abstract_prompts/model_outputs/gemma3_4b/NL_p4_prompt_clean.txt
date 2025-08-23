@@ -1,0 +1,2 @@
+ ⠙ ⠸ ⠼ ⠴ ⠦ ⠦ ⠧ ⠏ ⠋ ⠙ ⠙ ⠸ ⠼ ⠴ ⠴ 1. check-weather D
+2. walk hiker D

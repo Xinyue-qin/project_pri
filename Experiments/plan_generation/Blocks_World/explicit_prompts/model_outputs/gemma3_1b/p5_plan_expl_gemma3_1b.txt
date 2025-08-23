@@ -1,0 +1,4 @@
+ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ 1.  `pickup A`
+2.  `putdown A`
+3.  `stack A and B`
+4.  `unstack A and B`

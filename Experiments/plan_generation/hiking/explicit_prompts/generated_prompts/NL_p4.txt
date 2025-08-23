@@ -1,0 +1,5 @@
+Initial State:
+Hiker h1 is at location A. Two paths exist: A→B→D and A→C→D. There is a preference that location C has not rained.
+
+Goal State:
+Hiker h1 is at location D.

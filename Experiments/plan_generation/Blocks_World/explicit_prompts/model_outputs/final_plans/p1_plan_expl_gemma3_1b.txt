@@ -1,0 +1,2 @@
+pickup (ob = block A)
+

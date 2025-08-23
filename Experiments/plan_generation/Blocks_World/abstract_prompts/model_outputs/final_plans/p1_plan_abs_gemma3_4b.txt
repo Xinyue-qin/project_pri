@@ -1,0 +1,2 @@
+stack C B
+stack B A

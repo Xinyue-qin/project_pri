@@ -1,0 +1,7 @@
+Abstract Description：
+Initial State:
+There are two small towers: one with B on A, and another with D on C.
+
+Goal State:
+All blocks are stacked into one tall tower: A on B, B on C, C on D, D on the table.
+

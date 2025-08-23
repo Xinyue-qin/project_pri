@@ -1,0 +1,4 @@
+( pick-up RobotA pkgX locX )
+( move RobotA locX locY )
+( move RobotA locY locZ )
+( drop-off RobotA pkgX locZ )

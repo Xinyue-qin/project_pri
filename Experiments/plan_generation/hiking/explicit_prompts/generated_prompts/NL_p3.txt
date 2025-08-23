@@ -1,0 +1,5 @@
+Initial State:
+Hiker h1 is at start. Paths are clear from start to mid and from mid to end. Hiker h1 does not have energy.
+
+Goal State:
+Hiker h1 is at end.

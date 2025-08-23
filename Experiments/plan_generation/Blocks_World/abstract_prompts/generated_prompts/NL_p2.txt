@@ -1,0 +1,6 @@
+Abstract Description：
+Initial State:
+There is a tower of three blocks: C on B, B on A, A on the table.
+
+Goal State:
+The tower is reversed: A on B, B on C, C on the table.

@@ -1,0 +1,6 @@
+ ⠙ ⠹ ⠼ ⠼ ⠴ ⠦ ⠧ ⠏ ⠏ ⠙ (fly airplane starting-airport destination-airport)
+(drive truck starting-airport destination-airport)
+(load package1 truck starting-airport)
+(load package2 truck starting-airport)
+(unload package1 truck destination-airport)
+(unload package2 truck destination-airport)

@@ -1,0 +1,35 @@
+[2025年 8月23日 星期六 16时19分20秒 CST] Processed NL_p1_prompt with devstral
+  Duration: 30s
+  Exit code: 0
+  Raw lines:       13
+  Clean lines:       10
+  STATUS: SUCCESS
+----------------------------------------
+[2025年 8月23日 星期六 16时20分31秒 CST] Processed NL_p2_prompt with devstral
+  Duration: 25s
+  Exit code: 0
+  Raw lines:        8
+  Clean lines:        6
+  STATUS: SUCCESS
+----------------------------------------
+[2025年 8月23日 星期六 16时22分41秒 CST] Processed NL_p3_prompt with devstral
+  Duration: 85s
+  Exit code: 0
+  Raw lines:      130
+  Clean lines:      105
+  STATUS: SUCCESS
+----------------------------------------
+[2025年 8月23日 星期六 16时26分02秒 CST] Processed NL_p4_prompt with devstral
+  Duration: 25s
+  Exit code: 0
+  Raw lines:        9
+  Clean lines:        7
+  STATUS: SUCCESS
+----------------------------------------
+[2025年 8月23日 星期六 16时28分18秒 CST] Processed NL_p5_prompt with devstral
+  Duration: 90s
+  Exit code: 0
+  Raw lines:      123
+  Clean lines:       98
+  STATUS: SUCCESS
+----------------------------------------

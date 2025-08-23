@@ -1,0 +1,35 @@
+[2025年 8月23日 星期六 16时10分32秒 CST] Processed NL_p1_prompt with gemma3:1b
+  Duration: 5s
+  Exit code: 0
+  Raw lines:        9
+  Clean lines:        8
+  STATUS: SUCCESS
+----------------------------------------
+[2025年 8月23日 星期六 16时12分03秒 CST] Processed NL_p2_prompt with gemma3:1b
+  Duration: 5s
+  Exit code: 0
+  Raw lines:       10
+  Clean lines:        9
+  STATUS: SUCCESS
+----------------------------------------
+[2025年 8月23日 星期六 16时13分33秒 CST] Processed NL_p3_prompt with gemma3:1b
+  Duration: 5s
+  Exit code: 0
+  Raw lines:       46
+  Clean lines:       45
+  STATUS: SUCCESS
+----------------------------------------
+[2025年 8月23日 星期六 16时15分04秒 CST] Processed NL_p4_prompt with gemma3:1b
+  Duration: 5s
+  Exit code: 0
+  Raw lines:       49
+  Clean lines:       42
+  STATUS: SUCCESS
+----------------------------------------
+[2025年 8月23日 星期六 16时16分49秒 CST] Processed NL_p5_prompt with gemma3:1b
+  Duration: 5s
+  Exit code: 0
+  Raw lines:       39
+  Clean lines:       38
+  STATUS: SUCCESS
+----------------------------------------

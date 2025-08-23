@@ -1,0 +1,10 @@
+ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ 1. drive truck1 from loc1 to loc3
+2. drive truck2 from loc2 to loc3
+3. fly plane1 from airport1 to airport3
+4. unload pkg1 from truck1 at loc3
+5. fly plane2 from airport2 to airport3
+6. unload pkg2 from truck2 at airport3
+7. drive truck1 from loc3 to loc1
+8. unload pkg3 from truck3 at loc2
+9. drive truck2 from loc2 to loc3
+10. unload pkg4 from truck1 at airport3

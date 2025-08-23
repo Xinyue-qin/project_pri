@@ -1,0 +1,37 @@
+ ⠹ ⠹ ⠼ ⠼ ⠴ ⠧ ⠇ ⠇ ⠋ ⠋ ⠙ ⠸ ⠸ ⠴ ⠴ ⠦ ⠧ ⠏ ⠋ ⠋ ⠹ ⠹ ⠼ ⠼ ⠦ ⠧ ⠇ ⠇ ⠏ ⠙ ⠹ ⠹ ⠼ ⠼ ⠦ ⠧ ⠧ ⠏ ⠏ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠴ ⠦ ⠇ ⠇ ⠋ ⠋ ⠹ ⠹ ⠸ ⠼ ⠦ ⠦ ⠧ ⠏ ⠋ ⠙ ⠙ ⠸ ⠸ ⠼ ⠴ ⠦ ⠇ ⠏ ⠏ ⠋ ⠙ ⠸ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠋ ⠙ ⠹ ⠸ ⠸ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠋ ⠹ ⠹ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠋ ⠙ ⠹ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ To solve this problem, we need to transform the initial state into the goal state by applying the available actions in a logical sequence. Let's break down the steps:
+### Initial State:
+- arm-empty
+- (clear C)
+- (on-table A)
+- (on B A)
+- (on C B)
+### Goal State:
+- (on-table C)
+- (on B C)
+- (on A B)
+Let's work through the plan step by step:
+1. **unstack C from B**
+- Precondition: (clear C) ∧ (arm-empty) ∧ (on C B)
+- Effect: (holding C) ∧ (clear B) ∧ ¬(on C B) ∧ ¬(clear C) ∧ ¬(arm-empty)
+2. **putdown C on table**
+- Precondition: (holding C)
+- Effect: (clear C) ∧ (arm-empty) ∧ (on-table C) ∧ ¬(holding C)
+3. **unstack B from A**
+- Precondition: (clear B) ∧ (arm-empty) ∧ (on B A)
+- Effect: (holding B) ∧ (clear A) ∧ ¬(on B A) ∧ ¬(clear B) ∧ ¬(arm-empty)
+4. **stack B on C**
+- Precondition: (clear C) ∧ (holding B)
+- Effect: (arm-empty) ∧ (clear B) ∧ (on B C) ∧ ¬(clear C) ∧ ¬(holding B)
+5. **unstack A from table**
+- Precondition: (clear A) ∧ (arm-empty) ∧ (on-table A)
+- Effect: (holding A) ∧ (clear A) ∧ ¬(on-table A) ∧ ¬(clear A) ∧ ¬(arm-empty)
+6. **stack A on B**
+- Precondition: (clear B) ∧ (holding A)
+- Effect: (arm-empty) ∧ (clear A) ∧ (on A B) ∧ ¬(clear B) ∧ ¬(holding A)
+### Final Plan:
+1. (unstack C B)
+2. (putdown C)
+3. (unstack B A)
+4. (stack B C)
+5. (pickup A)
+6. (stack A B)

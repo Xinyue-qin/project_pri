@@ -1,0 +1,2 @@
+ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ 1.  `pickup A`
+2.  `putdown A`

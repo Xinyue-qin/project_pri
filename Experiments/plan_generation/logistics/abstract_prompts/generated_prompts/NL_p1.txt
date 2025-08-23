@@ -1,0 +1,5 @@
+Initial State:
+A package and a truck are both at the same location within a city.
+
+Goal State:
+The package is delivered to another location within the same city.

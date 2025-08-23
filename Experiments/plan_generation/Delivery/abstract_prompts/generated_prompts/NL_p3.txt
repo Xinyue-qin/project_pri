@@ -1,0 +1,6 @@
+Initial State:
+Two robots are positioned at different locations in a connected network, with a package at the starting location that needs to be delivered to the far end.
+
+Goal State:
+The package is successfully delivered to the final destination, possibly requiring coordination between multiple robots.
+

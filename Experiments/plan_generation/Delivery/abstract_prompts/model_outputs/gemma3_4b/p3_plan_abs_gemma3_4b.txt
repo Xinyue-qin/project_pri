@@ -1,0 +1,4 @@
+ ⠹ ⠹ ⠼ ⠴ ⠦ ⠦ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ 1. Move robot 1 from location 1 to location 2
+2. Pick up package from location 1
+3. Move robot 2 from location 2 to location 3
+4. Drop off package at location 3

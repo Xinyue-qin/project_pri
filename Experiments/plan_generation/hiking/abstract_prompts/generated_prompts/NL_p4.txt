@@ -1,0 +1,5 @@
+Initial State:
+A hiker has multiple route options to reach destination D, with a preference for one route that avoids rainy conditions.
+
+Goal State:
+The hiker reaches destination D, possibly choosing between alternative paths.

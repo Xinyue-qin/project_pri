@@ -1,0 +1,8 @@
+ ⠹ ⠹ ⠼ ⠼ ⠦ ⠦ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠴ ⠦ ⠇ 1. move courier1 from warehouse to client
+2. move courier2 from station to client
+3. pick-up urgentPkg from warehouse
+4. move courier1 from client to warehouse
+5. drop-off urgentPkg from courier1 at warehouse
+6. pick-up normalPkg from station
+7. move courier2 from client to station
+8. drop-off normalPkg from courier2 at station

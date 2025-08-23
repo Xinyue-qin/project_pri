@@ -1,0 +1,4 @@
+(pick-up drone medical-package depot)
+(move drone depot hospital)
+(move drone hospital disaster-area)
+(drop-off drone medical-package disaster-area)

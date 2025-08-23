@@ -1,0 +1,14 @@
+ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠋ ⠹ ⠹ ⠼ ⠴ ⠴ ⠦ ⠇ 1. stack B on A
+2. stack D on C
+3. unstack D
+4. stack D on C
+5. unstack B
+6. stack B on A
+7. unstack A
+8. stack A on B
+9. unstack B
+10. stack B on C
+11. unstack C
+12. stack C on D
+13. unstack D
+14. stack D on the table

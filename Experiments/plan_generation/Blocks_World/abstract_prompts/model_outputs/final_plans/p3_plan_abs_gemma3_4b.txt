@@ -1,0 +1,14 @@
+stack B on A
+stack D on C
+unstack D
+stack D on C
+unstack B
+stack B on A
+unstack A
+stack A on B
+unstack B
+stack B on C
+unstack C
+stack C on D
+unstack D
+stack D on the table

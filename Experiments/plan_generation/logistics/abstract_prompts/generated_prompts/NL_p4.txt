@@ -1,0 +1,5 @@
+Initial State:
+Packages are located in different cities, with transportation vehicles positioned at strategic locations across three cities.
+
+Goal State:
+Packages need cross-city delivery, with one package going to a third city and another returning to the second city.

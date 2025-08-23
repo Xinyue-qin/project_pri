@@ -1,0 +1,4 @@
+`pickup A`
+`putdown A`
+`stack A and B`
+`unstack A and B`

@@ -1,0 +1,6 @@
+Abstract Description：
+Initial State:
+All blocks are scattered on the table.
+
+Goal State:
+All blocks are stacked into a single tower with A on top of B, B on top of C, and C on the table.

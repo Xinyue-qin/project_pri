@@ -1,0 +1,20 @@
+ ⠙ ⠸ ⠼ ⠴ ⠴ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠦ 1. drive truck 1 from city 1 to city 2
+2. unload package 1 from truck 1 at city 2
+3. drive truck 1 from city 2 to city 3
+4. unload package 2 from truck 1 at city 3
+5. drive truck 1 from city 3 to city 1
+6. unload package 3 from truck 1 at city 1
+7. drive truck 1 from city 1 to city 2
+8. unload package 4 from truck 1 at city 2
+9. drive truck 1 from city 2 to city 3
+10. unload package 5 from truck 1 at city 3
+11. drive truck 1 from city 3 to city 1
+12. unload package 6 from truck 1 at city 1
+13. drive truck 1 from city 1 to city 2
+14. unload package 7 from truck 1 at city 2
+15. drive truck 1 from city 2 to city 3
+16. unload package 8 from truck 1 at city 3
+17. drive truck 1 from city 3 to city 1
+18. unload package 9 from truck 1 at city 1
+19. drive truck 1 from city 1 to city 2
+20. unload package 10 from truck 1 at city 2

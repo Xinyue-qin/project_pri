@@ -1,0 +1,16 @@
+stack B A
+stack E D
+unstack A C
+putdown C
+stack E D
+unstack B C
+putdown C
+stack E D
+unstack B C
+putdown C
+stack E D
+unstack B C
+putdown C
+stack E D
+unstack B C
+putdown C

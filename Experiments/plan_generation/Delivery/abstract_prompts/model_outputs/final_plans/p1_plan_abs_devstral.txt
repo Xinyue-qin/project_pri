@@ -1,0 +1,4 @@
+(pick-up robot package starting-location)
+(move robot starting-location destination-location)
+(drop-off robot package destination-location)
+；

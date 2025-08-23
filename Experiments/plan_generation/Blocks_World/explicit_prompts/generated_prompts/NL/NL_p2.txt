@@ -1,0 +1,6 @@
+Explicit Description:
+Initial State:
+The arm is empty. Block A is on the table, block B is on A, block C is on B, and block C is clear.
+
+Goal State:
+Block C is on the table, block B is on C, and block A is on B.

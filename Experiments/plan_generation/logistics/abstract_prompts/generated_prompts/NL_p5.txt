@@ -1,0 +1,6 @@
+Initial State:
+Multiple packages and vehicles are distributed across three interconnected cities with comprehensive transportation infrastructure.
+
+Goal State:
+A complex delivery pattern requiring packages to be moved between all three cities in a circular exchange pattern.
+

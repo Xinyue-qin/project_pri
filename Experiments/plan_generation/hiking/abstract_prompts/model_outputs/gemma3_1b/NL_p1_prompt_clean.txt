@@ -1,0 +1,4 @@
+ ⠙ ⠹ ⠸ ⠴ ⠦ ⠧ ⠧ ```
+(walk ( hiker "A hiker" "base" "summit")
+(rest)
+```

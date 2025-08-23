@@ -1,0 +1,7 @@
+ ⠙ ⠹ ⠼ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ (move Courier1 warehouse client)
+(pick-up Courier1 UrgentPkg warehouse)
+(move Courier1 client UrgentPkg)
+(drop-off Courier1 UrgentPkg client)
+(move Courier2 station client)
+(pick-up Courier2 normalPkg station)
+(drop-off Courier2 normalPkg client)

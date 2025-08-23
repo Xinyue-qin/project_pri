@@ -1,0 +1,4 @@
+A hiker starts at a lodge with energy, but one of the trails on the way to the peak is currently wet from rain.
+
+Goal State:
+The hiker reaches the peak, needing to deal with the weather condition.

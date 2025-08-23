@@ -1,0 +1,5 @@
+Initial State:
+Two packages, a truck, and an airplane are all at the starting airport in one city.
+
+Goal State:
+Both packages are delivered to the destination airport in another city.

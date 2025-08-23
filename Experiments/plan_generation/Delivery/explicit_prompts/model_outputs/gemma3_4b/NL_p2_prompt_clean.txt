@@ -1,0 +1,7 @@
+ ⠙ ⠹ ⠸ ⠴ ⠦ ⠦ ⠧ ⠇ ⠏ ⠙ ⠙ ⠹ ⠼ ⠴ ⠴ ⠦ ⠧ 1. move Robot2 from loc1 to loc2
+2. pick-up Robot2 with pkgA from loc2
+3. move Robot2 from loc2 to loc3
+4. drop-off Robot2 with pkgA from loc3
+5. move Robot2 from loc3 to loc1
+6. pick-up Robot2 with pkgB from loc1
+7. drop-off Robot2 with pkgB from loc1

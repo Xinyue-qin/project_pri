@@ -1,0 +1,2 @@
+ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ move drone from depot to hospital
+drop off medicalPkg at hospital

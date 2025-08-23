@@ -1,0 +1,8 @@
+ ⠹ ⠹ ⠼ ⠴ ⠴ ⠦ ⠧ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ 1. pickup D
+2. stack D E
+3. pickup C
+4. stack C E
+5. pickup B
+6. stack B E
+7. pickup A
+8. stack A C
