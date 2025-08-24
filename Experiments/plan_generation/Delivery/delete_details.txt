@@ -1,5 +1,0 @@
-P1: delete (at robot1 locA) (in pkg1 locA);
-P2: delete (at robot2 loc1);
-P3: delete (available robotA)(available robotB);
-P4: delete (in urgentPkg warehouse)(in normalPkg station) (connected warehouse client);
-P5: delete (at drone depot) (in medicalPkg depot)

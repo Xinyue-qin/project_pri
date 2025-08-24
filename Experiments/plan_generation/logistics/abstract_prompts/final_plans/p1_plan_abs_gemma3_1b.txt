@@ -1,0 +1,8 @@
+pddl
+(define (plan deliver_package)
+[(load truck city destination)
+(drive truck destination)
+(fly truck destination)
+)
+)
+

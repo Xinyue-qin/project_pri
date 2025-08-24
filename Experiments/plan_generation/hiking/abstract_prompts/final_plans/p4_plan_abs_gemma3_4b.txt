@@ -1,0 +1,2 @@
+check-weather D
+walk hiker D

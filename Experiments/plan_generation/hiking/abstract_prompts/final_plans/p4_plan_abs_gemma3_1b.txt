@@ -1,0 +1,15 @@
+(defplan (problem)
+(walk
+(:parameters
+(at ?h 100)
+(from 100)
+(to 100)
+)
+(:effect
+(has-energy ?h)
+)
+(effect
+(not (rained ?from))
+(not (rained ?to)))
+)
+)

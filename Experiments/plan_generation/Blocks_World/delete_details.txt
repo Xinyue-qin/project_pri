@@ -1,5 +1,0 @@
-P1: delete (arm-empty);
-P2: delete (arm-empty) and (on-table A);
-P3: delete (on-table A) and (on-table C);
-P4: delete (clear C) and (clear D);
-P5: delete (arm-empty) and (on E D) and (clear E)

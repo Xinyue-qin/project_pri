@@ -1,0 +1,3 @@
+walk h1 base camp
+rest h1 camp
+walk h1 camp summit

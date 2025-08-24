@@ -1,0 +1,6 @@
+(check-weather ?l danger-zone)
+(walk ?h h1 ?from base ?to rest-area)
+(rest ?h h1 ?l rest-area)
+(walk ?h h1 ?from rest-area ?to danger-zone)
+(check-weather ?l danger-zone)
+(walk ?h h1 ?from danger-zone ?to summit)

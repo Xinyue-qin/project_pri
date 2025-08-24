@@ -1,0 +1,4 @@
+rest(h1, start)
+walk(h1, start, mid)
+check-weather(end)
+walk(h1, mid, end)

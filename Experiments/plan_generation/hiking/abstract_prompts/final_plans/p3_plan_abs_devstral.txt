@@ -1,0 +1,3 @@
+rest(hiker, beginning)
+check-weather(end)
+walk(hiker, beginning, end)

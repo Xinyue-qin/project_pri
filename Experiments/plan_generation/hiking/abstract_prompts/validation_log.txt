@@ -1,0 +1,317 @@
+=== Validation Log ===
+Validation started at: 2025年 8月23日 星期六 22时36分53秒 CST
+Starting validation process...
+Processing problem: p1.pddl
+  Validating plan: p1_plan_abs_devstral.txt
+  Raw plan content (first 10 lines):
+    (check-weather camp)
+    (walk hiker base camp)
+    (check-weather summit)
+    (walk hiker camp summit)
+  Cleaned plan (4 actions):
+    (check-weather camp)
+    (walk hiker base camp)
+    (check-weather summit)
+    (walk hiker camp summit)
+  Running: validate "d_hiking.pddl" "problems/p1.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.K7nrNVPLqp"
+  ✓ VALID: p1_plan_abs_devstral.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p1_plan_abs_gemma3_12b.txt
+  Raw plan content (first 10 lines):
+    (walk ?h ?from base camp)
+    (walk ?h camp summit)
+  Cleaned plan (1 actions):
+    (walk ?h camp summit)
+  Running: validate "d_hiking.pddl" "problems/p1.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.yczxAP56Lb"
+  ✓ VALID: p1_plan_abs_gemma3_12b.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p1_plan_abs_gemma3_1b.txt
+  Raw plan content (first 10 lines):
+    (walk ( hiker "A hiker" "base" "summit")
+    (rest)
+  Cleaned plan (2 actions):
+    (walk ( hiker "a hiker" "base" "summit")
+    (rest)
+  Running: validate "d_hiking.pddl" "problems/p1.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.Qby3pdDNKI"
+  ✓ VALID: p1_plan_abs_gemma3_1b.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p1_plan_abs_gemma3_27b.txt
+  Raw plan content (first 10 lines):
+    (walk hiker1 base camp)
+    (walk hiker1 camp summit)
+  Cleaned plan (2 actions):
+    (walk hiker1 base camp)
+    (walk hiker1 camp summit)
+  Running: validate "d_hiking.pddl" "problems/p1.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.vpjX6NlSkt"
+  ✗ INVALID: p1_plan_abs_gemma3_27b.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.vpjX6NlSkt
+Error: Error in type-checking!
+  ----------------------------------------
+  Validating plan: p1_plan_abs_gemma3_4b.txt
+  Raw plan content (first 10 lines):
+    walk
+    rest
+    walk
+    rest
+    walk
+    rest
+    walk
+    rest
+    walk
+    rest
+  ✗ EMPTY: No valid actions found in p1_plan_abs_gemma3_4b.txt
+Processing problem: p2.pddl
+  Validating plan: p2_plan_abs_devstral.txt
+  Raw plan content (first 10 lines):
+    (rest ?h - hiker ?lodge - location)  ; Recharge energy at lodge
+    (check-weather ?trail - location)    ; Check if trail is clear from rain
+    (walk ?h - hiker ?lodge - location ?trail - location)
+    (walk ?h - hiker ?trail - location ?peak - location)
+  Cleaned plan (1 actions):
+    (check-weather ?trail - location)    ; check if trail is clear from rain
+  Running: validate "d_hiking.pddl" "problems/p2.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.m61H4j55q2"
+  ✓ VALID: p2_plan_abs_devstral.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p2_plan_abs_gemma3_12b.txt
+  Raw plan content (first 10 lines):
+    (rest lodge)
+    (check-weather peak)
+    (walk hiker peak)
+  Cleaned plan (3 actions):
+    (rest lodge)
+    (check-weather peak)
+    (walk hiker peak)
+  Running: validate "d_hiking.pddl" "problems/p2.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.7tQLihLkSH"
+  ✓ VALID: p2_plan_abs_gemma3_12b.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p2_plan_abs_gemma3_1b.txt
+  Raw plan content (first 10 lines):
+    (walk (at ?h lodge) (from ?h lodge) (to ?h peak) (rained ?peak))
+  Cleaned plan (1 actions):
+    (walk (at ?h lodge) (from ?h lodge) (to ?h peak) (rained ?peak))
+  Running: validate "d_hiking.pddl" "problems/p2.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.dcR7YJVA6p"
+  ✓ VALID: p2_plan_abs_gemma3_1b.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p2_plan_abs_gemma3_27b.txt
+  Raw plan content (first 10 lines):
+    (check-weather peak)
+    (walk hiker lodge peak)
+  Cleaned plan (2 actions):
+    (check-weather peak)
+    (walk hiker lodge peak)
+  Running: validate "d_hiking.pddl" "problems/p2.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.4xwysTiy4O"
+  ✓ VALID: p2_plan_abs_gemma3_27b.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p2_plan_abs_gemma3_4b.txt
+  Raw plan content (first 10 lines):
+    walk
+    rest
+    check-weather
+  ✗ EMPTY: No valid actions found in p2_plan_abs_gemma3_4b.txt
+Processing problem: p3.pddl
+  Validating plan: p3_plan_abs_devstral.txt
+  Raw plan content (first 10 lines):
+    rest(hiker, beginning)
+    check-weather(end)
+    walk(hiker, beginning, end)
+  ✗ EMPTY: No valid actions found in p3_plan_abs_devstral.txt
+  Validating plan: p3_plan_abs_gemma3_12b.txt
+  Raw plan content (first 10 lines):
+    (rest ?hiker)
+    (walk ?hiker ?beginning ?end)
+  Cleaned plan (2 actions):
+    (rest ?hiker)
+    (walk ?hiker ?beginning ?end)
+  Running: validate "d_hiking.pddl" "problems/p3.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.vTL6HADmaR"
+  ✓ VALID: p3_plan_abs_gemma3_12b.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p3_plan_abs_gemma3_1b.txt
+  Raw plan content (first 10 lines):
+    esercizio
+    (walk ( hiker 1  1  2) )
+  Cleaned plan (1 actions):
+    (walk ( hiker 1  1  2) )
+  Running: validate "d_hiking.pddl" "problems/p3.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.tlmmWCvPTY"
+  ✓ VALID: p3_plan_abs_gemma3_1b.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p3_plan_abs_gemma3_27b.txt
+  Raw plan content (first 10 lines):
+    (rest hiker beginning)
+    (check-weather beginning)
+    (check-weather end)
+    (walk hiker beginning end)
+  Cleaned plan (4 actions):
+    (rest hiker beginning)
+    (check-weather beginning)
+    (check-weather end)
+    (walk hiker beginning end)
+  Running: validate "d_hiking.pddl" "problems/p3.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.jvnFLIdSm6"
+  ✓ VALID: p3_plan_abs_gemma3_27b.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p3_plan_abs_gemma3_4b.txt
+  Raw plan content (first 10 lines):
+    check-weather (beginning)
+    rest (hiker)
+    walk (hiker, beginning, end)
+  ✗ EMPTY: No valid actions found in p3_plan_abs_gemma3_4b.txt
+Processing problem: p4.pddl
+  Validating plan: p4_plan_abs_devstral.txt
+  Raw plan content (first 10 lines):
+    (check-weather A)
+    (check-weather B)
+    (check-weather C)
+    (check-weather D)
+    (walk ?hiker A B)   ; Walk through intermediate locations if needed
+    (walk ?hiker B C)   ; Same logic applies here for possible alternatives
+    (walk ?hiker C D)   ; Final destination walk
+    ; If necessary, rest to gain energy at any point
+    (rest ?hiker D)
+  Cleaned plan (8 actions):
+    (check-weather a)
+    (check-weather b)
+    (check-weather c)
+    (check-weather d)
+    (walk ?hiker a b)   ; walk through intermediate locations if needed
+    (walk ?hiker b c)   ; same logic applies here for possible alternatives
+    (walk ?hiker c d)   ; final destination walk
+    (rest ?hiker d)
+  Running: validate "d_hiking.pddl" "problems/p4.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.k9GaXiZ206"
+  ✗ INVALID: p4_plan_abs_devstral.txt
+  Validation output: Error: Parser failed to read file!
+  ----------------------------------------
+  Validating plan: p4_plan_abs_gemma3_12b.txt
+  Raw plan content (first 10 lines):
+    (walk hiker1 start d)
+  Cleaned plan (1 actions):
+    (walk hiker1 start d)
+  Running: validate "d_hiking.pddl" "problems/p4.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.Y0tzGKHxx7"
+  ✗ INVALID: p4_plan_abs_gemma3_12b.txt
+  Validation output: Error: Parser failed to read file!
+  ----------------------------------------
+  Validating plan: p4_plan_abs_gemma3_1b.txt
+  Raw plan content (first 10 lines):
+    (defplan (problem)
+    (walk
+    (:parameters
+    (at ?h 100)
+    (from 100)
+    (to 100)
+    )
+    (:effect
+    (has-energy ?h)
+    )
+  Cleaned plan (4 actions):
+    (walk
+    (from 100)
+    (to 100)
+    (has-energy ?h)
+  Running: validate "d_hiking.pddl" "problems/p4.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.0PkizZI7bz"
+  ✗ INVALID: p4_plan_abs_gemma3_1b.txt
+  Validation output: Error: Parser failed to read file!
+  ----------------------------------------
+  Validating plan: p4_plan_abs_gemma3_27b.txt
+  Raw plan content (first 10 lines):
+    (check-weather d)
+    (walk hiker a d)
+  Cleaned plan (2 actions):
+    (check-weather d)
+    (walk hiker a d)
+  Running: validate "d_hiking.pddl" "problems/p4.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.KRGLeYFxiE"
+  ✗ INVALID: p4_plan_abs_gemma3_27b.txt
+  Validation output: Error: Parser failed to read file!
+  ----------------------------------------
+  Validating plan: p4_plan_abs_gemma3_4b.txt
+  Raw plan content (first 10 lines):
+    check-weather D
+    walk hiker D
+  ✗ EMPTY: No valid actions found in p4_plan_abs_gemma3_4b.txt
+Processing problem: p5.pddl
+  Validating plan: p5_plan_abs_devstral.txt
+  Raw plan content (first 10 lines):
+    (rest ?h ?current_location)
+    (check-weather ?dangerous_section)
+    (walk ?h ?current_location ?summit)
+  Cleaned plan (3 actions):
+    (rest ?h ?current_location)
+    (check-weather ?dangerous_section)
+    (walk ?h ?current_location ?summit)
+  Running: validate "d_hiking.pddl" "problems/p5.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.nd3egKenxR"
+  ✓ VALID: p5_plan_abs_devstral.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p5_plan_abs_gemma3_12b.txt
+  Raw plan content (first 10 lines):
+    (rest hiker1 basecamp)
+    (check-weather summit)
+    (walk hiker1 basecamp summit)
+  Cleaned plan (3 actions):
+    (rest hiker1 basecamp)
+    (check-weather summit)
+    (walk hiker1 basecamp summit)
+  Running: validate "d_hiking.pddl" "problems/p5.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.eQQcNuLXXm"
+  ✓ VALID: p5_plan_abs_gemma3_12b.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p5_plan_abs_gemma3_1b.txt
+  Raw plan content (first 10 lines):
+    tool_code
+    (def plan (and
+    (walk hiker ?from ?to)
+    (rest)
+    (check-weather ?from ?to)
+    )
+    )
+    
+  Cleaned plan (2 actions):
+    (walk hiker ?from ?to)
+    (check-weather ?from ?to)
+  Running: validate "d_hiking.pddl" "problems/p5.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.KoFBXJFJpe"
+  ✓ VALID: p5_plan_abs_gemma3_1b.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p5_plan_abs_gemma3_27b.txt
+  Raw plan content (first 10 lines):
+    (rest hiker1 location1)
+    (check-weather location2)
+    (walk hiker1 location1 location2)
+    (check-weather location3)
+    (walk hiker1 location2 location3)
+  Cleaned plan (5 actions):
+    (rest hiker1 location1)
+    (check-weather location2)
+    (walk hiker1 location1 location2)
+    (check-weather location3)
+    (walk hiker1 location2 location3)
+  Running: validate "d_hiking.pddl" "problems/p5.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.7JmTUMLsg5"
+  ✓ VALID: p5_plan_abs_gemma3_27b.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p5_plan_abs_gemma3_4b.txt
+  Raw plan content (first 10 lines):
+    check-weather
+    rest
+    walk
+    walk
+    walk
+  ✗ EMPTY: No valid actions found in p5_plan_abs_gemma3_4b.txt
+
+=== VALIDATION SUMMARY ===
+Total plans processed: 25
+Valid plans: 14
+Invalid plans: 5
+Empty plans: 6
+Validation success rate: 56%
+
+Validation completed at: 2025年 8月23日 星期六 22时36分55秒 CST
+Results saved to: validation_results.txt
+Detailed log saved to: validation_log.txt

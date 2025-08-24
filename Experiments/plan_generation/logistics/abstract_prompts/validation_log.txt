@@ -1,0 +1,433 @@
+=== Validation Log ===
+Validation started at: 2025年 8月24日 星期日 10时58分29秒 CST
+Starting validation process...
+Processing problem: p1.pddl
+  Validating plan: p1_plan_abs_devstral.txt
+  Raw plan content (first 10 lines):
+    (load package truck city1-location)
+    (drive truck city1-location city1-goal_location city1)
+    (unload package truck city1-goal_location)
+  Cleaned plan (3 actions):
+    (load package truck city1-location)
+    (drive truck city1-location city1-goal_location city1)
+    (unload package truck city1-goal_location)
+  Running: validate "d_logistics.pddl" "problems/p1.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.hXeN9VFr8D"
+  ✗ INVALID: p1_plan_abs_devstral.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.hXeN9VFr8D
+Error: Error in type-checking!
+  ----------------------------------------
+  Validating plan: p1_plan_abs_gemma3_12b.txt
+  Raw plan content (first 10 lines):
+    (load ?package ?truck ?location)
+    (drive ?truck ?location ?destination)
+  Cleaned plan (2 actions):
+    (load ?package ?truck ?location)
+    (drive ?truck ?location ?destination)
+  Running: validate "d_logistics.pddl" "problems/p1.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.LU96P1QyJ1"
+  ✓ VALID: p1_plan_abs_gemma3_12b.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p1_plan_abs_gemma3_1b.txt
+  Raw plan content (first 10 lines):
+    pddl
+    (define (plan deliver_package)
+    [(load truck city destination)
+    (drive truck destination)
+    (fly truck destination)
+    )
+    )
+    
+  Cleaned plan (2 actions):
+    (drive truck destination)
+    (fly truck destination)
+  Running: validate "d_logistics.pddl" "problems/p1.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.mWKtEUsnnS"
+  ✗ INVALID: p1_plan_abs_gemma3_1b.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.mWKtEUsnnS
+Error: Error in type-checking!
+  ----------------------------------------
+  Validating plan: p1_plan_abs_gemma3_27b.txt
+  Raw plan content (first 10 lines):
+    (load package truck initial_location)
+    (drive truck initial_location destination_location city)
+    (unload package truck destination_location)
+  Cleaned plan (3 actions):
+    (load package truck initial_location)
+    (drive truck initial_location destination_location city)
+    (unload package truck destination_location)
+  Running: validate "d_logistics.pddl" "problems/p1.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.Ku1Cmrn0Ik"
+  ✗ INVALID: p1_plan_abs_gemma3_27b.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.Ku1Cmrn0Ik
+Error: Error in type-checking!
+  ----------------------------------------
+  Validating plan: p1_plan_abs_gemma3_4b.txt
+  Raw plan content (first 10 lines):
+    drive truck from city to city
+  ✗ EMPTY: No valid actions found in p1_plan_abs_gemma3_4b.txt
+Processing problem: p2.pddl
+  Validating plan: p2_plan_abs_devstral.txt
+  Raw plan content (first 10 lines):
+    (LOAD PACKAGE_1 TRUCK AIRPORT_CITY_1)
+    (DRIVE TRUCK AIRPORT_CITY_1 AIRPORT_CITY_2 CITY_1)
+    (UNLOAD PACKAGE_1 TRUCK AIRPORT_CITY_2)
+    (LOAD PACKAGE_2 AIRPLANE AIRPORT_CITY_1)
+    (FLY AIRPLANE AIRPORT_CITY_1 AIRPORT_CITY_2)
+    (UNLOAD PACKAGE_2 AIRPLANE AIRPORT_CITY_2)
+  Cleaned plan (6 actions):
+    (load package_1 truck airport_city_1)
+    (drive truck airport_city_1 airport_city_2 city_1)
+    (unload package_1 truck airport_city_2)
+    (load package_2 airplane airport_city_1)
+    (fly airplane airport_city_1 airport_city_2)
+    (unload package_2 airplane airport_city_2)
+  Running: validate "d_logistics.pddl" "problems/p2.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.1ccBF8G30U"
+  ✗ INVALID: p2_plan_abs_devstral.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.1ccBF8G30U
+Error: Error in type-checking!
+  ----------------------------------------
+  Validating plan: p2_plan_abs_gemma3_12b.txt
+  Raw plan content (first 10 lines):
+    (fly airplane starting-airport destination-airport)
+    (drive truck starting-airport destination-airport)
+    (load package1 truck starting-airport)
+    (load package2 truck starting-airport)
+    (unload package1 truck destination-airport)
+    (unload package2 truck destination-airport)
+  Cleaned plan (6 actions):
+    (fly airplane starting-airport destination-airport)
+    (drive truck starting-airport destination-airport)
+    (load package1 truck starting-airport)
+    (load package2 truck starting-airport)
+    (unload package1 truck destination-airport)
+    (unload package2 truck destination-airport)
+  Running: validate "d_logistics.pddl" "problems/p2.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.7BEkrh4iVn"
+  ✗ INVALID: p2_plan_abs_gemma3_12b.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.7BEkrh4iVn
+Error: Error in type-checking!
+  ----------------------------------------
+  Validating plan: p2_plan_abs_gemma3_1b.txt
+  Raw plan content (first 10 lines):
+    pddl
+    (define (plan deliver_packages)
+    [(load truck truck_city destination_city)
+    (drive truck_city destination_city)
+    (fly airplane destination_city)
+    (unload truck truck_city destination_city)
+    (unload truck truck_city destination_city)
+    (unload truck truck_city destination_city)]
+  Cleaned plan (2 actions):
+    (drive truck_city destination_city)
+    (fly airplane destination_city)
+  Running: validate "d_logistics.pddl" "problems/p2.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.jcpmiRVcvl"
+  ✗ INVALID: p2_plan_abs_gemma3_1b.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.jcpmiRVcvl
+Error: Error in type-checking!
+  ----------------------------------------
+  Validating plan: p2_plan_abs_gemma3_27b.txt
+  Raw plan content (first 10 lines):
+    (load package1 truck airport1)
+    (load package2 truck airport1)
+    (drive truck airport1 airport2 city1)
+    (unload package1 truck airport2)
+    (unload package2 truck airport2)
+  Cleaned plan (5 actions):
+    (load package1 truck airport1)
+    (load package2 truck airport1)
+    (drive truck airport1 airport2 city1)
+    (unload package1 truck airport2)
+    (unload package2 truck airport2)
+  Running: validate "d_logistics.pddl" "problems/p2.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.xwUE490MN3"
+  ✗ INVALID: p2_plan_abs_gemma3_27b.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.xwUE490MN3
+Error: Error in type-checking!
+  ----------------------------------------
+  Validating plan: p2_plan_abs_gemma3_4b.txt
+  Raw plan content (first 10 lines):
+    fly airplane starting airport destination airport
+    fly airplane starting airport destination airport
+  ✗ EMPTY: No valid actions found in p2_plan_abs_gemma3_4b.txt
+Processing problem: p3.pddl
+  Validating plan: p3_plan_abs_devstral.txt
+  Raw plan content (first 10 lines):
+    To determine the plan for exchanging packages between cities in this logistics domain, we'll need more specifics about the initial state and goal state. However, since no specific locations or objects are provided, I can outline a general approach based on typical scenarios:
+    1. **Load Packages onto Vehicles**:
+    - Load Package1 onto Truck1 at LocationA (if it's in City1)
+    - Load Package2 onto Truck2 at LocationB (if it's in City2)
+    2. **Transport Packages within the Same City**:
+    - Drive Truck1 from LocationA to Airport1
+    - Drive Truck2 from LocationB to Airport2
+    3. **Load Packages onto Airplanes**:
+    - Unload Package1 from Truck1 at Airport1 and load it onto Airplane1
+    - Unload Package2 from Truck2 at Airport2 and load it onto Airplane2
+  ✗ EMPTY: No valid actions found in p3_plan_abs_devstral.txt
+  Validating plan: p3_plan_abs_gemma3_12b.txt
+  Raw plan content (first 10 lines):
+    (drive ?t1 ?from1 ?to1 ?c1)
+    (drive ?t2 ?from2 ?to2 ?c2)
+    (fly ?p1 ?from_airport ?to_airport)
+    (drive ?t1 ?from3 ?to3 ?c3)
+    (drive ?t2 ?from4 ?to4 ?c4)
+    (unload ?p1 ?t1 ?l1)
+    (unload ?p2 ?t2 ?l2)
+    (load ?p3 ?t1 ?l3)
+    (load ?p4 ?t2 ?l4)
+    (drive ?t1 ?from5 ?to5 ?c5)
+  Cleaned plan (11 actions):
+    (drive ?t1 ?from1 ?to1 ?c1)
+    (drive ?t2 ?from2 ?to2 ?c2)
+    (fly ?p1 ?from_airport ?to_airport)
+    (drive ?t1 ?from3 ?to3 ?c3)
+    (drive ?t2 ?from4 ?to4 ?c4)
+    (unload ?p1 ?t1 ?l1)
+    (unload ?p2 ?t2 ?l2)
+    (load ?p3 ?t1 ?l3)
+    (load ?p4 ?t2 ?l4)
+    (drive ?t1 ?from5 ?to5 ?c5)
+    (drive ?t2 ?from6 ?to6 ?c6)
+  Running: validate "d_logistics.pddl" "problems/p3.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.KalXEdGzAA"
+  ✓ VALID: p3_plan_abs_gemma3_12b.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p3_plan_abs_gemma3_1b.txt
+  Raw plan content (first 10 lines):
+    pddl
+    (define (plan transfer-packages)
+    (:domain logistics)
+    (:objects
+    truck
+    airplane
+    city
+    physobj
+    vehicle
+    location
+  ✗ EMPTY: No valid actions found in p3_plan_abs_gemma3_1b.txt
+  Validating plan: p3_plan_abs_gemma3_27b.txt
+  Raw plan content (first 10 lines):
+    (load package1 truck1 loc1)
+    (drive truck1 loc1 loc2)
+    (unload package1 truck1 loc2)
+    (load package2 airplane1 airport1)
+    (fly airplane1 airport1 airport2)
+    (unload package2 airplane1 airport2)
+    (load package3 truck2 loc3)
+    (drive truck2 loc3 loc4)
+    (unload package3 truck2 loc4)
+  Cleaned plan (9 actions):
+    (load package1 truck1 loc1)
+    (drive truck1 loc1 loc2)
+    (unload package1 truck1 loc2)
+    (load package2 airplane1 airport1)
+    (fly airplane1 airport1 airport2)
+    (unload package2 airplane1 airport2)
+    (load package3 truck2 loc3)
+    (drive truck2 loc3 loc4)
+    (unload package3 truck2 loc4)
+  Running: validate "d_logistics.pddl" "problems/p3.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.ZtFjGUndcF"
+  ✗ INVALID: p3_plan_abs_gemma3_27b.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.ZtFjGUndcF
+Error: Error in type-checking!
+  ----------------------------------------
+  Validating plan: p3_plan_abs_gemma3_4b.txt
+  Raw plan content (first 10 lines):
+    Drive truck 1 from airport to city 1
+    Load package 1 onto truck 1
+    Drive truck 1 from city 1 to airport
+    Fly airplane 1 from airport to city 2
+    Load package 2 onto airplane 1
+    Drive truck 2 from airport to city 1
+    Load package 3 onto truck 2
+    Drive truck 2 from city 1 to airport
+    Load package 1 onto airplane 1
+    Fly airplane 1 from airport to city 2
+  ✗ EMPTY: No valid actions found in p3_plan_abs_gemma3_4b.txt
+Processing problem: p4.pddl
+  Validating plan: p4_plan_abs_devstral.txt
+  Raw plan content (first 10 lines):
+    To provide you with the correct plan for this PDDL problem, I'll need more specific details about the initial state (including which packages are in which cities, where each vehicle is located, etc.) as well as the exact goal state. The domain provides the possible actions and their effects, but without knowing the specifics of the scenario, it's not possible to generate a plan.
+    Could you please provide:
+    1. Initial positions of all objects (packages) and vehicles
+    2. The specific goal condition for each package
+    For example:
+    Initial State:
+    - Package p1 is at location l1 in city c1
+    - Package p2 is at location l2 in city c2
+    - Truck t1 is at location l3 in city c3
+    - Airplane a1 is at airport ap1 in city c1
+  ✗ EMPTY: No valid actions found in p4_plan_abs_devstral.txt
+  Validating plan: p4_plan_abs_gemma3_12b.txt
+  Raw plan content (first 10 lines):
+    (load package1 truck1 city1)
+    (drive truck1 city1 city2)
+    (drive truck1 city2 city3)
+    (unload package1 truck1 city3)
+    (load package2 truck1 city2)
+    (drive truck1 city2 city1)
+    (unload package2 truck1 city1)
+  Cleaned plan (7 actions):
+    (load package1 truck1 city1)
+    (drive truck1 city1 city2)
+    (drive truck1 city2 city3)
+    (unload package1 truck1 city3)
+    (load package2 truck1 city2)
+    (drive truck1 city2 city1)
+    (unload package2 truck1 city1)
+  Running: validate "d_logistics.pddl" "problems/p4.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.UTTuz3B7Rp"
+  ✗ INVALID: p4_plan_abs_gemma3_12b.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.UTTuz3B7Rp
+Error: Error in type-checking!
+  ----------------------------------------
+  Validating plan: p4_plan_abs_gemma3_1b.txt
+  Raw plan content (first 10 lines):
+    (define (plan deliver-packages)
+    (:domain logistics)
+    (:objects
+    truck airplane
+    location
+    physobj
+    object vehicle
+    truck - physobj
+    airplane - physobj
+    city
+  ✗ EMPTY: No valid actions found in p4_plan_abs_gemma3_1b.txt
+  Validating plan: p4_plan_abs_gemma3_27b.txt
+  Raw plan content (first 10 lines):
+    (load package1 truck1 city1)
+    (drive truck1 city1 city2)
+    (unload package1 truck1 city2)
+    (load package2 airplane1 airport2)
+    (fly airplane1 airport2 airport1)
+    (unload package2 airplane1 airport1)
+  Cleaned plan (6 actions):
+    (load package1 truck1 city1)
+    (drive truck1 city1 city2)
+    (unload package1 truck1 city2)
+    (load package2 airplane1 airport2)
+    (fly airplane1 airport2 airport1)
+    (unload package2 airplane1 airport1)
+  Running: validate "d_logistics.pddl" "problems/p4.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.GkYlNajhj8"
+  ✗ INVALID: p4_plan_abs_gemma3_27b.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.GkYlNajhj8
+Error: Error in type-checking!
+  ----------------------------------------
+  Validating plan: p4_plan_abs_gemma3_4b.txt
+  Raw plan content (first 10 lines):
+    fly airplane from airport to city
+    drive truck from city to city
+    unload package from truck to city
+    drive truck from city to city
+    unload package from truck to city
+  ✗ EMPTY: No valid actions found in p4_plan_abs_gemma3_4b.txt
+Processing problem: p5.pddl
+  Validating plan: p5_plan_abs_devstral.txt
+  Raw plan content (first 10 lines):
+    (fly airplane1 AirportA AirportB)
+    (load pkg1 truck1 City1)
+    (drive truck1 City1 City2)
+    (unload pkg1 truck1 City2)
+    (load pkg2 truck1 City2)
+    (drive truck1 City2 City3)
+    (unload pkg2 truck1 City3)
+    (fly airplane1 AirportB AirportC)
+    (load pkg3 airplane1 AirportC)
+    (fly airplane1 AirportC AirportA)
+  Cleaned plan (11 actions):
+    (fly airplane1 airporta airportb)
+    (load pkg1 truck1 city1)
+    (drive truck1 city1 city2)
+    (unload pkg1 truck1 city2)
+    (load pkg2 truck1 city2)
+    (drive truck1 city2 city3)
+    (unload pkg2 truck1 city3)
+    (fly airplane1 airportb airportc)
+    (load pkg3 airplane1 airportc)
+    (fly airplane1 airportc airporta)
+    (unload pkg3 airplane1 airporta)
+  Running: validate "d_logistics.pddl" "problems/p5.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.9jLG6Gq5d1"
+  ✗ INVALID: p5_plan_abs_devstral.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.9jLG6Gq5d1
+Error: Error in type-checking!
+  ----------------------------------------
+  Validating plan: p5_plan_abs_gemma3_12b.txt
+  Raw plan content (first 10 lines):
+    (:action load
+    :parameters (?o - object ?v - vehicle ?l - location)
+    )
+    (:action unload
+    :parameters (?o - object ?v - vehicle ?l - location)
+    )
+    (:action drive
+    :parameters (?t - truck ?from - location ?to - location ?c - city)
+    )
+    (:action fly
+  ✗ EMPTY: No valid actions found in p5_plan_abs_gemma3_12b.txt
+  Validating plan: p5_plan_abs_gemma3_1b.txt
+  Raw plan content (first 10 lines):
+    pddl
+    (define (plan deliver_packages)
+    [:target (transport ?package ?city) ?city1 ?city2 ?city3)
+    [problem
+    (domain logistics)
+    (requirements (typing :strips :typing))
+    (:predicates
+    (loc ?l - location ?c - city)
+    (at ?x - physobj ?l - location)
+    (in ?p - object ?v - vehicle)
+  Cleaned plan (5 actions):
+    (domain logistics)
+    (drive ?t - truck ?from - location ?to - location ?c - city)
+    (fly ?p - airplane ?from - airport ?to - airport)
+    (load ?o - object ?v - vehicle ?l - location)
+    (unload ?o - object ?v - vehicle ?l - location)
+  Running: validate "d_logistics.pddl" "problems/p5.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.N5F0AKdqhW"
+  ✓ VALID: p5_plan_abs_gemma3_1b.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p5_plan_abs_gemma3_27b.txt
+  Raw plan content (first 10 lines):
+    (load package1 truck1 city1)
+    (drive truck1 city1 city2 city1)
+    (unload package1 truck1 city2)
+    (load package2 truck1 city2)
+    (drive truck1 city2 city3 city2)
+    (unload package2 truck1 city3)
+    (load package3 truck1 city3)
+    (drive truck1 city3 city1 city3)
+    (unload package3 truck1 city1)
+  Cleaned plan (9 actions):
+    (load package1 truck1 city1)
+    (drive truck1 city1 city2 city1)
+    (unload package1 truck1 city2)
+    (load package2 truck1 city2)
+    (drive truck1 city2 city3 city2)
+    (unload package2 truck1 city3)
+    (load package3 truck1 city3)
+    (drive truck1 city3 city1 city3)
+    (unload package3 truck1 city1)
+  Running: validate "d_logistics.pddl" "problems/p5.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.7IsqwmdLBs"
+  ✗ INVALID: p5_plan_abs_gemma3_27b.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.7IsqwmdLBs
+Error: Error in type-checking!
+  ----------------------------------------
+  Validating plan: p5_plan_abs_gemma3_4b.txt
+  Raw plan content (first 10 lines):
+    1. drive truck 1 from city 1 to city 2
+    2. unload package 1 from truck 1 at city 2
+    3. drive truck 1 from city 2 to city 3
+    4. unload package 2 from truck 1 at city 3
+    5. drive truck 1 from city 3 to city 1
+    6. unload package 3 from truck 1 at city 1
+    7. drive truck 1 from city 1 to city 2
+    8. unload package 4 from truck 1 at city 2
+    9. drive truck 1 from city 2 to city 3
+    10. unload package 5 from truck 1 at city 3
+  ✗ EMPTY: No valid actions found in p5_plan_abs_gemma3_4b.txt
+
+=== VALIDATION SUMMARY ===
+Total plans processed: 25
+Valid plans: 3
+Invalid plans: 12
+Empty plans: 10
+Validation success rate: 12%
+
+Validation completed at: 2025年 8月24日 星期日 10时58分30秒 CST
+Results saved to: validation_results.txt
+Detailed log saved to: validation_log.txt

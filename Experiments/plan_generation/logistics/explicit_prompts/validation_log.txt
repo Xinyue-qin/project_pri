@@ -1,0 +1,506 @@
+=== Validation Log ===
+Validation started at: 2025年 8月24日 星期日 10时58分40秒 CST
+Starting validation process...
+Processing problem: p1.pddl
+  Validating plan: p1_plan_expl_devstral.txt
+  Raw plan content (first 10 lines):
+    (LOAD pkg1 truck1 loc1)
+    (DRIVE truck1 loc1 loc2 city1)
+    (UNLOAD pkg1 truck1 loc2)
+  Cleaned plan (3 actions):
+    (load pkg1 truck1 loc1)
+    (drive truck1 loc1 loc2 city1)
+    (unload pkg1 truck1 loc2)
+  Running: validate "d_logistics.pddl" "problems/p1.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.iw6aMSWwCm"
+  ✓ VALID: p1_plan_expl_devstral.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p1_plan_expl_gemma3_12b.txt
+  Raw plan content (first 10 lines):
+    (drive Truck1 loc1 loc2 city1)
+  Cleaned plan (1 actions):
+    (drive truck1 loc1 loc2 city1)
+  Running: validate "d_logistics.pddl" "problems/p1.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.FaZE3Vcvqp"
+  ✗ INVALID: p1_plan_expl_gemma3_12b.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.FaZE3Vcvqp
+Plan executed successfully - checking goal
+Goal not satisfied
+Plan invalid
+
+
+Failed plans:
+ /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.FaZE3Vcvqp 
+  ----------------------------------------
+  Validating plan: p1_plan_expl_gemma3_1b.txt
+  Raw plan content (first 10 lines):
+    pidp
+    (load pkg1)
+    
+  Cleaned plan (1 actions):
+    (load pkg1)
+  Running: validate "d_logistics.pddl" "problems/p1.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.XfHrFt3G2z"
+  ✗ INVALID: p1_plan_expl_gemma3_1b.txt
+  Validation output: 
+  ----------------------------------------
+  Validating plan: p1_plan_expl_gemma3_27b.txt
+  Raw plan content (first 10 lines):
+    (load pkg1 Truck1 loc1)
+    (drive Truck1 loc1 loc2 city1)
+    (unload pkg1 Truck1 loc2)
+  Cleaned plan (3 actions):
+    (load pkg1 truck1 loc1)
+    (drive truck1 loc1 loc2 city1)
+    (unload pkg1 truck1 loc2)
+  Running: validate "d_logistics.pddl" "problems/p1.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.M9wiEQk8tQ"
+  ✓ VALID: p1_plan_expl_gemma3_27b.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p1_plan_expl_gemma3_4b.txt
+  Raw plan content (first 10 lines):
+    drive Truck1 loc1 loc2 city1
+  ✗ EMPTY: No valid actions found in p1_plan_expl_gemma3_4b.txt
+Processing problem: p2.pddl
+  Validating plan: p2_plan_expl_devstral.txt
+  Raw plan content (first 10 lines):
+    (load pkg1 plane1 airport1)
+    (fly plane1 airport1 airport2)
+    (unload pkg1 plane1 airport2)
+    (load pkg2 plane1 airport1)
+    (fly plane1 airport1 airport2)
+    (unload pkg2 plane1 airport2)
+  Cleaned plan (6 actions):
+    (load pkg1 plane1 airport1)
+    (fly plane1 airport1 airport2)
+    (unload pkg1 plane1 airport2)
+    (load pkg2 plane1 airport1)
+    (fly plane1 airport1 airport2)
+    (unload pkg2 plane1 airport2)
+  Running: validate "d_logistics.pddl" "problems/p2.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.OJ7ZjWUBvZ"
+  ✗ INVALID: p2_plan_expl_devstral.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.OJ7ZjWUBvZ
+
+Plan failed to execute
+
+
+Failed plans:
+ /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.OJ7ZjWUBvZ 
+  ----------------------------------------
+  Validating plan: p2_plan_expl_gemma3_12b.txt
+  Raw plan content (first 10 lines):
+    (fly plane1 airport1 airport2)
+    (load pkg1 plane1 airport1)
+    (load pkg2 plane1 airport1)
+    (unload pkg1 plane1 airport2)
+    (unload pkg2 plane1 airport2)
+  Cleaned plan (5 actions):
+    (fly plane1 airport1 airport2)
+    (load pkg1 plane1 airport1)
+    (load pkg2 plane1 airport1)
+    (unload pkg1 plane1 airport2)
+    (unload pkg2 plane1 airport2)
+  Running: validate "d_logistics.pddl" "problems/p2.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.gyz8pQZ9YR"
+  ✗ INVALID: p2_plan_expl_gemma3_12b.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.gyz8pQZ9YR
+
+Plan failed to execute
+
+
+Failed plans:
+ /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.gyz8pQZ9YR 
+  ----------------------------------------
+  Validating plan: p2_plan_expl_gemma3_1b.txt
+  Raw plan content (first 10 lines):
+    pidl
+    (driver (drive (truck 1 "airport1" "airport2" (at "truck1") (fly "plane1"))))
+  Cleaned plan (1 actions):
+    (driver (drive (truck 1 "airport1" "airport2" (at "truck1") (fly "plane1"))))
+  Running: validate "d_logistics.pddl" "problems/p2.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.FBHHWF3Jt1"
+  ✓ VALID: p2_plan_expl_gemma3_1b.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p2_plan_expl_gemma3_27b.txt
+  Raw plan content (first 10 lines):
+    (load pkg1 plane1 airport1)
+    (load pkg2 plane1 airport1)
+    (fly plane1 airport1 airport2)
+    (unload pkg1 plane1 airport2)
+    (unload pkg2 plane1 airport2)
+  Cleaned plan (5 actions):
+    (load pkg1 plane1 airport1)
+    (load pkg2 plane1 airport1)
+    (fly plane1 airport1 airport2)
+    (unload pkg1 plane1 airport2)
+    (unload pkg2 plane1 airport2)
+  Running: validate "d_logistics.pddl" "problems/p2.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.2Tw1EqwzoX"
+  ✓ VALID: p2_plan_expl_gemma3_27b.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p2_plan_expl_gemma3_4b.txt
+  Raw plan content (first 10 lines):
+    fly plane1 airport1 airport2
+    unload pkg1 plane1 airport2
+    unload pkg2 plane1 airport2
+  ✗ EMPTY: No valid actions found in p2_plan_expl_gemma3_4b.txt
+Processing problem: p3.pddl
+  Validating plan: p3_plan_expl_devstral.txt
+  Raw plan content (first 10 lines):
+    (load pkg1 truck1 loc1)
+    (drive truck1 loc1 airport1 city1)
+    (fly plane1 airport1 airport2)
+    (unload pkg1 truck1 airport1)
+    (load pkg1 plane1 airport1)
+    (fly plane1 airport1 airport2)
+    (unload pkg1 plane1 airport2)
+    (load pkg3 truck2 loc2)
+    (drive truck2 loc2 airport2 city2)
+    (unload pkg3 truck2 airport2)
+  Cleaned plan (16 actions):
+    (load pkg1 truck1 loc1)
+    (drive truck1 loc1 airport1 city1)
+    (fly plane1 airport1 airport2)
+    (unload pkg1 truck1 airport1)
+    (load pkg1 plane1 airport1)
+    (fly plane1 airport1 airport2)
+    (unload pkg1 plane1 airport2)
+    (load pkg3 truck2 loc2)
+    (drive truck2 loc2 airport2 city2)
+    (unload pkg3 truck2 airport2)
+    (load pkg2 plane1 airport2)
+    (fly plane1 airport2 airport1)
+    (unload pkg2 plane1 airport1)
+    (load pkg2 truck1 airport1)
+    (drive truck1 airport1 loc1 city1)
+    (unload pkg2 truck1 loc1)
+  Running: validate "d_logistics.pddl" "problems/p3.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.uBlwtL1PSF"
+  ✗ INVALID: p3_plan_expl_devstral.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.uBlwtL1PSF
+
+Plan failed to execute
+
+
+Failed plans:
+ /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.uBlwtL1PSF 
+  ----------------------------------------
+  Validating plan: p3_plan_expl_gemma3_12b.txt
+  Raw plan content (first 10 lines):
+    (drive Truck1 loc1 loc2 city1)
+    (load pkg1 Truck1 loc2)
+    (unload pkg1 Truck1 loc2)
+    (fly plane1 airport1 airport2)
+    (load pkg2 plane1 airport2)
+    (unload pkg2 plane1 airport2)
+    (drive Truck2 loc2 loc1 city1)
+    (load pkg3 Truck2 loc1)
+    (unload pkg3 Truck2 loc1)
+  Cleaned plan (9 actions):
+    (drive truck1 loc1 loc2 city1)
+    (load pkg1 truck1 loc2)
+    (unload pkg1 truck1 loc2)
+    (fly plane1 airport1 airport2)
+    (load pkg2 plane1 airport2)
+    (unload pkg2 plane1 airport2)
+    (drive truck2 loc2 loc1 city1)
+    (load pkg3 truck2 loc1)
+    (unload pkg3 truck2 loc1)
+  Running: validate "d_logistics.pddl" "problems/p3.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.cIi5CesBjw"
+  ✗ INVALID: p3_plan_expl_gemma3_12b.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.cIi5CesBjw
+
+Plan failed to execute
+
+
+Failed plans:
+ /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.cIi5CesBjw 
+  ----------------------------------------
+  Validating plan: p3_plan_expl_gemma3_1b.txt
+  Raw plan content (first 10 lines):
+    tool_code
+    (define (plan load_and_unload)
+    (task (if (and (at truck1 loc1) (at truck2 loc2) (at plane1 airport1))
+    (not (at truck1 loc1) (at truck2 loc2) (at plane1 airport1)))
+    (load truck1 truck2 plane1))
+    (task (if (and (at truck1 loc1) (at truck2 loc2) (at plane1 airport1))
+    (not (at truck1 loc1) (at truck2 loc2) (at plane1 airport1)))
+    (unload truck1 truck2 plane1))
+    (task (if (and (at truck1 loc1) (at truck2 loc2) (at plane1 airport1))
+    (not (at truck1 loc1) (at truck2 loc2) (at plane1 airport1)))
+  Cleaned plan (9 actions):
+    (load truck1 truck2 plane1))
+    (unload truck1 truck2 plane1))
+    (unload truck1 truck2 plane1))
+    (drive truck1 truck2 plane1))
+    (fly plane1))
+    (fly truck1))
+    (fly truck2))
+    (fly plane1))
+    (fly truck1))
+  Running: validate "d_logistics.pddl" "problems/p3.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.pXhUvUsl40"
+  ✓ VALID: p3_plan_expl_gemma3_1b.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p3_plan_expl_gemma3_27b.txt
+  Raw plan content (first 10 lines):
+    (load pkg1 truck1 loc1)
+    (drive truck1 loc1 loc2 city1)
+    (unload pkg1 truck1 loc2)
+    (load pkg2 plane1 airport1)
+    (fly plane1 airport1 airport2)
+    (unload pkg2 plane1 airport2)
+    (load pkg3 plane1 airport2)
+    (fly plane1 airport2 airport1)
+    (unload pkg3 plane1 airport1)
+  Cleaned plan (9 actions):
+    (load pkg1 truck1 loc1)
+    (drive truck1 loc1 loc2 city1)
+    (unload pkg1 truck1 loc2)
+    (load pkg2 plane1 airport1)
+    (fly plane1 airport1 airport2)
+    (unload pkg2 plane1 airport2)
+    (load pkg3 plane1 airport2)
+    (fly plane1 airport2 airport1)
+    (unload pkg3 plane1 airport1)
+  Running: validate "d_logistics.pddl" "problems/p3.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.Ae2Oc3BDrr"
+  ✗ INVALID: p3_plan_expl_gemma3_27b.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.Ae2Oc3BDrr
+
+Plan failed to execute
+
+
+Failed plans:
+ /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.Ae2Oc3BDrr 
+  ----------------------------------------
+  Validating plan: p3_plan_expl_gemma3_4b.txt
+  Raw plan content (first 10 lines):
+    fly plane1 airport1 airport2
+    drive truck1 loc1 loc2
+    fly plane1 airport2 airport1
+    drive truck2 loc2 loc1
+    unload pkg1 truck2 loc2
+    fly plane1 airport1 airport2
+    drive truck2 loc2 loc1
+    unload pkg2 truck2 loc2
+    fly plane1 airport1 airport2
+    drive truck2 loc2 loc1
+  ✗ EMPTY: No valid actions found in p3_plan_expl_gemma3_4b.txt
+Processing problem: p4.pddl
+  Validating plan: p4_plan_expl_devstral.txt
+  Raw plan content (first 10 lines):
+    (load pkg1 truck1 loc1)
+    (drive truck1 loc1 loc3 city3)
+    (unload pkg1 truck1 loc3)
+    (fly plane1 airport1 airport2)
+    (load pkg2 plane1 airport1)
+    (unload pkg2 truck2 airport2)
+    (drive truck2 airport2 loc2 city2)
+  Cleaned plan (7 actions):
+    (load pkg1 truck1 loc1)
+    (drive truck1 loc1 loc3 city3)
+    (unload pkg1 truck1 loc3)
+    (fly plane1 airport1 airport2)
+    (load pkg2 plane1 airport1)
+    (unload pkg2 truck2 airport2)
+    (drive truck2 airport2 loc2 city2)
+  Running: validate "d_logistics.pddl" "problems/p4.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.vudGPPyC39"
+  ✗ INVALID: p4_plan_expl_devstral.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.vudGPPyC39
+
+Plan failed to execute
+
+
+Failed plans:
+ /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.vudGPPyC39 
+  ----------------------------------------
+  Validating plan: p4_plan_expl_gemma3_12b.txt
+  Raw plan content (first 10 lines):
+    (drive Truck1 loc1 loc2 city1)
+    (load pkg1 Truck1 loc2)
+    (drive Truck1 loc2 loc3 city1)
+    (unload pkg1 Truck1 loc3)
+    (load pkg2 Truck1 airport2)
+    (fly Truck1 airport2 airport1)
+    (unload pkg2 Truck1 loc2)
+  Cleaned plan (7 actions):
+    (drive truck1 loc1 loc2 city1)
+    (load pkg1 truck1 loc2)
+    (drive truck1 loc2 loc3 city1)
+    (unload pkg1 truck1 loc3)
+    (load pkg2 truck1 airport2)
+    (fly truck1 airport2 airport1)
+    (unload pkg2 truck1 loc2)
+  Running: validate "d_logistics.pddl" "problems/p4.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.xI0B75G7fJ"
+  ✓ VALID: p4_plan_expl_gemma3_12b.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p4_plan_expl_gemma3_1b.txt
+  Raw plan content (first 10 lines):
+    drive truck1 to loc3
+    fly plane1 to loc3
+    unload truck2
+    unload truck1
+    unload package pkg1
+  ✗ EMPTY: No valid actions found in p4_plan_expl_gemma3_1b.txt
+  Validating plan: p4_plan_expl_gemma3_27b.txt
+  Raw plan content (first 10 lines):
+    (load pkg1 truck1 loc1)
+    (drive truck1 loc1 loc3 city1)
+    (unload pkg1 truck1 loc3)
+    (load pkg2 plane1 airport1)
+    (fly plane1 airport1 airport2)
+    (unload pkg2 plane1 airport2)
+  Cleaned plan (6 actions):
+    (load pkg1 truck1 loc1)
+    (drive truck1 loc1 loc3 city1)
+    (unload pkg1 truck1 loc3)
+    (load pkg2 plane1 airport1)
+    (fly plane1 airport1 airport2)
+    (unload pkg2 plane1 airport2)
+  Running: validate "d_logistics.pddl" "problems/p4.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.Lu5iqDllDx"
+  ✗ INVALID: p4_plan_expl_gemma3_27b.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.Lu5iqDllDx
+
+Plan failed to execute
+
+
+Failed plans:
+ /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.Lu5iqDllDx 
+  ----------------------------------------
+  Validating plan: p4_plan_expl_gemma3_4b.txt
+  Raw plan content (first 10 lines):
+    drive truck2 airport1 loc3 city1
+    fly plane1 airport1 airport2
+    drive truck1 airport2 loc3 city2
+  ✗ EMPTY: No valid actions found in p4_plan_expl_gemma3_4b.txt
+Processing problem: p5.pddl
+  Validating plan: p5_plan_expl_devstral.txt
+  Raw plan content (first 10 lines):
+    ;; Plan to achieve the goal
+    ; Move pkg1 to loc3
+    (load pkg1 truck1 loc1)
+    (drive truck1 loc1 loc3 city1)  ; assuming both locations are in the same city
+    (unload pkg1 truck1 loc3)
+    ; Move pkg2 to airport3
+    (load pkg2 plane1 airport1)
+    (fly plane1 airport1 airport3)
+    (unload pkg2 plane1 airport3)
+    ; Move pkg3 to loc1
+  Cleaned plan (12 actions):
+    (load pkg1 truck1 loc1)
+    (drive truck1 loc1 loc3 city1)  ; assuming both locations are in the same city
+    (unload pkg1 truck1 loc3)
+    (load pkg2 plane1 airport1)
+    (fly plane1 airport1 airport3)
+    (unload pkg2 plane1 airport3)
+    (load pkg3 truck2 loc2)
+    (drive truck2 loc2 loc1 city2)  ; assuming both locations are in the same city
+    (unload pkg3 truck2 loc1)
+    (load pkg4 plane2 airport3)
+    (fly plane2 airport3 airport2)
+    (unload pkg4 plane2 airport2)
+  Running: validate "d_logistics.pddl" "problems/p5.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.4sFdvauR82"
+  ✗ INVALID: p5_plan_expl_devstral.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.4sFdvauR82
+
+Plan failed to execute
+
+
+Failed plans:
+ /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.4sFdvauR82 
+  ----------------------------------------
+  Validating plan: p5_plan_expl_gemma3_12b.txt
+  Raw plan content (first 10 lines):
+    (unload pkg1 truck1 loc1)
+    (load pkg1 truck1 loc1)
+    (drive truck1 loc1 loc3)
+    (unload pkg1 truck1 loc3)
+    (unload pkg2 plane1 airport1)
+    (load pkg2 plane1 airport1)
+    (fly plane1 airport1 airport3)
+    (unload pkg2 plane1 airport3)
+    (unload pkg3 truck2 loc2)
+    (load pkg3 truck2 loc2)
+  Cleaned plan (15 actions):
+    (unload pkg1 truck1 loc1)
+    (load pkg1 truck1 loc1)
+    (drive truck1 loc1 loc3)
+    (unload pkg1 truck1 loc3)
+    (unload pkg2 plane1 airport1)
+    (load pkg2 plane1 airport1)
+    (fly plane1 airport1 airport3)
+    (unload pkg2 plane1 airport3)
+    (unload pkg3 truck2 loc2)
+    (load pkg3 truck2 loc2)
+    (drive truck2 loc2 loc1)
+    (unload pkg3 truck2 loc1)
+    (unload pkg4 plane2 airport2)
+    (load pkg4 plane2 airport2)
+    (fly plane2 airport2 airport3)
+  Running: validate "d_logistics.pddl" "problems/p5.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.z1Ri7whhg0"
+  ✗ INVALID: p5_plan_expl_gemma3_12b.txt
+  Validation output: 
+  ----------------------------------------
+  Validating plan: p5_plan_expl_gemma3_1b.txt
+  Raw plan content (first 10 lines):
+    (define (plan deliver_packages)
+    (reflexivity-solve (define (deliver_packages)
+    (let ((pkg1 (get (truck1) pkg1))
+    (pkg2 (truck2) pkg2))
+    (let ((airport1 (get (airport1) pkg1))
+    (airport2 (truck2) pkg2))
+    (let ((airport3 (get (airport3) pkg1))
+    (airport4 (truck3) pkg2))
+    (let ((location3 (get (location3) pkg1))
+    (location4 (truck3) pkg2)))
+  ✗ EMPTY: No valid actions found in p5_plan_expl_gemma3_1b.txt
+  Validating plan: p5_plan_expl_gemma3_27b.txt
+  Raw plan content (first 10 lines):
+    (load pkg1 truck1 loc1)
+    (drive truck1 loc1 loc3)
+    (unload pkg1 truck1 loc3)
+    (load pkg2 plane1 airport1)
+    (fly plane1 airport1 airport3)
+    (unload pkg2 plane1 airport3)
+    (load pkg3 truck2 loc2)
+    (drive truck2 loc2 loc1)
+    (unload pkg3 truck2 loc1)
+    (load pkg4 plane2 airport2)
+  Cleaned plan (12 actions):
+    (load pkg1 truck1 loc1)
+    (drive truck1 loc1 loc3)
+    (unload pkg1 truck1 loc3)
+    (load pkg2 plane1 airport1)
+    (fly plane1 airport1 airport3)
+    (unload pkg2 plane1 airport3)
+    (load pkg3 truck2 loc2)
+    (drive truck2 loc2 loc1)
+    (unload pkg3 truck2 loc1)
+    (load pkg4 plane2 airport2)
+    (fly plane2 airport2 airport3)
+    (unload pkg4 plane2 airport3)
+  Running: validate "d_logistics.pddl" "problems/p5.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.12hanKRV7H"
+  ✗ INVALID: p5_plan_expl_gemma3_27b.txt
+  Validation output: 
+  ----------------------------------------
+  Validating plan: p5_plan_expl_gemma3_4b.txt
+  Raw plan content (first 10 lines):
+    drive truck1 from loc1 to loc3
+    drive truck2 from loc2 to loc3
+    fly plane1 from airport1 to airport3
+    unload pkg1 from truck1 at loc3
+    fly plane2 from airport2 to airport3
+    unload pkg2 from truck2 at airport3
+    drive truck1 from loc3 to loc1
+    unload pkg3 from truck3 at loc2
+    drive truck2 from loc2 to loc3
+    unload pkg4 from truck1 at airport3
+  ✗ EMPTY: No valid actions found in p5_plan_expl_gemma3_4b.txt
+
+=== VALIDATION SUMMARY ===
+Total plans processed: 25
+Valid plans: 6
+Invalid plans: 12
+Empty plans: 7
+Validation success rate: 24%
+
+Validation completed at: 2025年 8月24日 星期日 10时58分41秒 CST
+Results saved to: validation_results.txt
+Detailed log saved to: validation_log.txt

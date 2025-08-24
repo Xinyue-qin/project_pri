@@ -1,0 +1,12 @@
+(:action load
+:parameters (?o - object ?v - vehicle ?l - location)
+)
+(:action unload
+:parameters (?o - object ?v - vehicle ?l - location)
+)
+(:action drive
+:parameters (?t - truck ?from - location ?to - location ?c - city)
+)
+(:action fly
+:parameters (?p - airplane ?from - airport ?to - airport)
+)

@@ -1,0 +1,5 @@
+(rest hiker1 location1)
+(check-weather location2)
+(walk hiker1 location1 location2)
+(check-weather location3)
+(walk hiker1 location2 location3)

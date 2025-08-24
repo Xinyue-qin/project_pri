@@ -1,0 +1,2 @@
+(rest ?hiker)
+(walk ?hiker ?beginning ?end)

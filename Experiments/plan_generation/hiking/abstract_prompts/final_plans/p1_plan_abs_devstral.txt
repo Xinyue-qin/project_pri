@@ -1,0 +1,4 @@
+(check-weather camp)
+(walk hiker base camp)
+(check-weather summit)
+(walk hiker camp summit)

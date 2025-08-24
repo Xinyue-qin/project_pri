@@ -1,0 +1,1 @@
+(walk (at ?h lodge) (from ?h lodge) (to ?h peak) (rained ?peak))

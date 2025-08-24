@@ -1,0 +1,6 @@
+pick-up robot1 package1 location1
+move robot1 location1 to location2
+drop-off robot1 package1 location2
+pick-up robot1 package2 location2
+move robot1 location2 to location1
+drop-off robot1 package2 location1

@@ -1,0 +1,5 @@
+(pickup ?ob1 - block)
+(stack ?ob1 ?ob2 - block)
+(putdown ?ob1 - block)
+(unstack ?ob1 ?ob3 - block)
+(stack ?ob1 ?ob2 - block)

@@ -1,0 +1,3 @@
+(rest ?h ?current_location)
+(check-weather ?dangerous_section)
+(walk ?h ?current_location ?summit)

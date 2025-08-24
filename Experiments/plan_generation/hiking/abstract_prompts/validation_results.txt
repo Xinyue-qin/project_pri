@@ -1,0 +1,39 @@
+=== Fast Downward Plan Validation Results ===
+Validation started at: 2025年 8月23日 星期六 22时36分53秒 CST
+
+Problem File | Plan File | Status | Action Count
+------------ | --------- | ------ | ------------
+p1.pddl | p1_plan_abs_devstral.txt | VALID | 4
+p1.pddl | p1_plan_abs_gemma3_12b.txt | VALID | 1
+p1.pddl | p1_plan_abs_gemma3_1b.txt | VALID | 2
+p1.pddl | p1_plan_abs_gemma3_27b.txt | INVALID | 2
+p1.pddl | p1_plan_abs_gemma3_4b.txt | EMPTY | 0
+p2.pddl | p2_plan_abs_devstral.txt | VALID | 1
+p2.pddl | p2_plan_abs_gemma3_12b.txt | VALID | 3
+p2.pddl | p2_plan_abs_gemma3_1b.txt | VALID | 1
+p2.pddl | p2_plan_abs_gemma3_27b.txt | VALID | 2
+p2.pddl | p2_plan_abs_gemma3_4b.txt | EMPTY | 0
+p3.pddl | p3_plan_abs_devstral.txt | EMPTY | 0
+p3.pddl | p3_plan_abs_gemma3_12b.txt | VALID | 2
+p3.pddl | p3_plan_abs_gemma3_1b.txt | VALID | 1
+p3.pddl | p3_plan_abs_gemma3_27b.txt | VALID | 4
+p3.pddl | p3_plan_abs_gemma3_4b.txt | EMPTY | 0
+p4.pddl | p4_plan_abs_devstral.txt | INVALID | 8
+p4.pddl | p4_plan_abs_gemma3_12b.txt | INVALID | 1
+p4.pddl | p4_plan_abs_gemma3_1b.txt | INVALID | 4
+p4.pddl | p4_plan_abs_gemma3_27b.txt | INVALID | 2
+p4.pddl | p4_plan_abs_gemma3_4b.txt | EMPTY | 0
+p5.pddl | p5_plan_abs_devstral.txt | VALID | 3
+p5.pddl | p5_plan_abs_gemma3_12b.txt | VALID | 3
+p5.pddl | p5_plan_abs_gemma3_1b.txt | VALID | 2
+p5.pddl | p5_plan_abs_gemma3_27b.txt | VALID | 5
+p5.pddl | p5_plan_abs_gemma3_4b.txt | EMPTY | 0
+
+=== VALIDATION SUMMARY ===
+Total plans processed: 25
+Valid plans: 14
+Invalid plans: 5
+Empty plans: 6
+Validation success rate: 56%
+
+Validation completed at: 2025年 8月23日 星期六 22时36分55秒 CST

@@ -1,0 +1,4 @@
+(rest ?h - hiker ?lodge - location)  ; Recharge energy at lodge
+(check-weather ?trail - location)    ; Check if trail is clear from rain
+(walk ?h - hiker ?lodge - location ?trail - location)
+(walk ?h - hiker ?trail - location ?peak - location)

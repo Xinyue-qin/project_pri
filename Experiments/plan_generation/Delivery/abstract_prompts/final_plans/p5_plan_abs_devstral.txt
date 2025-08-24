@@ -1,0 +1,4 @@
+(pick-up drone1 package1 depot)
+(move drone1 depot hospital)
+(move drone1 hospital disaster_area)
+(drop-off drone1 package1 disaster_area)

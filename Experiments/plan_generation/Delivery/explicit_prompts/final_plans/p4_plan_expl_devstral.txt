@@ -1,0 +1,6 @@
+(pick-up courier1 urgentPkg warehouse)
+(move courier1 warehouse client)
+(drop-off courier1 urgentPkg client)
+(pick-up courier2 normalPkg station)
+(move courier2 station client)
+(drop-off courier2 normalPkg client)

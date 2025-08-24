@@ -1,0 +1,38 @@
+pddl
+(define (plan deliver_packages)
+[:target (transport ?package ?city) ?city1 ?city2 ?city3)
+[problem
+(domain logistics)
+(requirements (typing :strips :typing))
+(:predicates
+(loc ?l - location ?c - city)
+(at ?x - physobj ?l - location)
+(in ?p - object ?v - vehicle)
+(drive ?t - truck ?from - location ?to - location ?c - city)
+(fly ?p - airplane ?from - airport ?to - airport)
+(load ?o - object ?v - vehicle ?l - location)
+(unload ?o - object ?v - vehicle ?l - location)
+(move ?o - object ?v - vehicle ?l - location)
+)
+[action load
+:parameters (?o - object ?v - vehicle ?l - location)
+:precondition (and (at ?v ?l) (at ?o ?l))
+)
+[action unload
+:parameters (?o - object ?v - vehicle ?l - location)
+:precondition (and (at ?v ?l) (at ?o ?l))
+:effect (and (in ?o ?v) (not (at ?o ?l)))
+)
+[action drive
+:parameters (?t - truck ?from - location ?to - location ?c - city)
+:precondition (and (at ?t ?from) (loc ?from ?c) (loc ?to ?c))
+:effect (and (at ?t ?to) (not (at ?t ?from)))
+)
+[action fly
+:parameters (?p - airplane ?from - airport ?to - airport)
+:precondition (at ?p ?from)
+:effect (and (at ?p ?to) (not (at ?p ?from)))
+)
+)
+)
+

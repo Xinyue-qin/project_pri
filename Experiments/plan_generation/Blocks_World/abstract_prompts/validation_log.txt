@@ -1,0 +1,318 @@
+=== Validation Log ===
+Validation started at: 2025年 8月23日 星期六 22时00分21秒 CST
+Starting validation process...
+Processing problem: P_1_blocks.pddl
+  Validating plan: p1_plan_abs_devstral.txt
+  Cleaned plan (6 actions):
+    (pickup a)
+    (putdown a)
+    (pickup b)
+    (stack b a)
+    (pickup c)
+    (stack c b)
+  Running: validate "D_blocksworld.pddl" "problems/P_1_blocks.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.YcY7y3YoUh"
+  ✗ INVALID: p1_plan_abs_devstral.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.YcY7y3YoUh
+Plan executed successfully - checking goal
+Goal not satisfied
+Plan invalid
+
+
+Failed plans:
+ /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.YcY7y3YoUh 
+  ----------------------------------------
+  Validating plan: p1_plan_abs_gemma3_12b.txt
+  Cleaned plan (6 actions):
+    (pickup a)
+    (stack a b)
+    (pickup b)
+    (stack b c)
+    (pickup c)
+    (putdown c)
+  Running: validate "D_blocksworld.pddl" "problems/P_1_blocks.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.PSiqRgHT1L"
+  ✗ INVALID: p1_plan_abs_gemma3_12b.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.PSiqRgHT1L
+
+Plan failed to execute
+
+
+Failed plans:
+ /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.PSiqRgHT1L 
+  ----------------------------------------
+  Validating plan: p1_plan_abs_gemma3_1b.txt
+  ✗ EMPTY: No valid actions found in p1_plan_abs_gemma3_1b.txt
+  Validating plan: p1_plan_abs_gemma3_27b.txt
+  Cleaned plan (6 actions):
+    (pickup c)
+    (stack c b)
+    (pickup b)
+    (stack b a)
+    (pickup a)
+    (putdown a)
+  Running: validate "D_blocksworld.pddl" "problems/P_1_blocks.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.mntUCAKZau"
+  ✗ INVALID: p1_plan_abs_gemma3_27b.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.mntUCAKZau
+
+Plan failed to execute
+
+
+Failed plans:
+ /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.mntUCAKZau 
+  ----------------------------------------
+  Validating plan: p1_plan_abs_gemma3_4b.txt
+  ✗ EMPTY: No valid actions found in p1_plan_abs_gemma3_4b.txt
+Processing problem: P_2_blocks.pddl
+  Validating plan: p2_plan_abs_devstral.txt
+  Cleaned plan (7 actions):
+    (unstack c b)
+    (putdown c)
+    (unstack b a)
+    (stack b c)
+    (unstack a b)
+    (stack a b)
+    (putdown a)
+  Running: validate "D_blocksworld.pddl" "problems/P_2_blocks.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.3F7IgIExtj"
+  ✗ INVALID: p2_plan_abs_devstral.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.3F7IgIExtj
+
+Plan failed to execute
+
+
+Failed plans:
+ /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.3F7IgIExtj 
+  ----------------------------------------
+  Validating plan: p2_plan_abs_gemma3_12b.txt
+  Cleaned plan (7 actions):
+    (unstack c b)
+    (stack c b)
+    (unstack b a)
+    (stack b c)
+    (putdown c)
+    (putdown b)
+    (putdown a)
+  Running: validate "D_blocksworld.pddl" "problems/P_2_blocks.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.Ojgf9UFFay"
+  ✗ INVALID: p2_plan_abs_gemma3_12b.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.Ojgf9UFFay
+
+Plan failed to execute
+
+
+Failed plans:
+ /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.Ojgf9UFFay 
+  ----------------------------------------
+  Validating plan: p2_plan_abs_gemma3_1b.txt
+  Cleaned plan (1 actions):
+    (pickup c b)
+  Running: validate "D_blocksworld.pddl" "problems/P_2_blocks.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.GimXeUbKbM"
+  ✗ INVALID: p2_plan_abs_gemma3_1b.txt
+  Validation output: 
+  ----------------------------------------
+  Validating plan: p2_plan_abs_gemma3_27b.txt
+  Cleaned plan (11 actions):
+    (unstack c b)
+    (putdown c)
+    (unstack b a)
+    (putdown b)
+    (unstack a)
+    (pickup a)
+    (stack a b)
+    (pickup b)
+    (stack b c)
+    (pickup c)
+    (putdown c)
+  Running: validate "D_blocksworld.pddl" "problems/P_2_blocks.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.hSbJUUev8P"
+  ✗ INVALID: p2_plan_abs_gemma3_27b.txt
+  Validation output: 
+  ----------------------------------------
+  Validating plan: p2_plan_abs_gemma3_4b.txt
+  ✗ EMPTY: No valid actions found in p2_plan_abs_gemma3_4b.txt
+Processing problem: P_3_blocks.pddl
+  Validating plan: p3_plan_abs_devstral.txt
+  Cleaned plan (6 actions):
+    (pickup b)
+    (stack b a)
+    (pickup c)
+    (stack c b)
+    (pickup d)
+    (stack d c)
+  Running: validate "D_blocksworld.pddl" "problems/P_3_blocks.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.K27EhE3MJ0"
+  ✗ INVALID: p3_plan_abs_devstral.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.K27EhE3MJ0
+
+Plan failed to execute
+
+
+Failed plans:
+ /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.K27EhE3MJ0 
+  ----------------------------------------
+  Validating plan: p3_plan_abs_gemma3_12b.txt
+  Cleaned plan (10 actions):
+    (unstack d c)
+    (stack d c)
+    (unstack b a)
+    (stack b c)
+    (unstack a b)
+    (stack a b)
+    (putdown d)
+    (stack c d)
+    (stack b c)
+    (stack a b)
+  Running: validate "D_blocksworld.pddl" "problems/P_3_blocks.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.H6r2fJFucm"
+  ✗ INVALID: p3_plan_abs_gemma3_12b.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.H6r2fJFucm
+
+Plan failed to execute
+
+
+Failed plans:
+ /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.H6r2fJFucm 
+  ----------------------------------------
+  Validating plan: p3_plan_abs_gemma3_1b.txt
+  Cleaned plan (3 actions):
+    (putdown b)
+    (stack d)
+    (unstack d)
+  Running: validate "D_blocksworld.pddl" "problems/P_3_blocks.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.qo3z4IQoqY"
+  ✗ INVALID: p3_plan_abs_gemma3_1b.txt
+  Validation output: 
+  ----------------------------------------
+  Validating plan: p3_plan_abs_gemma3_27b.txt
+  Cleaned plan (16 actions):
+    (unstack d c)
+    (putdown d)
+    (unstack c b)
+    (putdown c)
+    (unstack b a)
+    (putdown b)
+    (unstack a)
+    (putdown a)
+    (pickup a)
+    (stack a b)
+    (pickup b)
+    (stack b c)
+    (pickup c)
+    (stack c d)
+    (pickup d)
+    (putdown d)
+  Running: validate "D_blocksworld.pddl" "problems/P_3_blocks.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.yIlW8wGr4u"
+  ✗ INVALID: p3_plan_abs_gemma3_27b.txt
+  Validation output: 
+  ----------------------------------------
+  Validating plan: p3_plan_abs_gemma3_4b.txt
+  ✗ EMPTY: No valid actions found in p3_plan_abs_gemma3_4b.txt
+Processing problem: P_4_blocks.pddl
+  Validating plan: p4_plan_abs_devstral.txt
+  Cleaned plan (4 actions):
+    (pickup a)
+    (stack a b)
+    (pickup c)
+    (stack c d)
+  Running: validate "D_blocksworld.pddl" "problems/P_4_blocks.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.9VJoLpdVBw"
+  ✓ VALID: p4_plan_abs_devstral.txt
+  ----------------------------------------
+  Validating plan: p4_plan_abs_gemma3_12b.txt
+  Cleaned plan (4 actions):
+    (pickup a)
+    (stack a b)
+    (pickup c)
+    (stack c d)
+  Running: validate "D_blocksworld.pddl" "problems/P_4_blocks.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.kCgm0jsNh7"
+  ✓ VALID: p4_plan_abs_gemma3_12b.txt
+  ----------------------------------------
+  Validating plan: p4_plan_abs_gemma3_1b.txt
+  ✗ EMPTY: No valid actions found in p4_plan_abs_gemma3_1b.txt
+  Validating plan: p4_plan_abs_gemma3_27b.txt
+  Cleaned plan (4 actions):
+    (pickup a)
+    (stack a b)
+    (pickup c)
+    (stack c d)
+  Running: validate "D_blocksworld.pddl" "problems/P_4_blocks.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.1AaAJ1O6up"
+  ✓ VALID: p4_plan_abs_gemma3_27b.txt
+  ----------------------------------------
+  Validating plan: p4_plan_abs_gemma3_4b.txt
+  ✗ EMPTY: No valid actions found in p4_plan_abs_gemma3_4b.txt
+Processing problem: P_5_blocks.pddl
+  Validating plan: p5_plan_abs_devstral.txt
+  Cleaned plan (6 actions):
+    (unstack c b) -> (putdown c) ->
+    (unstack a b) -> (stack a c) ->
+    (unstack b a) -> (putdown b) ->
+    (unstack e d) -> (putdown e) ->
+    (stack b e) ->
+    (unstack d table) -> (stack d b)
+  Running: validate "D_blocksworld.pddl" "problems/P_5_blocks.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.avMzeJXSEM"
+  ✗ INVALID: p5_plan_abs_devstral.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.avMzeJXSEM
+Plan executed successfully - checking goal
+Goal not satisfied
+Plan invalid
+
+
+Failed plans:
+ /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.avMzeJXSEM 
+  ----------------------------------------
+  Validating plan: p5_plan_abs_gemma3_12b.txt
+  Cleaned plan (8 actions):
+    (unstack c a)
+    (putdown c)
+    (unstack b a)
+    (putdown b)
+    (unstack e d)
+    (putdown e)
+    (stack d b)
+    (stack a c)
+  Running: validate "D_blocksworld.pddl" "problems/P_5_blocks.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.egjnIiAH66"
+  ✗ INVALID: p5_plan_abs_gemma3_12b.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.egjnIiAH66
+
+Plan failed to execute
+
+
+Failed plans:
+ /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.egjnIiAH66 
+  ----------------------------------------
+  Validating plan: p5_plan_abs_gemma3_1b.txt
+  Cleaned plan (2 actions):
+    (pickup ob underob)
+    (putdown ob underob)
+  Running: validate "D_blocksworld.pddl" "problems/P_5_blocks.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.XrSxRaoLqv"
+  ✗ INVALID: p5_plan_abs_gemma3_1b.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.XrSxRaoLqv
+Error: Error in type-checking!
+  ----------------------------------------
+  Validating plan: p5_plan_abs_gemma3_27b.txt
+  Cleaned plan (16 actions):
+    (unstack c b)
+    (putdown c)
+    (unstack b a)
+    (putdown b)
+    (unstack a)
+    (putdown a)
+    (unstack e d)
+    (putdown e)
+    (unstack d)
+    (putdown d)
+    (pickup a)
+    (stack a c)
+    (pickup b)
+    (stack b e)
+    (pickup d)
+    (stack d b)
+  Running: validate "D_blocksworld.pddl" "problems/P_5_blocks.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.wkIPPzqbmw"
+  ✗ INVALID: p5_plan_abs_gemma3_27b.txt
+  Validation output: 
+  ----------------------------------------
+  Validating plan: p5_plan_abs_gemma3_4b.txt
+  ✗ EMPTY: No valid actions found in p5_plan_abs_gemma3_4b.txt
+
+=== VALIDATION SUMMARY ===
+Total plans processed: 25
+Valid plans: 3
+Invalid plans: 15
+Empty plans: 7
+Validation success rate: 12%
+
+Validation completed at: 2025年 8月23日 星期六 22时00分22秒 CST
+Results saved to: validation_results.txt
+Detailed log saved to: validation_log.txt

@@ -1,0 +1,1 @@
+(drive Truck1 loc1 loc2 city1)

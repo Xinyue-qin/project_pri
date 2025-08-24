@@ -1,0 +1,2 @@
+(walk hiker1 base camp)
+(walk hiker1 camp summit)

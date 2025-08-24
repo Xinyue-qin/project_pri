@@ -1,0 +1,8 @@
+move courier1 from warehouse to client
+move courier2 from station to client
+pick-up urgentPkg from warehouse
+move courier1 from client to warehouse
+drop-off urgentPkg from courier1 at warehouse
+pick-up normalPkg from station
+move courier2 from client to station
+drop-off normalPkg from courier2 at station

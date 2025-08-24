@@ -1,0 +1,7 @@
+move Robot2 from loc1 to loc2
+pick-up Robot2 with pkgA from loc2
+move Robot2 from loc2 to loc3
+drop-off Robot2 with pkgA from loc3
+move Robot2 from loc3 to loc1
+pick-up Robot2 with pkgB from loc1
+drop-off Robot2 with pkgB from loc1

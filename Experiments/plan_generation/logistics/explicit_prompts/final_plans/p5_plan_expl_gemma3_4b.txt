@@ -1,0 +1,10 @@
+drive truck1 from loc1 to loc3
+drive truck2 from loc2 to loc3
+fly plane1 from airport1 to airport3
+unload pkg1 from truck1 at loc3
+fly plane2 from airport2 to airport3
+unload pkg2 from truck2 at airport3
+drive truck1 from loc3 to loc1
+unload pkg3 from truck3 at loc2
+drive truck2 from loc2 to loc3
+unload pkg4 from truck1 at airport3

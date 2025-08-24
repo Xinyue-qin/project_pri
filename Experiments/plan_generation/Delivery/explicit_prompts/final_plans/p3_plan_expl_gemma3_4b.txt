@@ -1,0 +1,3 @@
+move robotA from locX to locY
+move robotA from locY to locZ
+drop-off robotA with pkgX at locZ

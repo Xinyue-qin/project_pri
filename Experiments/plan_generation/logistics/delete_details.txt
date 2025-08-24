@@ -1,7 +1,0 @@
-P1: delete (at truck1 loc1) (at pkg1 loc1);
-P2: delete (loc airport1 city1) (loc airport2 city2);
-P3: delete (at truck1 loc1) (at truck2 loc2) (at plane1 airport1));
-P4: delete (loc airport2 city2)
-P5: delete (at truck2 loc2) (at truck3 loc3) (at pkg3 loc2)
-
-

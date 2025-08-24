@@ -1,0 +1,4 @@
+(check-weather B)
+(walk h1 A B)
+(check-weather D)
+(walk h1 B D)

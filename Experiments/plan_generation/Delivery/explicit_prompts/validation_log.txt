@@ -1,0 +1,386 @@
+=== Validation Log ===
+Validation started at: 2025年 8月23日 星期六 22时33分54秒 CST
+Starting validation process...
+Processing problem: p1.pddl
+  Validating plan: p1_plan_expl_devstral.txt
+  Raw plan content (first 10 lines):
+    ( pick-up Robot1 pkg1 locA )
+    ( move Robot1 locA locB )
+    ( drop-off Robot1 pkg1 locB )
+  ✗ EMPTY: No valid actions found in p1_plan_expl_devstral.txt
+  Validating plan: p1_plan_expl_gemma3_12b.txt
+  Raw plan content (first 10 lines):
+    (pick-up Robot1 pkg1 locA)
+    (move Robot1 locA locB)
+    (drop-off Robot1 pkg1 locB)
+  Cleaned plan (3 actions):
+    (pick-up robot1 pkg1 loca)
+    (move robot1 loca locb)
+    (drop-off robot1 pkg1 locb)
+  Running: validate "d_delivery.pddl" "problems/p1.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.cyeBd5Zg4S"
+  ✓ VALID: p1_plan_expl_gemma3_12b.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p1_plan_expl_gemma3_1b.txt
+  Raw plan content (first 10 lines):
+    (define (plan deliver_pkg1)
+    [[pick-up drop-off deliver-pkg1]]
+    ]])
+  ✗ EMPTY: No valid actions found in p1_plan_expl_gemma3_1b.txt
+  Validating plan: p1_plan_expl_gemma3_27b.txt
+  Raw plan content (first 10 lines):
+    (pick-up robot1 pkg1 locA)
+    (move robot1 locA locB)
+    (drop-off robot1 pkg1 locB)
+  Cleaned plan (3 actions):
+    (pick-up robot1 pkg1 loca)
+    (move robot1 loca locb)
+    (drop-off robot1 pkg1 locb)
+  Running: validate "d_delivery.pddl" "problems/p1.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.BJWjoAFreu"
+  ✓ VALID: p1_plan_expl_gemma3_27b.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p1_plan_expl_gemma3_4b.txt
+  Raw plan content (first 10 lines):
+    move Robot1 from locA to locB.
+    drop-off Robot1 with pkg1 at locB.
+  ✗ EMPTY: No valid actions found in p1_plan_expl_gemma3_4b.txt
+Processing problem: p2.pddl
+  Validating plan: p2_plan_expl_devstral.txt
+  Raw plan content (first 10 lines):
+    (pick-up Robot2 pkgA loc1)
+    (move Robot2 loc1 loc2)
+    (move Robot2 loc2 loc3)
+    (drop-off Robot2 pkgA loc3)
+    (move Robot2 loc3 loc2)
+    (pick-up Robot2 pkgB loc2)
+    (move Robot2 loc2 loc1)
+    (drop-off Robot2 pkgB loc1)
+  Cleaned plan (8 actions):
+    (pick-up robot2 pkga loc1)
+    (move robot2 loc1 loc2)
+    (move robot2 loc2 loc3)
+    (drop-off robot2 pkga loc3)
+    (move robot2 loc3 loc2)
+    (pick-up robot2 pkgb loc2)
+    (move robot2 loc2 loc1)
+    (drop-off robot2 pkgb loc1)
+  Running: validate "d_delivery.pddl" "problems/p2.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.hUUEcVxjX4"
+  ✗ INVALID: p2_plan_expl_devstral.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.hUUEcVxjX4
+
+Plan failed to execute
+
+
+Failed plans:
+ /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.hUUEcVxjX4 
+  ----------------------------------------
+  Validating plan: p2_plan_expl_gemma3_12b.txt
+  Raw plan content (first 10 lines):
+    (move Robot2 loc1 loc2)
+    (pick-up Robot2 pkgB loc1)
+    (move Robot2 pkgB loc1 loc2)
+    (drop-off Robot2 pkgB loc1 loc1)
+    (move Robot2 loc1 loc2)
+    (move Robot2 loc2 loc3)
+    (pick-up Robot2 pkgA loc1)
+    (move Robot2 pkgA loc1 loc2)
+    (move Robot2 pkgA loc2 loc3)
+    (drop-off Robot2 pkgA loc3 loc3)
+  Cleaned plan (10 actions):
+    (move robot2 loc1 loc2)
+    (pick-up robot2 pkgb loc1)
+    (move robot2 pkgb loc1 loc2)
+    (drop-off robot2 pkgb loc1 loc1)
+    (move robot2 loc1 loc2)
+    (move robot2 loc2 loc3)
+    (pick-up robot2 pkga loc1)
+    (move robot2 pkga loc1 loc2)
+    (move robot2 pkga loc2 loc3)
+    (drop-off robot2 pkga loc3 loc3)
+  Running: validate "d_delivery.pddl" "problems/p2.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.YLuxutTNVO"
+  ✓ VALID: p2_plan_expl_gemma3_12b.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p2_plan_expl_gemma3_1b.txt
+  Raw plan content (first 10 lines):
+    pick-up pkgA
+    move loc1 to loc3
+    drop-off pkgA
+  ✗ EMPTY: No valid actions found in p2_plan_expl_gemma3_1b.txt
+  Validating plan: p2_plan_expl_gemma3_27b.txt
+  Raw plan content (first 10 lines):
+    (move robot2 loc1 loc2)
+    (pick-up robot2 pkgB loc2)
+    (move robot2 loc2 loc1)
+    (drop-off robot2 pkgB loc1)
+    (move robot2 loc1 loc2)
+    (pick-up robot2 pkgA loc2)
+    (move robot2 loc2 loc3)
+    (drop-off robot2 pkgA loc3)
+  Cleaned plan (8 actions):
+    (move robot2 loc1 loc2)
+    (pick-up robot2 pkgb loc2)
+    (move robot2 loc2 loc1)
+    (drop-off robot2 pkgb loc1)
+    (move robot2 loc1 loc2)
+    (pick-up robot2 pkga loc2)
+    (move robot2 loc2 loc3)
+    (drop-off robot2 pkga loc3)
+  Running: validate "d_delivery.pddl" "problems/p2.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.ZfM1VziPxY"
+  ✗ INVALID: p2_plan_expl_gemma3_27b.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.ZfM1VziPxY
+
+Plan failed to execute
+
+
+Failed plans:
+ /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.ZfM1VziPxY 
+  ----------------------------------------
+  Validating plan: p2_plan_expl_gemma3_4b.txt
+  Raw plan content (first 10 lines):
+    move Robot2 from loc1 to loc2
+    pick-up Robot2 with pkgA from loc2
+    move Robot2 from loc2 to loc3
+    drop-off Robot2 with pkgA from loc3
+    move Robot2 from loc3 to loc1
+    pick-up Robot2 with pkgB from loc1
+    drop-off Robot2 with pkgB from loc1
+  ✗ EMPTY: No valid actions found in p2_plan_expl_gemma3_4b.txt
+Processing problem: p3.pddl
+  Validating plan: p3_plan_expl_devstral.txt
+  Raw plan content (first 10 lines):
+    ( pick-up RobotA pkgX locX )
+    ( move RobotA locX locY )
+    ( move RobotA locY locZ )
+    ( drop-off RobotA pkgX locZ )
+  ✗ EMPTY: No valid actions found in p3_plan_expl_devstral.txt
+  Validating plan: p3_plan_expl_gemma3_12b.txt
+  Raw plan content (first 10 lines):
+    (move RobotA locX locY)
+    (move RobotA locY locZ)
+    (pick-up RobotA pkgX locX)
+    (drop-off RobotA pkgX locZ)
+  Cleaned plan (4 actions):
+    (move robota locx locy)
+    (move robota locy locz)
+    (pick-up robota pkgx locx)
+    (drop-off robota pkgx locz)
+  Running: validate "d_delivery.pddl" "problems/p3.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.HwqtLPgvvO"
+  ✗ INVALID: p3_plan_expl_gemma3_12b.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.HwqtLPgvvO
+
+Plan failed to execute
+
+
+Failed plans:
+ /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.HwqtLPgvvO 
+  ----------------------------------------
+  Validating plan: p3_plan_expl_gemma3_1b.txt
+  Raw plan content (first 10 lines):
+    tool_code
+    pick-up pkgX locZ
+    move locX to locZ
+    drop-off pkgX locX
+  ✗ EMPTY: No valid actions found in p3_plan_expl_gemma3_1b.txt
+  Validating plan: p3_plan_expl_gemma3_27b.txt
+  Raw plan content (first 10 lines):
+    (move RobotA locX locY)
+    (move RobotA locY locZ)
+    (pick-up RobotA pkgX locZ)
+    (drop-off RobotA pkgX locZ)
+  Cleaned plan (4 actions):
+    (move robota locx locy)
+    (move robota locy locz)
+    (pick-up robota pkgx locz)
+    (drop-off robota pkgx locz)
+  Running: validate "d_delivery.pddl" "problems/p3.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.HwWemLmCs8"
+  ✗ INVALID: p3_plan_expl_gemma3_27b.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.HwWemLmCs8
+
+Plan failed to execute
+
+
+Failed plans:
+ /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.HwWemLmCs8 
+  ----------------------------------------
+  Validating plan: p3_plan_expl_gemma3_4b.txt
+  Raw plan content (first 10 lines):
+    move robotA from locX to locY
+    move robotA from locY to locZ
+    drop-off robotA with pkgX at locZ
+  ✗ EMPTY: No valid actions found in p3_plan_expl_gemma3_4b.txt
+Processing problem: p4.pddl
+  Validating plan: p4_plan_expl_devstral.txt
+  Raw plan content (first 10 lines):
+    (pick-up courier1 urgentPkg warehouse)
+    (move courier1 warehouse client)
+    (drop-off courier1 urgentPkg client)
+    (pick-up courier2 normalPkg station)
+    (move courier2 station client)
+    (drop-off courier2 normalPkg client)
+  Cleaned plan (6 actions):
+    (pick-up courier1 urgentpkg warehouse)
+    (move courier1 warehouse client)
+    (drop-off courier1 urgentpkg client)
+    (pick-up courier2 normalpkg station)
+    (move courier2 station client)
+    (drop-off courier2 normalpkg client)
+  Running: validate "d_delivery.pddl" "problems/p4.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.VWic4o4a7Z"
+  ✓ VALID: p4_plan_expl_devstral.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p4_plan_expl_gemma3_12b.txt
+  Raw plan content (first 10 lines):
+    (move Courier1 warehouse client)
+    (pick-up Courier1 UrgentPkg warehouse)
+    (move Courier1 client UrgentPkg)
+    (drop-off Courier1 UrgentPkg client)
+    (move Courier2 station client)
+    (pick-up Courier2 normalPkg station)
+    (drop-off Courier2 normalPkg client)
+  Cleaned plan (7 actions):
+    (move courier1 warehouse client)
+    (pick-up courier1 urgentpkg warehouse)
+    (move courier1 client urgentpkg)
+    (drop-off courier1 urgentpkg client)
+    (move courier2 station client)
+    (pick-up courier2 normalpkg station)
+    (drop-off courier2 normalpkg client)
+  Running: validate "d_delivery.pddl" "problems/p4.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.qBhipsFIGr"
+  ✓ VALID: p4_plan_expl_gemma3_12b.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p4_plan_expl_gemma3_1b.txt
+  Raw plan content (first 10 lines):
+    (define (plan deliver-urgent-pkg-normalpkg)
+    [(pick-up courier1 warehouse normalPkg client)
+    [(move courier1 warehouse client)
+    [(pick-up courier2 warehouse normalPkg client)
+    [(drop-off courier1 client client)
+    [(pick-up courier2 warehouse normalPkg client)
+    [(drop-off courier2 client client)
+    [(deliver urgentPkg client)
+    [(deliver normalPkg client)
+    [(delivered urgentPkg)
+  Cleaned plan (2 actions):
+    [(deliver normalpkg client)
+    [(deliver urgentpkg client)
+  Running: validate "d_delivery.pddl" "problems/p4.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.tUPgn2nC7l"
+  ✗ INVALID: p4_plan_expl_gemma3_1b.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.tUPgn2nC7l
+Plan executed successfully - checking goal
+Goal not satisfied
+Plan invalid
+
+
+Failed plans:
+ /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.tUPgn2nC7l 
+  ----------------------------------------
+  Validating plan: p4_plan_expl_gemma3_27b.txt
+  Raw plan content (first 10 lines):
+    (move courier1 warehouse client)
+    (drop-off courier1 urgentPkg client)
+    (move courier2 station client)
+    (drop-off courier2 normalPkg client)
+  Cleaned plan (4 actions):
+    (move courier1 warehouse client)
+    (drop-off courier1 urgentpkg client)
+    (move courier2 station client)
+    (drop-off courier2 normalpkg client)
+  Running: validate "d_delivery.pddl" "problems/p4.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.tcCd3GfEuz"
+  ✗ INVALID: p4_plan_expl_gemma3_27b.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.tcCd3GfEuz
+
+Plan failed to execute
+
+
+Failed plans:
+ /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.tcCd3GfEuz 
+  ----------------------------------------
+  Validating plan: p4_plan_expl_gemma3_4b.txt
+  Raw plan content (first 10 lines):
+    move courier1 from warehouse to client
+    move courier2 from station to client
+    pick-up urgentPkg from warehouse
+    move courier1 from client to warehouse
+    drop-off urgentPkg from courier1 at warehouse
+    pick-up normalPkg from station
+    move courier2 from client to station
+    drop-off normalPkg from courier2 at station
+  ✗ EMPTY: No valid actions found in p4_plan_expl_gemma3_4b.txt
+Processing problem: p5.pddl
+  Validating plan: p5_plan_expl_devstral.txt
+  Raw plan content (first 10 lines):
+    (pick-up drone medicalpkg depot)
+    (move drone depot hospital)
+    (move drone hospital disasterArea)
+    (drop-off drone medicalpkg disasterArea)
+  Cleaned plan (4 actions):
+    (pick-up drone medicalpkg depot)
+    (move drone depot hospital)
+    (move drone hospital disasterarea)
+    (drop-off drone medicalpkg disasterarea)
+  Running: validate "d_delivery.pddl" "problems/p5.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.hE1ZEZNJsV"
+  ✓ VALID: p5_plan_expl_devstral.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p5_plan_expl_gemma3_12b.txt
+  Raw plan content (first 10 lines):
+    (move depot hospital)
+    (pick-up drone MedicalPkg depot)
+    (move drone hospital disasterArea)
+    (drop-off drone MedicalPkg disasterArea)
+  Cleaned plan (1 actions):
+    (move depot hospital)
+  Running: validate "d_delivery.pddl" "problems/p5.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.3NIjGkc8yz"
+  ✓ VALID: p5_plan_expl_gemma3_12b.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p5_plan_expl_gemma3_1b.txt
+  Raw plan content (first 10 lines):
+    tool_code
+    (pick-up (agent depot) (package MedicalPkg) (hospital disasterArea))
+  Cleaned plan (1 actions):
+    (pick-up (agent depot) (package medicalpkg) (hospital disasterarea))
+  Running: validate "d_delivery.pddl" "problems/p5.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.fONd4CTQ5M"
+  ✓ VALID: p5_plan_expl_gemma3_1b.txt
+  Validation output: Plan valid
+  ----------------------------------------
+  Validating plan: p5_plan_expl_gemma3_27b.txt
+  Raw plan content (first 10 lines):
+    (move drone depot hospital)
+    (move drone hospital disasterArea)
+    (pick-up drone MedicalPkg disasterArea)
+    (drop-off drone MedicalPkg disasterArea)
+  Cleaned plan (4 actions):
+    (move drone depot hospital)
+    (move drone hospital disasterarea)
+    (pick-up drone medicalpkg disasterarea)
+    (drop-off drone medicalpkg disasterarea)
+  Running: validate "d_delivery.pddl" "problems/p5.pddl" "/var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.WXD4Ibsnec"
+  ✗ INVALID: p5_plan_expl_gemma3_27b.txt
+  Validation output: Checking plan: /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.WXD4Ibsnec
+
+Plan failed to execute
+
+
+Failed plans:
+ /var/folders/mz/g2mhzgdx0zd6g7n_g7zxvd580000gn/T/tmp.WXD4Ibsnec 
+  ----------------------------------------
+  Validating plan: p5_plan_expl_gemma3_4b.txt
+  Raw plan content (first 10 lines):
+    move drone from depot to hospital
+    drop off medicalPkg at hospital
+  ✗ EMPTY: No valid actions found in p5_plan_expl_gemma3_4b.txt
+
+=== VALIDATION SUMMARY ===
+Total plans processed: 25
+Valid plans: 8
+Invalid plans: 7
+Empty plans: 10
+Validation success rate: 32%
+
+Validation completed at: 2025年 8月23日 星期六 22时33分55秒 CST
+Results saved to: validation_results.txt
+Detailed log saved to: validation_log.txt

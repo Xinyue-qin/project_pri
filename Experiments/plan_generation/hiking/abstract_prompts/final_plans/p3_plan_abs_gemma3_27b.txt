@@ -1,0 +1,4 @@
+(rest hiker beginning)
+(check-weather beginning)
+(check-weather end)
+(walk hiker beginning end)
