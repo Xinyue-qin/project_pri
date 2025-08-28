@@ -1,0 +1,29 @@
+错误分析：
+
+错误信息：KeyError: 'block'
+
+错误位置：在 pddl_to_prolog.py 的 translate_typed_object 函数中
+
+错误原因：类型字典 type_dict 中找不到 'block' 这个类型
+
+错误分类：
+这属于 语义错误 (Semantic Error) 中的 类型错误 (TError)，具体原因是模型生成了未定义的类型 'block'。
+
+
+详细解释：
+
+错误类别: Semantic Error → Type Error (TError)
+
+具体问题: 生成的PDDL中使用了未定义的类型 'block'
+
+错误位置: 在类型实例化过程中，type_dict 字典中找不到 'block' 这个键
+
+影响范围: 所有5个问题都出现相同的错误，说明这是一个系统性的类型定义问题
+
+严重程度: 翻译阶段完全失败（exit code 30），无法进行后续的规划求解
+
+建议修复：
+需要检查生成的PDDL域文件，确保所有使用的类型（如 block）都在域文件的 :types 部分正确定义。
+
+这个错误表明Devstral模型在生成Blocksworld领域的PDDL时，没有正确包含或定义必要的类型信息。
+

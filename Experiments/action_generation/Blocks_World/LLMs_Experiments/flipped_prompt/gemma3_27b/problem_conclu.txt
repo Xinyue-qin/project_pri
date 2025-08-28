@@ -1,0 +1,38 @@
+语义错误 (Semantic Errors) - 总频率：5
+Type Error (TError) - 频率：5
+
+错误描述：类型字典中找不到'block'类型
+
+错误信息：KeyError: 'block'
+
+错误位置：在pddl_to_prolog.py的translate_typed_object函数中
+
+根本原因：生成的PDDL域文件中使用了未定义的类型'block'
+
+错误详细分析：
+翻译阶段失败：所有5个问题在翻译阶段就终止（exit code 30）
+
+类型系统错误：在类型实例化过程中，type_dict字典中缺少'block'这个键
+
+影响范围：所有对象类型检查都失败，因为基础类型'block'未定义
+
+严重程度：完全无法进行后续的实例化和规划求解
+
+错误链：
+解析成功：PDDL文件语法解析通过
+
+规范化成功：任务规范化完成
+
+实例化失败：在生成Datalog程序时，类型检查失败
+
+翻译终止：由于类型错误，翻译过程完全终止
+
+与其他模型的对比：
+与Devstral模型的错误完全相同（都是TError: KeyError: 'block'）
+
+与Gemma 3:1b不同（1b是Syntax Error: UnToken）
+
+与Gemma 3:12b不同（12b是Different Domain: NoPlan）
+
+总结：Gemma 3:27b模型在生成Blocksworld域文件时，产生了系统性的语义错误，所有5个输出文件都因缺少'block'类型定义而无法进行类型检查。这是一个Type Error语义错误，总频率为5。
+

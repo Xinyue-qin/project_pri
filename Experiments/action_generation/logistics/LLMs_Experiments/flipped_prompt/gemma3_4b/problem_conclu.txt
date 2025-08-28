@@ -1,0 +1,39 @@
+所有5个问题实例(P1-P5)都表现出完全相同的错误：
+
+语法错误 (Syntax Errors) - 总频率：5
+Unexpected Token (UnToken) - 频率：5
+
+错误描述：解析器期望开括号 (，但收到了百分号 %
+
+错误信息：Expected '(', got '%'
+
+根本原因：PDDL域文件以注释行开头（%Problem in domain definition!）
+
+错误详细分析：
+注释格式错误：域文件以注释符号%开头
+
+语法违规：PDDL文件不能以注释开头，必须以正式结构开始
+
+解析器预期：第一个字符应该是开括号(用于开始域定义
+
+翻译阶段失败：所有问题在解析的最初阶段就失败（exit code 31）
+
+错误模式：
+这与Gemma 3:4b在Delivery领域的错误模式完全相同：
+
+都是：Expected '(', got '%'
+
+都是注释格式问题导致解析失败
+
+都是UnToken语法错误
+
+与其他Gemma版本的对比：
+Gemma 3:1b Logistics: Got: module（Python关键字）
+
+Gemma 3:4b Logistics: Got: %（注释符号）
+
+两者都是语法错误，但具体表现形式不同
+
+总结：Gemma 3:4b模型在生成Logistics领域文件时，产生了系统性的语法错误，所有5个输出文件都因以注释行开头而无法解析。这是一个Unexpected Token语法错误，总频率为5。域文件以注释开头违反了PDDL语法要求。
+
+错误频率总计：5（每个问题1次UnToken错误）

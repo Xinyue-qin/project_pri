@@ -1,0 +1,37 @@
+语法错误 (Syntax Errors) - 总频率：5
+Unexpected Token (UnToken) - 频率：5
+
+错误描述：解析器期望完整的域定义结构 (domain NAME)，但只收到了关键字 domain
+
+错误信息：Expected: (domain NAME) Got: domain
+
+根本原因：生成的PDDL域文件缺少域名称和必要的括号结构
+
+错误详细分析（所有5个问题完全一致）：
+P1: UnToken (1) - 与其他问题相同的错误模式
+
+P2: UnToken (1) - 相同的语法错误
+
+P3: UnToken (1) - 相同的语法错误
+
+P4: UnToken (1) - 相同的语法错误
+
+P5: UnToken (1) - 相同的语法错误
+
+错误特征：
+完全一致性：所有5个问题实例都出现完全相同的错误
+
+语法结构缺失：只有关键字 domain，缺少：
+
+开括号 (
+
+域名称（如 delivery）
+
+闭括号 )
+
+翻译阶段失败：所有问题在翻译阶段终止（exit code 31）
+
+总结：
+Gemma 3:1b模型在Delivery领域的所有5个问题实例中都产生了完全相同的语法错误（UnToken），总频率为5。模型生成了关键字但缺少完整的PDDL语法结构，导致解析器无法识别域定义格式。
+
+错误频率总计：5（每个问题1次UnToken错误）

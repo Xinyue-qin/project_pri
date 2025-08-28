@@ -11,3 +11,4 @@
     (available robot1)
   )
   (:goal (delivered pkg1))
+

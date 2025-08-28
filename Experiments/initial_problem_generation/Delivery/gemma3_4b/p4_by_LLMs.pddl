@@ -16,3 +16,5 @@
     (in normalPkg warehouse)
   )
   (:goal (and (delivered urgentPkg)(delivered normalPkg))))
+
+

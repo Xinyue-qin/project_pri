@@ -1,0 +1,42 @@
+所有5个问题实例(P1-P5)都表现出完全相同的错误：
+
+语义错误 (Semantic Errors) - 总频率：5
+Type Error (TError) - 频率：5
+
+错误描述：类型字典中找不到'agent'类型
+
+错误信息：KeyError: 'agent'
+
+错误位置：在pddl_to_prolog.py的translate_typed_object函数中
+
+根本原因：生成的PDDL域文件中使用了未定义的类型'agent'
+
+错误详细分析：
+翻译阶段失败：所有5个问题在翻译阶段就终止（exit code 30）
+
+类型系统错误：在类型实例化过程中，type_dict字典中缺少'agent'这个键
+
+影响范围：所有对象类型检查都失败，因为基础类型'agent'未定义
+
+严重程度：完全无法进行后续的实例化和规划求解
+
+错误模式：
+这与Devstral模型在Delivery领域的错误模式完全相同：
+
+都是：KeyError: 'agent'
+
+都是Type Error语义错误
+
+都是因为缺少'agent'类型定义
+
+与其他Gemma版本的对比：
+Gemma 3:1b: Syntax Error (UnToken) - 结构不完整
+
+Gemma 3:4b: Syntax Error (UnToken) - 注释开头
+
+Gemma 3:12b: 80%成功，20% Different Domain
+
+Gemma 3:27b: Semantic Error (TError) - 类型缺失
+
+总结：Gemma 3:27b模型在生成Delivery领域文件时，产生了系统性的语义错误，所有5个输出文件都因缺少'agent'类型定义而无法进行类型检查。这是一个Type Error语义错误，总频率为5。
+

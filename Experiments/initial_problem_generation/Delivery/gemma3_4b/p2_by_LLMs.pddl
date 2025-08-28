@@ -16,3 +16,5 @@
     (available robot2)
   )
   (:goal (and (delivered pkgA)(delivered pkgB)))
+
+  
